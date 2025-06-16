@@ -11,6 +11,8 @@
 <link href="/Plugin/fontawesome/css/solid.css" rel="stylesheet" />
 <!-- Bootstrap -->
 <link href="/Plugin/bootstrap-5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Datatables -->    
+<link rel="stylesheet" href="/Plugin/DataTables/datatables.min.css">
 </head>
 <body>
     <!-- header -->
@@ -26,7 +28,7 @@
                 <!-- page-heading -->
                 <div class="pt-md-3 pb-md-4 px-md-4 p-3 d-flex justify-content-between flex-sm-row flex-column bg-white border-bottom align-items-sm-center align-items-start">
                     <div class="mb-md-0 mb-2 d-flex flex-row flex-column-reverse justify-content-between fs-6 align-items-start">
-                        <h3 class="m-0 mt-3 content-icon-title fw-bold fz-6">使用者基本資料 </h3>
+                        <h3 class="m-0 mt-3 content-icon-title fw-bold fz-6">使用者管理</h3>
                         <nav aria-label="breadcrumb align-self-end  my-2">
                             <ol class="breadcrumb m-0 p-0 justify-content-start">
                                 <li class="breadcrumb-item m-0 p-0">
@@ -36,76 +38,159 @@
                                     <a class="text-decoration-none fz-1 me-1" href="#">系統管理</a>
                                 </li>
                                 <li class="breadcrumb-item m-0 p-0 active">
-                                    <a class="text-decoration-none fz-1 me-1 disabled" href="user-profile.html">使用者基本資料</a>
+                                    <a class="text-decoration-none fz-1 me-1 disabled" href="auth-user-list.html">使用者管理</a>
                                 </li>
                             </ol>
                         </nav>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-outlilne-primary border-primary link-primary mb-2 mb-sm-0">返回 <i class="fa-solid fa-share"></i>
-                        </button>
+                        <div class="btn btn-primary text-light mb-2 mb-sm-0" data-bs-toggle="modal" data-bs-target="#createUserModal">新增</div>
                     </div>
                 </div>
             </div>
-            <div class="page-content mx-4 mh-90 p-4 bg-white">
-                <div class="mx-1 p-4 row align-items-center row-bg-gray">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input01"><span class="text-danger">*</span>名稱</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="text" class="form-control" id="input01" name="input01" value="input01" placeholder="名稱">
-                    </div>
+            <div class="page-content mx-4 mh-90 pb-4 bg-white">
+                <table id="tableUserList" class="dataTable hoverLargeImage pageTable9Hide4 table table-hover mt-3 mb-2 nowrap">
+                <thead>
+                        <tr>
+                                <th class="fz-3" style="width: 0">#</th>
+                                <th class="fz-3">名稱</th>
+                                <th class="fz-3">信箱</th>
+                                <th class="fz-3">狀態</th>
+                                <th class="fz-3">角色</th>
+                                <th class="fz-3">功能</th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td class="py-0"></td>
+                                <td class="py-0 fz-3" data-src="名稱">系統管理員</td>
+                                <td class="py-0 fz-3" data-src="信箱">admin@mail.slab.com.tw</td>
+                                <td class="py-0 fz-3" data-src="狀態"><span class="text-success">開啟</span></td>
+                                <td class="py-0 fz-3" data-src="角色">系統管理者</td>
+                                <td class="py-0 fz-3" data-src="功能">
+                                        <a href="#" class="px-1 fz-3" type="button" title="編輯"><i class="fa-regular fa-pen-to-square"></i><span class="d-none">編輯</span></a>
+                                        <a href="#" class="px-1 fz-3 link-danger" type="button" title="刪除"><i class="fa-regular fa-trash-can"></i><span class="d-none">刪除</span></a>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td class="py-0"></td>
+                                <td class="py-0 fz-3" data-src="名稱">陳小明</td>
+                                <td class="py-0 fz-3" data-src="信箱">xiaoming.wang@example.com</td>
+                                <td class="py-0 fz-3" data-src="狀態"><span class="text-danger">關閉</span></td>
+                                <td class="py-0 fz-3" data-src="角色">管理者</td>
+                                <td class="py-0 fz-3" data-src="功能">
+                                        <a href="#" class="px-1 fz-3" type="button" title="編輯"><i class="fa-regular fa-pen-to-square"></i><span class="d-none">編輯</span></a>
+                                        <a href="#" class="px-1 fz-3 link-danger" type="button" title="刪除"><i class="fa-regular fa-trash-can"></i><span class="d-none">刪除</span></a>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td class="py-0"></td>
+                                <td class="py-0 fz-3" data-src="名稱">李佳怡</td>
+                                <td class="py-0 fz-3" data-src="信箱">jiayi.li@example.com</td>
+                                <td class="py-0 fz-3" data-src="狀態"><span class="text-success">開啟</span></td>
+                                <td class="py-0 fz-3" data-src="角色">管理者</td>
+                                <td class="py-0 fz-3" data-src="功能">
+                                        <a href="#" class="px-1 fz-3" type="button" title="編輯"><i class="fa-regular fa-pen-to-square"></i><span class="d-none">編輯</span></a>
+                                        <a href="#" class="px-1 fz-3 link-danger" type="button" title="刪除"><i class="fa-regular fa-trash-can"></i><span class="d-none">刪除</span></a>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td class="py-0"></td>
+                                <td class="py-0 fz-3" data-src="名稱">張志豪</td>
+                                <td class="py-0 fz-3" data-src="信箱">zhihao.zhang@example.com</td>
+                                <td class="py-0 fz-3" data-src="狀態"><span class="text-success">開啟</span></td>
+                                <td class="py-0 fz-3" data-src="角色">技術人員</td>
+                                <td class="py-0 fz-3" data-src="功能">
+                                        <a href="#" class="px-1 fz-3" type="button" title="編輯"><i class="fa-regular fa-pen-to-square"></i><span class="d-none">編輯</span></a>
+                                        <a href="#" class="px-1 fz-3 link-danger" type="button" title="刪除"><i class="fa-regular fa-trash-can"></i><span class="d-none">刪除</span></a>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td class="py-0"></td>
+                                <td class="py-0 fz-3" data-src="名稱">陳美玲</td>
+                                <td class="py-0 fz-3" data-src="信箱">meiling.chen@example.com</td>
+                                <td class="py-0 fz-3" data-src="狀態"><span class="text-success">開啟</span></td>
+                                <td class="py-0 fz-3" data-src="角色">技術人員</td>
+                                <td class="py-0 fz-3" data-src="功能">
+                                        <a href="#" class="px-1 fz-3" type="button" title="編輯"><i class="fa-regular fa-pen-to-square"></i><span class="d-none">編輯</span></a>
+                                        <a href="#" class="px-1 fz-3 link-danger" type="button" title="刪除"><i class="fa-regular fa-trash-can"></i><span class="d-none">刪除</span></a>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td class="py-0"></td>
+                                <td class="py-0 fz-3" data-src="名稱">林俊傑</td>
+                                <td class="py-0 fz-3" data-src="信箱">junjie.lin@example.com</td>
+                                <td class="py-0 fz-3" data-src="狀態"><span class="text-success">開啟</span></td>
+                                <td class="py-0 fz-3" data-src="角色">技術人員</td>
+                                <td class="py-0 fz-3" data-src="功能">
+                                        <a href="#" class="px-1 fz-3" type="button" title="編輯"><i class="fa-regular fa-pen-to-square"></i><span class="d-none">編輯</span></a>
+                                        <a href="#" class="px-1 fz-3 link-danger" type="button" title="刪除"><i class="fa-regular fa-trash-can"></i><span class="d-none">刪除</span></a>
+                                </td>
+                        </tr>
+                </tbody>
+                </table>                    
                 </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input02"><span class="text-danger">*</span>帳號</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="text" class="form-control" id="input02" name="input02" value="" placeholder="信箱">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-gray">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input04"><span class="text-danger">*</span>密碼</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="password" class="form-control" id="input04" name="input04" value="input04" placeholder="密碼">
-                    </div>
-                </div>
-                <!-- <div class="mx-1 p-4 row align-items-top row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input02"><span class="text-danger">*</span>說明</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <textarea class="form-control" id="input02" name="input02"></textarea>
-                    </div>
-                </div> 
-                <div class="mx-1 p-4 row align-items-center row-bg-gray">
-                    <div class="col-5 col-md-2 col-lg-2 text-end">
-                        <label class="form-label mb-0" for="input03"><span class="text-danger">*</span>狀態</label>
-                    </div>
-                    <div class="col-5 col-md-5 col-lg-5">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input switch-status" type="checkbox" role="switch" id="input03" name="input03" checked>
-                        </div>
-                    </div>
-                </div>-->
-                <div class="btn-row d-flex justify-content-center justify-content-md-end pt-3">
-                    <div class="m-1 btn btn-outline-primary">取消</div>
-                    <div class="m-1 btn btn-primary link-light">確認</div>
-                </div>
-            </div>
         </section>
+
+
+        <!-- Modal -->
+         <%- include('src/layout/modalUserCreate.ejs') -%>
     </div>
 
 
     <script type="module" src="main.js"></script>
+    <!-- Bootstrap -->
+    <script src="/Plugin/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery -->
     <script src="/Plugin/jQuery/jquery-3.7.1.min.js"></script>
     <!-- 自定義 js -->
     <script src="/assets/js/sidebar/sidebars.js"></script>
-    <!-- Bootstrap -->
-    <script src="/Plugin/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <!-- Datatables -->    
+    <script src="/Plugin/DataTables/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $('#tableUserList').DataTable({
+                lengthChange: false,
+                searching: false,
+                autoWidth: false,
+                pageLength: 20,
+                order: [[4, 'dec']],
+                responsive: true,
+                language: {
+                    processing:
+                        '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> ',
+                    info: '顯示第 _START_ 到第 _END_ 筆，共 _TOTAL_ 筆資料',
+                    lengthMenu: '每頁顯示 _MENU_ 筆資料',
+                },
+                columnDefs: [
+                    {
+                        targets: [0],
+                        orderable: false,
+                    },
+                    {
+                        targets: [0, 2, 3, -1],
+                        responsivePriority: 1,
+                    },
+                    {
+                        targets: [2, 4,],
+                        responsivePriority: 2,
+                    },
+                    {
+                        targets: [0],
+                        className: 'text-lg-center',
+                    },
+                ],
+                columns: [
+                    { width: '0px' },
+                    { width: '110px' },
+                    { width: 'auto' },
+                    { width: '70px' },
+                    { width: '200px' },
+                    { width: '70px' },
+                ],
+            });
+        });
+    </script>
   </body>
 </html>

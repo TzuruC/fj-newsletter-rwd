@@ -1,0 +1,65 @@
+<div class="modal fade" id="createUserModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="createUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="createUserModalLabel">新增 / 編輯使用者</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        
+            <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                <div class="col-12 col-md-2 col-lg-3 text-start text-md-end">
+                    <label class="form-label mb-0" for="input01"><span class="text-danger">*</span>名稱</label>
+                </div>
+                <div class="col-12 col-md-5 col-lg-8">
+                    <input type="text" class="form-control" id="input01" name="input01" value="input01" placeholder="名稱">
+                </div>
+            </div>
+            <div class="mx-1 p-4 row align-items-center row-bg-light">
+                <div class="col-12 col-md-2 col-lg-3 text-start text-md-end">
+                    <label class="form-label mb-0" for="input02"><span class="text-danger">*</span>帳號</label>
+                </div>
+                <div class="col-12 col-md-5 col-lg-8">
+                    <input type="text" class="form-control" id="input02" name="input02" value="" placeholder="信箱">
+                </div>
+            </div>
+            <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                <div class="col-12 col-md-2 col-lg-3 text-start text-md-end">
+                    <label class="form-label mb-0" for="input04"><span class="text-danger">*</span>密碼</label>
+                </div>
+                <div class="col-12 col-md-5 col-lg-8">
+                    <input type="password" class="form-control" id="input04" name="input04" value="input04" placeholder="密碼">
+                </div>
+            </div>
+            <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                <div class="col-12 col-md-2 col-lg-3 text-start text-md-end">
+                    <label class="form-label mb-0" for="input04"><span class="text-danger">*</span>角色</label>
+                </div>
+                <div class="col-12 col-md-5 col-lg-8">
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>一般使用者</option>
+                        <option value="1">管理員</option>
+                        <option value="2">其他</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                <div class="col-5 col-md-2 col-lg-3 text-end">
+                    <label class="form-label mb-0" for="input03"><span class="text-danger">*</span>狀態</label>
+                </div>
+                <div class="col-5 col-md-5 col-lg-8">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input switch-status" type="checkbox" role="switch" id="input03" name="input03" checked>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary text-white">確認新增</button>
+        </div>
+    </div>
+    </div>
+</div>
