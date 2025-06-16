@@ -41,9 +41,9 @@ $logoHight: 72px;
     top: $logoHight;
     left: 0;
     min-width: $logoWidth;
-    background: #fff;
+    background: transparent;
     position: fixed;
-    z-index: 9;
+    z-index: 3;
     // transition-duration: 0.3s;
     @include pad {
         width: $logoWidth;
