@@ -1,0 +1,22 @@
+.bg-login {
+    height: 100vh;
+}
+
+.form-check-input.m-check {
+    width: 18px;
+    height: 18px;
+}
+
+.auth-table td {
+    vertical-align: middle;
+}
+
+.auth-table th,
+.auth-table td:first-child,
+.auth-table td:nth-child(2) {
+    text-wrap: nowrap;
+}
+
+.table.auth-table > :not(caption) > * > * {
+    padding: 12px 8px;
+}

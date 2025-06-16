@@ -1,0 +1,23 @@
+@mixin bigPad {
+    @media (max-width: 988px) {
+        @content;
+    }
+}
+@mixin pad {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin h-mobile {
+    @media (max-width: 560px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+// bigPad-988px
+// pad-768px
+// mobile-375px

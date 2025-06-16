@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="/assets/Image/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>福智電子報</title>
+<!-- Font Awesome Solid + Brands -->
+<link href="/Plugin/fontawesome/css/fontawesome.css" rel="stylesheet" />
+<link href="/Plugin/fontawesome/css/brands.css" rel="stylesheet" />
+<link href="/Plugin/fontawesome/css/solid.css" rel="stylesheet" />
+<!-- Bootstrap -->
+<link href="/Plugin/bootstrap-5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="fixed-top contianer-fluid d-flex justify-content-between align-items-center shadow-sm">
+        <!-- logo -->
+        <div class="side-div logo p-0 fixed-top bg-white">
+            <h1 class="logo-text m-0 fw-bold">
+                <a href="index.html" class="d-inline-block px-3 py-3 link-dark text-decoration-none shadow-sm">
+                    <span class="d-flex">
+                        <img class="my-1 me-2" src="/assets/Image/fj-logo.png" alt="福智教育園區-電子報管理系統">
+                        <span class="fs-5">福智教育園區<span class="fs-6">電子報管理系統</span></span>
+                    </span>
+                </a>
+            </h1>
+        </div>
+        <!-- section-nav -->
+        <div class="right-header fixed-top bg-white ps-7 pe-6 d-flex justify-content-between align-items-center shadow-sm">
+            <div>
+                <a href="#" class="btn btn-toggle link-dark p-0">
+                    <i class="fas fa-bars" style="line-height: 1; color: rgb(30, 48, 80)"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center fz-3">
+                <!-- 使用者資訊 -->
+                <span class="user-info d-sm-block d-none"> 系統管理員 / 陳小明 </span>
+                <div class="dropdown d-inline ps-1">
+                    <button class="py-4 btn btn-sm dropdown-toggle border-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton2">
+                        <li class="d-sm-none d-block border-bottom">
+                            <span class="user-info dropdown-item py-2"> 系統管理員 / 陳小明 </span>
+                        </li>
+                        <li><a class="dropdown-item py-2 border-bottom" href="UserEdit.html">基本資料</a></li>
+                        <li>
+                            <a class="dropdown-item py-2" href="#">登出<i class="fas fa-sign-out-alt ms-1"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="fixed-content container-fluid sidebar-nav px-0 d-flex justify-content-start">
+        <!-- 左側欄 -->
+        <aside class="aside-left side-div p-0 border-0 shadow-sm">
+            <nav class="accordion accordion-flush" id="accordion">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="open1">
+                        <button class="p-5 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            系統設定
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="open1">
+                        <div class="accordion-body p-0">
+                            <ul class="flush-child list-group list-group-flush">
+                                <li class="list-group-item p-0 border-0">
+                                    <a class="text-decoration-none text-decoration-none fz-2 d-block link-dark py-3 px-4" href="#">使用者管理</a>
+                                </li>
+                                <li class="list-group-item p-0 border-0">
+                                    <a class="text-decoration-none text-decoration-none fz-2 d-block link-dark py-3 px-4" href="#">權限管理</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a class="w-100 p-5 d-inline-block sidebar-no-child link-dark text-decoration-none" href="equipment-management.html">
+                    裝備物料管理
+                </a>
+                <a class="w-100 p-5 d-inline-block sidebar-no-child link-dark text-decoration-none" href="#"> 裝備構型管理
+                </a>
+                <a class="w-100 p-5 d-inline-block sidebar-no-child link-dark text-decoration-none" href="ship-list.html">
+                    艦艇構型管理
+                </a>
+                <a class="w-100 p-5 d-inline-block sidebar-no-child link-dark text-decoration-none" href="#"> 文件中心 </a>
+            </nav>
+        </aside>
+        <section class="page-content-bg">
+            <div class="page-content mx-4 mt-1 bg-white">
+                <!-- page-heading -->
+                <div class="pt-md-3 pb-md-4 px-md-4 p-3 d-flex justify-content-between flex-sm-row flex-column bg-white border-bottom align-items-sm-center align-items-start">
+                    <div class="mb-md-0 mb-2 d-flex flex-row flex-column-reverse justify-content-between fs-6 align-items-start">
+                        <h3 class="m-0 mt-2 content-icon-title fw-bold fz-6">編輯角色</h3>
+                        <nav aria-label="breadcrumb align-self-end  my-2">
+                            <ol class="breadcrumb m-0 p-0 justify-content-start">
+                                <li class="breadcrumb-item m-0 p-0">
+                                    <a class="text-decoration-none fz-1 me-1" href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item m-0 p-0">
+                                    <a class="text-decoration-none fz-1 me-1" href="#">系統管理</a>
+                                </li>
+                                <li class="breadcrumb-item m-0 p-0">
+                                    <a class="text-decoration-none fz-1 me-1" href="#">權限管理</a>
+                                </li>
+                                <li class="breadcrumb-item m-0 p-0 active">
+                                    <a class="text-decoration-none fz-1 me-1 disabled" href="auth-edit-role-list.html">編輯角色</a>
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outlilne-primary border-primary link-primary mb-2 mb-sm-0">返回 <i class="fa-solid fa-share"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content mx-4 mh-90 p-4 bg-white">
+                <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
+                        <label class="form-label mb-0" for="input01"><span class="text-danger">*</span>角色名稱</label>
+                    </div>
+                    <div class="col-12 col-md-5 col-lg-5">
+                        <input type="text" class="form-control" id="input01" name="input01" value="input01" placeholder="系統管理者">
+                    </div>
+                </div>
+                <div class="mx-1 p-4 row align-items-top row-bg-light">
+                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
+                        <label class="form-label mb-0" for="input02"><span class="text-danger">*</span>說明</label>
+                    </div>
+                    <div class="col-12 col-md-5 col-lg-5">
+                        <textarea class="form-control" id="input02" name="input02"></textarea>
+                    </div>
+                </div>
+                <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                    <div class="col-5 col-md-2 col-lg-2 text-end">
+                        <label class="form-label mb-0" for="input03"><span class="text-danger">*</span>狀態</label>
+                    </div>
+                    <div class="col-5 col-md-5 col-lg-5">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input switch-status" type="checkbox" role="switch" id="input03" name="input03" checked>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-row d-flex justify-content-center justify-content-md-end pt-3">
+                    <div class="m-1 btn btn-outline-primary">取消</div>
+                    <div class="m-1 btn btn-primary link-light">確認</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script type="module" src="main.js"></script>
+    <!-- jQuery -->
+    <script src="/Plugin/jQuery/jquery-3.7.1.min.js"></script>
+    <!-- 自定義 js -->
+    <script src="/assets/js/sidebar/sidebars.js"></script>
+    <!-- Bootstrap -->
+    <script src="/Plugin/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+  </body>
+</html>

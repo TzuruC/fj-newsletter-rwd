@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="/assets/Image/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>福智電子報</title>
+<!-- Font Awesome Solid + Brands -->
+<link href="/Plugin/fontawesome/css/fontawesome.css" rel="stylesheet" />
+<link href="/Plugin/fontawesome/css/brands.css" rel="stylesheet" />
+<link href="/Plugin/fontawesome/css/solid.css" rel="stylesheet" />
+<!-- Bootstrap -->
+<link href="/Plugin/bootstrap-5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="main-signin text-center d-flex flex-column justify-content-center align-items-center">
+            <div class="form-signin">
+                <div class="header-logo flex-shrink-0 mb-2
+                 w-100 my-0 mx-a">
+                    <img class="mb-1" src="/assets/Image/fj-logo.png" alt="logo">
+                    <h1 class="pt-0 fw-bolder mb-0 fs-2">福智教育園區</h1>
+                    <div class="fw-bolder fs-5">電子報管理系統</div>
+                </div>
+                <form class>
+                    <input name="LoginForm" type="hidden" id="RandomSession" value="ea08d2b7-2e65-419d-bf86-d701f41402fa">
+
+                    <div class="form-floating mb-2">
+                        <input type="text" name="LoginForm" class="form-control rounded-top" id="LoginForm-ID"
+                            placeholder="請輸入帳號 ..">
+                        <label for="floatingInput">帳號</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <input type="password" name="LoginForm" class="form-control rounded-bottom" id="LoginForm-PW"
+                            placeholder="請輸入密碼.." autocomplete="off">
+                        <label for="floatingPassword">密碼</label>
+                    </div>
+
+                    <div class="row my-3">
+                        <!-- <div class="col"><a class="text-decoration-none" href="Register.jsp"><i class="fas fa-user-plus me-2"></i>註冊帳號</a></div> -->
+                        <div class="col">
+                            <a class="text-decoration-none" href="#" onclick="OpenModel('ForgetPW-Modal');"><i
+                                    class="fas fa-question-circle me-2"></i>忘記密碼</a>
+                        </div>
+                    </div>
+
+                    <button id="loginBtn" class="w-100 btn btn-lg btn-primary link-light mb-5" name="LoginForm" type="button"
+                        onclick="LoginVerify();">
+                        登入
+                    </button>
+                </form>
+            </div>
+            <div class="modal fade" id="ForgetPW-Modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">忘記密碼</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-white">
+                            <div class="main-signin">
+                                <div class="form-signin">
+                                    <h5 class="fw-bold mb-3 text-center">忘記密碼</h5>
+                                    <p class="text-body col-12 pb-1">
+                                        若您忘記密碼或帳號，需請您填寫您的身分證字號與註冊信箱，
+                                        系統確認無誤後，將會寄送重設密碼連結給您重新設定。
+                                    </p>
+        
+                                    <form>
+                                        <div class="p-2 row gx-2">
+                                            <label for="ForgetPWForm-UserID" class="col-form-label-sm col-md-12 pe-3">
+                                                <span class="text-danger">*</span>帳號</label>
+                                            <div class="col-md-12">
+                                                <input name="ForgetPWForm" placeholder="請輸入帳號" type="text"
+                                                    id="ForgetPWForm-UserID" class="form-control rounded-1" autocomplete="off">
+                                            </div>
+                                            <p class="Feedback my-1 d-none">
+                                                <i class="fas fa-times-circle me-1"></i>請輸入帳號
+                                            </p>
+                                        </div>
+        
+                                        <div class="p-2 row gx-2">
+                                            <label for="ForgetPWForm-Email" class="col-form-label-sm col-md-12 pe-3">
+                                                <span class="text-danger">*</span>電子信箱</label>
+                                            <div class="col-md-12">
+                                                <input name="ForgetPWForm" placeholder="請輸入電子信箱" type="email"
+                                                    id="ForgetPWForm-Email" class="form-control rounded-1" autocomplete="off">
+                                            </div>
+                                            <p class="Feedback my-1 d-none">
+                                                <i class="fas fa-times-circle me-1"></i>請輸入電子信箱
+                                            </p>
+                                        </div>
+                                    </form>
+        
+                                    <p class="PromptText text-danger col-12 py-3">
+                                        請注意，重設密碼連結僅在1日內有效，請您成功送出申請後速至信箱收信。<br>
+                                        如尚未收到信件，可能由於部分信箱會轉到垃圾信件，所以也請您不吝多留意「垃圾郵件夾」。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">返回</button>
+                            <button type="button" class="btn btn-primary" onclick="ForgetPW();">送出</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="modal fade" id="ResetPW-Modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">重設密碼</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-white">
+                            <div class="main-signin">
+                                <div class="form-signin">
+                                    <h5 class="fw-bold mb-3 text-center">重設密碼</h5>
+                                    <form>
+                                        <div class="p-2 row gx-2">
+                                            <label for="ResetPWForm-PW1" class="col-form-label-sm col-md-12 pe-3">
+                                                <span class="text-danger">*</span>設定密碼</label>
+                                            <div class="col-md-12">
+                                                <input name="ResetPWForm" placeholder="請輸入密碼" type="password"
+                                                    id="ResetPWForm-PW1" class="form-control rounded-1" autocomplete="off">
+                                            </div>
+                                            <p class="Feedback my-1 d-none">
+                                                <i class="fas fa-times-circle me-1"></i>密碼須符合規則。
+                                            </p>
+                                        </div>
+        
+                                        <div class="p-2 row gx-2">
+                                            <label for="ResetPWForm-PW2" class="col-form-label-sm col-md-12 pe-3">
+                                                <span class="text-danger">*</span>再次輸入密碼</label>
+                                            <div class="col-md-12">
+                                                <input name="ResetPWForm" placeholder="再次輸入密碼" type="password"
+                                                    id="ResetPWForm-PW2" class="form-control rounded-1" autocomplete="off">
+                                            </div>
+                                            <p class="Feedback my-1 d-none">
+                                                <i class="fas fa-times-circle me-1"></i>密碼輸入不相同。
+                                            </p>
+                                        </div>
+                                    </form>
+        
+                                    <p class="p-2 pb-3 PromptText col-12">
+                                        <i class="fas fa-info-circle me-1"></i>
+                                        長度至少需有8位以上，應英數字、特殊符號混合（不得8位皆為英文或數字）、同一英文字母其大小寫視為不同字元。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">返回</button>
+                            <button type="button" class="btn btn-primary" onclick="ResetPW();">送出</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginBtn = document.querySelector('#loginBtn');
+        // 登入成功
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            Swal.fire({
+                title: '登入成功',
+                text: '即將登入系統',
+                icon: 'success',
+                // icon選項 - success | error | info
+                confirmButtonColor: '#057bdd',
+                // timer: 3000,
+                // timer 倒數關閉
+            });
+        });
+    </script>
+
+
+    <script type="module" src="main.js"></script>
+    <!-- Bootstrap -->
+    <script src="/Plugin/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Sweetalert -->
+    <script src="Plugin/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  </body>
+</html>

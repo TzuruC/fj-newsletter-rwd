@@ -1,0 +1,198 @@
+$logoWidth: 200px;
+$logoHight: 72px;
+.content-sidebar {
+    width: $logoWidth;
+}
+.content-sidebar-nav {
+    color: #067cdf;
+    cursor: pointer;
+    &:hover {
+        background-color: #067cdf;
+    }
+    &.active {
+        color: #fff;
+        background-color: #067cdf;
+    }
+    &.tree {
+        background: url('assets/Image/layout/tree-active.png') 22px 10px no-repeat;
+        &.active {
+            color: #fff;
+            background: url('assets/Image/layout/tree-active.png') 22px 10px no-repeat;
+            background-color: #067cdf;
+        }
+    }
+    &.search {
+        background: url('assets/Image/layout/search-normal.png') 22px 10px no-repeat;
+        &.active {
+            color: #fff;
+            background: url('assets/Image/layout/search-active.png') 22px 10px no-repeat;
+            background-color: #067cdf;
+        }
+    }
+}
+
+.logo {
+    width: $logoWidth;
+    height: $logoHight;
+}
+.aside-left {
+    width: $logoWidth;
+    height: calc(100vh - $logoHight);
+    top: $logoHight;
+    left: 0;
+    min-width: $logoWidth;
+    background: #fff;
+    position: fixed;
+    z-index: 9;
+    // transition-duration: 0.3s;
+    @include pad {
+        width: $logoWidth;
+        height: 100vh;
+        top: $logoHight;
+        left: 0;
+        box-sizing: border-box;
+        position: fixed;
+    }
+    &.hidden {
+        margin-left: -$logoWidth; /* js控制 */
+    }
+}
+section.page-content-bg {
+    width: calc(100% - $logoWidth);
+    margin-left: $logoWidth;
+    // transition-duration: 0.3s;
+    &.twoAsides {
+        width: calc(100% - $logoWidth - 265px);
+        margin-left: $logoWidth;
+        margin-right: 265px;
+        &.hidden-left {
+            width: calc(100% - 265px); /* js控制 */
+            margin-left: 0px;
+        }
+        &.hidden-right {
+            width: calc(100% - $logoWidth); /* js控制 */
+            margin-right: 0px;
+        }
+    }
+    @include pad {
+        width: 100%; /* js控制 */
+        margin-left: 0px;
+    }
+    &.hidden {
+        width: 100%; /* js控制 */
+        margin-left: 0px;
+    }
+    &.hidden-left {
+        width: 100%; /* js控制 */
+        margin-left: 0px;
+    }
+    &.hidden-right {
+        width: calc(100% - $logoWidth); /* js控制 */
+        margin-right: 0px;
+    }
+    &.hidden-left.hidden-right {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.logo-text {
+    line-height: 24px;
+}
+a.sidebar-link:focus {
+    outline: none;
+}
+.content-sidebar .accordion-button {
+    &:focus {
+        border-color: transparent;
+        box-shadow: none;
+    }
+    &::after {
+        transform-origin: 5px 10px;
+    }
+    &.collapse {
+        &::after {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            background-image: none;
+            &:hover {
+                color: #fff;
+            }
+        }
+        &:not(.collapsed)::after {
+            color: #fff !important;
+            transform: rotate(90deg);
+            background-image: none;
+        }
+    }
+}
+.accordion-collapse .list-group-item a:hover,
+.content-sidebar .accordion-button:hover {
+    color: #fff !important;
+    background-color: #0d6efd;
+    &::after {
+        color: #fff !important;
+        background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%23ffffff%22%20viewBox%3D%220%200%20640%201024%22%3E%3Cpath%20d%3D%22M310.6%20233.4c12.5%2012.5%2012.5%2032.8%200%2045.3l-192%20192c-12.5%2012.5-32.8%2012.5-45.3%200s-12.5-32.8%200-45.3L242.7%20256%2073.4%2086.6c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l192%20192z%22%2F%3E%3C%2Fsvg%3E') !important;
+    }
+}
+.content-sidebar .accordion-button:not(.collapsed) {
+    color: #fff;
+    background: #4888e7;
+    &::after {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1024"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>') !important;
+    }
+}
+.content-sidebar .accordion-button:not(.collapsed):hover {
+    color: #fff;
+    background-color: #0d6efd;
+    &::after {
+        background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%23ffffff%22%20viewBox%3D%220%200%20640%201024%22%3E%3Cpath%20d%3D%22M310.6%20233.4c12.5%2012.5%2012.5%2032.8%200%2045.3l-192%20192c-12.5%2012.5-32.8%2012.5-45.3%200s-12.5-32.8%200-45.3L242.7%20256%2073.4%2086.6c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l192%20192z%22%2F%3E%3C%2Fsvg%3E') !important;
+    }
+}
+.content-sidebar a.sidebar-no-child {
+    width: 100%;
+    padding: 18px 19px;
+    background: #ffffff;
+    color: #212529;
+    display: block;
+    &:hover,
+    &.active:hover {
+        color: #fff !important;
+        background-color: #0d6efd !important;
+    }
+    &.active {
+        color: #212529 !important;
+        background: #b3d8ff !important;
+    }
+    &::after {
+        content: '';
+        font-family: 'Font Awesome 6 Free';
+        background-image: none;
+        position: absolute;
+        right: 29px;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+.sidebar-link:hover:after {
+    color: #fff;
+}
+
+ul.flush-child {
+    background: #e1f0ff;
+}
+ul.flush-child a {
+    background: #e1f0ff;
+}
+
+ul.flush-child a.active {
+    color: #212529;
+    background: #b3d8ff;
+}
+.dropdown-menu {
+    z-index: 11;
+}
+.sidebar-nav{
+    padding-top: $logoHight;
+}

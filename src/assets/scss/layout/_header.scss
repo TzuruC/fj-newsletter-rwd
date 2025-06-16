@@ -1,0 +1,30 @@
+/* HEADER */
+.logo {
+    z-index: 1000;
+}
+.logo-text img{
+    height: 40px;
+}
+.logo-text span{
+    display: block;
+    font-size: 16px;
+}
+header.fixed-top {
+    z-index: 9;
+    .logo.fixed-top {
+        z-index: 10;
+    }
+    .right-header.fixed-top {
+        z-index: 9;
+    }
+}
+.right-header {
+    width: calc(100vw - $logoWidth);
+    height: $logoHight;
+    margin-left: $logoWidth;
+    left: $logoWidth;
+    z-index: 9;
+}
+.aside-left {
+    width: $logoWidth;
+}

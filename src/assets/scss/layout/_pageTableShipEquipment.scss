@@ -1,0 +1,51 @@
+.pageTable9Hide4,
+.tableStyle {
+    font-size: 14px;
+    vertical-align: middle;
+    border-bottom: 1px solid #e6e6e6 !important;
+    thead tr:first-child {
+        background: #f5f5f5;
+    }
+    thead th {
+        border-bottom: 1px solid #e6e6e6 !important;
+    }
+    td {
+        padding: 4px auto;
+        line-height: 48px;
+        border-bottom: 1px solid #e6e6e6 !important;
+        background-color: #ffffff;
+    }
+    td.child {
+        line-height: 34px;
+        background-color: #f5f5f5;
+        li {
+            border-bottom: 1px solid #e7e7e7 !important;
+        }
+        li:last-child {
+            border-bottom: 0 !important;
+        }
+    }
+}
+table.dataTable > tbody > tr.child span.dtr-title {
+    min-width: auto;
+    &::after {
+        content: '：';
+    }
+}
+table.dataTable > tbody > tr.child:first-child span.dtr-title {
+    min-width: auto;
+    &::after {
+        content: '';
+    }
+}
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control::before {
+    left: 10px;
+    box-shadow: 0 0 0.1em #919191;
+}
+.dtr-details {
+    width: 100%;
+}
+.dataTables_info {
+    font-size: 14px;
+}

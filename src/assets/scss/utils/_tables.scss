@@ -1,0 +1,69 @@
+tr.bg-table-title-gray {
+    background: #f5f5f5;
+}
+table.bg-light-title-table,
+.bg-light-title-table thead,
+.bg-light-title-table tbody,
+.bg-light-title-table > tr > th,
+.bg-light-title-table tr,
+.bg-light-title-table td,
+.table.bg-light-title-table > :not(:last-child) > :last-child > * {
+    border-color: #e6e6e6;
+}
+/*-------------------------------------------*\
+	toggleSwitch.scss
+\*-------------------------------------------*/
+.custom-form-switch {
+    position: relative;
+    /* The dot */
+    /* toggle on */
+    /* moves the dot when on */
+    max-height: 25px;
+}
+.custom-form-switch .form-switch-input {
+    opacity: 0;
+    width: 0;
+}
+.custom-form-switch label {
+    font-size: 0.875em;
+}
+.custom-form-switch input.form-switch-input:empty + label:before {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.custom-form-switch input.form-switch-input:empty + label:before,
+.custom-form-switch input.form-switch-input:empty + label:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    content: attr(data-off-text);
+    padding: 0;
+    width: 60px;
+    height: 25px;
+    text-indent: 25px;
+    color: #343a40;
+    background-color: #fff;
+    border-radius: 55px;
+    transition: all 180ms ease-in;
+}
+.custom-form-switch input.form-switch-input:empty + label:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: #dee2e6;
+}
+.custom-form-switch input.form-switch-input:checked + label:before {
+    content: attr(data-on-text);
+    text-indent: 7px;
+    color: #fff;
+    background-color: #21b26f;
+    border-color: #198754;
+}
+.custom-form-switch input.form-switch-input:checked + label:after {
+    margin-left: 40px;
+    background-color: #fff;
+}

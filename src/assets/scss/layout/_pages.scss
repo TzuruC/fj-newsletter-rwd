@@ -1,0 +1,62 @@
+h3.content-icon-title {
+    background: url('./assets/Image/layout/heading-icon.png') 0 5px no-repeat;
+    padding-left: 26px;
+}
+h4.content-icon-title {
+    background: url('./assets/Image/layout/heading-icon-2.png') 0 5px no-repeat;
+    padding-left: 16px;
+}
+.breadcrumb-item {
+    line-height: 17px;
+    & > a {
+        color: #4d4d4d;
+        border-bottom: 1px solid #4d4d4d;
+        &:hover {
+            color: #067cdf;
+            border-bottom: 1px solid #067cdf;
+        }
+    }
+    &.active > a {
+        line-height: 17px;
+        color: #067cdf;
+        border-bottom: 0;
+        &:hover {
+            border-bottom: 1px solid #067cdf;
+        }
+    }
+    &::before {
+        padding-right: 6px !important;
+    }
+}
+.content-data {
+    width: calc(100% - 211px);
+    background: #f8f8f9;
+    &.sidebarHide {
+        width: 100%;
+    }
+    @include pad {
+        width: 100%;
+    }
+}
+.border-heading {
+    border-left: 3px solid #067cdf;
+}
+.tab-search-input {
+    max-width: 263px;
+}
+.form-control.tab-search-input::placeholder {
+    color: #cccccc;
+}
+.tab-search .btn {
+    font-size: 14px;
+    &:hover {
+        // color: #f8f8f9;
+    }
+}
+.config-link-btn a {
+    background-color: #f0f4ff;
+    // border: 2px solid $primary;
+}
+.inner-sidebar-nav-group > * {
+    height: 50%;
+}

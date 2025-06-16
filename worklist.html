@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/assets/Image/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>福智電子報</title>
+    <!-- Font Awesome Solid + Brands -->
+    <link href="/Plugin/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="/Plugin/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="/Plugin/fontawesome/css/solid.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="/Plugin/bootstrap-5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #eeeeee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-slide {
+            width: 80%;
+        }
+
+        .swiper-slide:nth-child(2n) {
+            width: 80%;
+        }
+
+        .swiper-slide:nth-child(3n) {
+            width: 40%;
+        }
+
+        /* 自定義 */
+        .swiper-pagination {
+            position: static;
+        }
+
+        .swiper-pagination-bullet {
+            width: auto;
+            height: auto;
+            padding: 8px 20px;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+    <div class="container p-5">
+        <h1 class="text-center fw-bold">福智電子報</h1>
+
+        <!-- ---------------------------------------- -->
+        <!--              開發用頁面-頁面索引                -->
+        <!-- ---------------------------------------- -->
+        <h3 class="text-center fw-bold">開發-頁面索引</h3>
+        <table class="table table-light table-bordered fs-14 text-start">
+          <tr class="table-primary fs-14">
+              <th>檔案名稱 (點兩下複製)</th>
+              <th>頁面名稱 ( title )</th>
+              <th>簡介 / 功能</th>
+              <th>使用套件</th>
+              <th>備註</th>
+          </tr>
+          <tr>
+              <td class="copyText">worklist.html</td>
+              <td><a href="worklist.html" class="text-decoration-none">
+                <!-- 頁面名稱 --> 專案-索引頁
+              </a></td>
+              <td class="text-start">
+                <!-- 頁面簡介 --> 所有頁面索引
+              </td>
+              <td>
+                <!-- 使用插件 --> 
+              </td>
+              <td>
+                <!-- 備註 --> - -
+              </td>
+          </tr>
+          <tr class="table-primary fs-14">
+              <td class="p-1" colspan="5"></td>
+          </tr>
+        </table>
+
+
+        <!-- ---------------------------------------- -->
+        <!--              前台-頁面索引                -->
+        <!-- ---------------------------------------- -->
+        <h3 class="text-center fw-bold">前台-頁面索引</h3>
+        <table class="table table-light table-bordered fs-14 text-start">
+          <tr class="table-primary fs-14">
+              <th>檔案名稱 (點兩下複製)</th>
+              <th>頁面名稱 ( title )</th>
+              <th>簡介 / 功能</th>
+              <th>使用套件</th>
+              <th>備註</th>
+          </tr>
+          <tr>
+              <td class="copyText">newsletter-content.html</td>
+              <td><a href="newsletter-content.html" class="text-decoration-none">
+                <!-- 頁面名稱 --> 電子報內容內頁(含列表)
+              </a></td>
+              <td class="text-start">
+                <!-- 頁面簡介 --> 前台首頁
+              </td>
+              <td>
+                <!-- 使用插件 --> 
+              </td>
+              <td>
+                <!-- 備註 --> - -
+              </td>
+          </tr>
+          <tr class="table-primary fs-14">
+            <td class="p-1" colspan="5"></td>
+          </tr>
+        </table>
+        
+        <!-- ---------------------------------------- -->
+        <!--              後台-頁面索引                -->
+        <!-- ---------------------------------------- -->
+        <h3 class="text-center fw-bold">後台-頁面索引</h3>
+        <table class="table table-light table-bordered fs-14 text-start">
+          <tr class="table-primary fs-14">
+              <th>檔案名稱 (點兩下複製)</th>
+              <th>頁面名稱 ( title )</th>
+              <th>簡介 / 功能</th>
+              <th>使用套件</th>
+              <th>備註</th>
+          </tr>
+          <tr>
+              <td class="copyText">login.html</td>
+              <td><a href="login.html" class="text-decoration-none">
+                <!-- 頁面名稱 --> 登入頁
+              </a></td>
+              <td class="text-start">
+                <!-- 頁面簡介 --> 後台登入前首頁
+              </td>
+              <td>
+                <!-- 使用插件 --> 
+                Sweetalert
+              </td>
+              <td>
+                <!-- 備註 --> - -
+              </td>
+          </tr>
+                    
+          <tr class="table-primary fz-2">
+            <td class="py-1" colspan="9">系統管理</td>
+          </tr>
+          <tr>
+              <td class="copyText">user-profile.html</td>
+              <td><a href="user-profile.html" class="text-decoration-none">
+                <!-- 頁面名稱 --> 使用者基本資料
+              </a></td>
+              <td class="text-start">
+                <!-- 頁面簡介 --> 後台登入前首頁
+              </td>
+              <td>
+                <!-- 使用插件 --> 
+              </td>
+              <td>
+                <!-- 備註 --> - -
+              </td>
+          </tr>
+          <tr>
+              <td class="copyText">user-management-list.html</td>
+              <td><a href="user-management-list.html" class="text-decoration-none">
+                <!-- 頁面名稱 --> 使用者管理(列表)
+              </a></td>
+              <td class="text-start">
+                <!-- 頁面簡介 --> 後台登入前首頁
+              </td>
+              <td>
+                <!-- 使用插件 --> 
+              </td>
+              <td>
+                <!-- 備註 --> - -
+              </td>
+          </tr>
+          <tr>
+              <td class="copyText">user-management-create.html</td>
+              <td><a href="user-management-create.html" class="text-decoration-none">
+                <!-- 頁面名稱 --> 使用者管理(新增)
+              </a></td>
+              <td class="text-start">
+                <!-- 頁面簡介 --> 後台登入前首頁
+              </td>
+              <td>
+                <!-- 使用插件 --> 
+              </td>
+              <td>
+                <!-- 備註 --> - -
+              </td>
+          </tr>
+          <tr>
+              <td class="copyText">user-management-edit.html</td>
+              <td><a href="user-management-edit.html" class="text-decoration-none">
+                <!-- 頁面名稱 --> 使用者管理(編輯)
+              </a></td>
+              <td class="text-start">
+                <!-- 頁面簡介 --> 後台登入前首頁
+              </td>
+              <td>
+                <!-- 使用插件 --> 
+              </td>
+              <td>
+                <!-- 備註 --> - -
+              </td>
+          </tr>
+
+          <tr class="table-primary fz-2">
+            <td class="py-1" colspan="9">電子報管理</td>
+          </tr>
+          <tr>
+              <td class="copyText">newsletter-list.html</td>
+              <td><a href="newsletter-list.html" class="text-decoration-none">
+                <!-- 頁面名稱 --> 電子報列表
+              </a></td>
+              <td class="text-start">
+                <!-- 頁面簡介 --> 後台登入前首頁
+              </td>
+              <td>
+                <!-- 使用插件 --> 
+              </td>
+              <td>
+                <!-- 備註 --> - -
+              </td>
+          </tr>
+          <tr>
+              <td class="copyText">newsletter-view.html</td>
+              <td><a href="newsletter-view.html" class="text-decoration-none">
+                <!-- 頁面名稱 --> 檢視/新增/編輯電子報
+              </a></td>
+              <td class="text-start">
+                <!-- 頁面簡介 --> 後台登入前首頁
+              </td>
+              <td>
+                <!-- 使用插件 --> 
+              </td>
+              <td>
+                <!-- 備註 --> - -
+              </td>
+          </tr>
+          <tr class="table-primary fs-14">              
+            <td class="p-1" colspan="5"></td>
+          </tr>
+        </table>
+    </div>
+    <!-- Bootstrap -->
+    <script src="/Plugin/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="main.js"></script>
+
+    <script>
+        const copyText = document.querySelectorAll('.copyText');
+        copyText.forEach((e) => {
+            e.addEventListener('dblclick', (e) => {
+                const textToCopy = e.target.innerText;
+                // 複製文字到剪貼板
+                navigator.clipboard
+                    .writeText(textToCopy)
+                    .then(() => {
+                        e.target.innerHTML = `${textToCopy}<span class="mx-1 px-1 bg-secondary text-white d-inline-block">已複製 !</span>`;
+                        setTimeout(() => {
+                            e.target.innerHTML = `${textToCopy}`;
+                        }, 1000);
+                    })
+                    .catch((err) => {
+                        console.error('文字複製失敗: ', err);
+                    });
+            });
+        });
+    </script>
+  </body>
+</html>

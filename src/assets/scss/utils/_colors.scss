@@ -1,0 +1,9 @@
+.btn-outline-secondary.hover-danger {
+    &:hover,
+    &:active,
+    &:focus-visible {
+        background: $danger !important;
+        color: $white !important;
+        border-color: $danger !important;
+    }
+}
