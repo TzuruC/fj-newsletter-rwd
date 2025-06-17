@@ -44,7 +44,7 @@
                         </nav>
                     </div>
                     <div>
-                        <div class="btn btn-primary text-light mb-2 mb-sm-0" data-bs-toggle="modal" data-bs-target="#createUserModal">新增</div>
+                        <a href="" class="btn btn-primary text-light mb-2 mb-sm-0">新增</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
 
 
         <!-- Modal -->
-         <%- include('src/layout/modalUserCreate.ejs') -%>
+         <%- include('src/layout/modalNewsletterView.ejs') -%>
     </div>
 
 
@@ -71,7 +71,7 @@
     <script>
         $(document).ready(function () {
             
-            $('#tableUserList').DataTable({
+            $('#tableNewsletterList').DataTable({
                 lengthChange: false,
                 searching: false,
                 autoWidth: false,
@@ -104,11 +104,11 @@
                 ],
                 columns: [
                     { width: '0px' },
-                    { width: '110px' },
-                    { width: 'auto' },
-                    { width: '70px' },
-                    { width: '200px' },
                     { width: '120px' },
+                    { width: '200px' },
+                    { width: '80px' },
+                    { width: '250px' },
+                    { width: '80px' },
                 ],
             });
         });

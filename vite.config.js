@@ -55,11 +55,12 @@ export default defineConfig({
     rollupOptions: {
       input: htmlEntries,
       output: {
+        // 不加 hash
         entryFileNames: 'assets/js/[name].js',
-        // 停止動態 chunk 分離
+        chunkFileNames: 'assets/js/[name].js',
+        assetFileNames: 'assets/[name][extname]',
+        // 停止 dynamic chunk 拆分
         manualChunks: undefined,
-        chunkFileNames: undefined,
-        assetFileNames: 'assets/[name].[ext]',
       },
     },
     sourcemap: false,
