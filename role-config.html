@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="/assets/Image/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>福智電子報</title>
+<!-- Font Awesome Solid + Brands -->
+<link href="/Plugin/fontawesome/css/fontawesome.css" rel="stylesheet" />
+<link href="/Plugin/fontawesome/css/brands.css" rel="stylesheet" />
+<link href="/Plugin/fontawesome/css/solid.css" rel="stylesheet" />
+<!-- Bootstrap -->
+<link href="/Plugin/bootstrap-5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Datatables -->    
+<link rel="stylesheet" href="/Plugin/DataTables/datatables.min.css">
+</head>
+<body>
+    <!-- header -->
+    <%- include('src/layout/header.ejs'); -%>
+    
+    <div class="fixed-content container-fluid sidebar-nav px-0 d-flex justify-content-start">
+
+        <!-- 左側欄 -->
+        <%- include('src/layout/pageSidebar.ejs'); -%>
+        
+        <section class="page-content-bg">
+            <div class="page-content mx-4 mt-1 bg-white">
+                <!-- page-heading -->
+                <div class="pt-md-3 pb-md-4 px-md-4 p-3 d-flex justify-content-between flex-sm-row flex-column bg-white border-bottom align-items-sm-center align-items-start">
+                    <div class="mb-md-0 mb-2 d-flex flex-row flex-column-reverse justify-content-between fs-6 align-items-start">
+                        <h3 class="m-0 mt-2 content-icon-title fw-bold fz-6">角色權限設定</h3>
+                        <nav aria-label="breadcrumb align-self-end  my-2">
+                            <ol class="breadcrumb m-0 p-0 justify-content-start">
+                                <li class="breadcrumb-item m-0 p-0">
+                                    <a class="text-decoration-none fz-1 me-1" href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item m-0 p-0">
+                                    <a class="text-decoration-none fz-1 me-1" href="#">系統管理</a>
+                                </li>
+                                <li class="breadcrumb-item m-0 p-0">
+                                    <a class="text-decoration-none fz-1 me-1" href="#">角色權限管理</a>
+                                </li>
+                                <li class="breadcrumb-item m-0 p-0 active">
+                                    <a class="text-decoration-none fz-1 me-1 disabled" href="auth-user-list.html">角色權限設定</a>
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- 搜尋欄 -->
+                <div class="bg-white">
+                    <div class="d-flex justify-content-between align-items-end px-4 pt-2 pb-5 mb-2">
+                        <div class="d-flex flex-md-row flex-column align-items-md-end align-items-start">
+                            <div class="d-flex align-items-md-end align-items-start b-2 mb-md-0 flex-sm-row flex-column">
+                                <div class="me-2">
+                                    <label for="searchClass" class="form-label fz-1">管理群組</label>
+                                    <select id="searchClass" class="form-select" aria-label="管理者">
+                                        <option selected>
+                                            --
+                                        </option>
+                                        <option selected>管理者</option>
+                                        <option value="1">系統管理者</option>
+                                        <option value="2">學科管理者</option>
+                                        <option value="3">使用者</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content mx-4 mh-90 bg-white">
+                <table class="w-100 table auth-table bg-light-title-table fz-3">
+                    <thead class=" fw-bold">
+                        <tr class="bg-table-title-gray">
+                            <th class="ps-5">功能項目</th>
+                            <th>說明</th>
+                            <th>新增</th>
+                            <th>編輯</th>
+                            <th>檢視</th>
+                            <th>刪除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ps-5">使用者管理</td>
+                            <td>管理使用系統的各種使用者。包括創建新帳戶、編輯現有帳戶的資訊、啟用或停用帳戶，以及設定使用者的角色和權限等。</td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth11">
+                                        <input type="checkbox" class="form-check-input m-check m-check m-0" name="auth11" id="auth11" value="auth11" checked>
+                                        <span class="d-none">新增</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth12">
+                                        <input type="checkbox" class="form-check-input m-check m-0" name="auth12" id="auth12" value="auth12" checked>
+                                        <span class="d-none">編輯</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth13">
+                                        <input type="checkbox" class="form-check-input m-check m-0" name="auth13" id="auth13" value="auth13" checked>
+                                        <span class="d-none">檢視</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth14">
+                                        <input type="checkbox" class="form-check-input m-check m-0" name="auth14" id="auth14" value="auth14" checked>
+                                        <span class="d-none">刪除</span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ps-5">角色權限管理</td>
+                            <td></td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth11">
+                                        <input type="checkbox" class="form-check-input m-check m-check m-0" name="auth11" id="auth11" value="auth11" checked>
+                                        <span class="d-none">新增</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth12">
+                                        <input type="checkbox" class="form-check-input m-check m-0" name="auth12" id="auth12" value="auth12" checked>
+                                        <span class="d-none">編輯</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth13">
+                                        <input type="checkbox" class="form-check-input m-check m-0" name="auth13" id="auth13" value="auth13" checked>
+                                        <span class="d-none">檢視</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth14">
+                                        <input type="checkbox" class="form-check-input m-check m-0" name="auth14" id="auth14" value="auth14" checked>
+                                        <span class="d-none">刪除</span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ps-5">電子報管理</td>
+                            <td></td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth11">
+                                        <input type="checkbox" class="form-check-input m-check m-check m-0" name="auth11" id="auth11" value="auth11" checked>
+                                        <span class="d-none">新增</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth12">
+                                        <input type="checkbox" class="form-check-input m-check m-0" name="auth12" id="auth12" value="auth12" checked>
+                                        <span class="d-none">編輯</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth13">
+                                        <input type="checkbox" class="form-check-input m-check m-0" name="auth13" id="auth13" value="auth13" checked>
+                                        <span class="d-none">檢視</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-check p-0 text-center">
+                                    <label class="form-check-label" for="auth14">
+                                        <input type="checkbox" class="form-check-input m-check m-0" name="auth14" id="auth14" value="auth14" checked>
+                                        <span class="d-none">刪除</span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <!-- Modal -->
+         <%- include('src/layout/modalRoleUserCreate.ejs') -%>
+    </div>
+
+
+    <script type="module" src="main.js"></script>
+    <!-- Bootstrap -->
+    <script src="/Plugin/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="/Plugin/jQuery/jquery-3.7.1.min.js"></script>
+    <!-- 自定義 js -->
+    <script src="/assets/js/sidebar/sidebars.js"></script>
+    <!-- Datatables -->    
+    <script src="/Plugin/DataTables/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $('#tableUserList').DataTable({
+                lengthChange: false,
+                searching: false,
+                autoWidth: false,
+                pageLength: 20,
+                order: [[1, 'dec']],
+                responsive: true,
+                language: {
+                    processing:
+                        '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> ',
+                    info: '顯示第 _START_ 到第 _END_ 筆，共 _TOTAL_ 筆資料',
+                    lengthMenu: '每頁顯示 _MENU_ 筆資料',
+                },
+                columnDefs: [
+                    {
+                        targets: [0],
+                        orderable: false,
+                    },
+                    {
+                        targets: [0, 2, -1],
+                        responsivePriority: 1,
+                    },
+                    {
+                        targets: [1],
+                        responsivePriority: 2,
+                    },
+                    {
+                        targets: [0],
+                        className: 'text-lg-center',
+                    },
+                ],
+                columns: [
+                    { width: '0px' },
+                    { width: '180px' },
+                    { width: 'auto' },
+                    { width: '150px' },
+                ],
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            
+            $('#tableRoleUserCreateList').DataTable({
+                lengthChange: false,
+                searching: false,
+                autoWidth: false,
+                // pageLength: 20,
+                paging: false,
+                order: [[1, 'dec']],
+                responsive: true,
+                language: {
+                    processing:
+                        '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> ',
+                    info: '顯示第 _START_ 到第 _END_ 筆，共 _TOTAL_ 筆資料',
+                    lengthMenu: '每頁顯示 _MENU_ 筆資料',
+                },
+                columnDefs: [
+                    {
+                        targets: [0],
+                        orderable: false,
+                    },
+                    {
+                        targets: [0, 2, -1],
+                        responsivePriority: 1,
+                    },
+                    {
+                        targets: [1],
+                        responsivePriority: 2,
+                    },
+                    {
+                        targets: [0],
+                        className: 'text-lg-center',
+                    },
+                ],
+                columns: [
+                    { width: '0px' },
+                    { width: '180px' },
+                    { width: 'auto' },
+                ],
+            });
+        });
+    </script>
+  </body>
+</html>

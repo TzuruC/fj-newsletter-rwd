@@ -29,7 +29,7 @@
                 <div class="pt-md-3 pb-md-4 px-md-4 p-3 d-flex justify-content-between flex-sm-row flex-column bg-white border-bottom align-items-sm-center align-items-start">
                     <div class="mb-md-0 mb-2 d-flex flex-row flex-column-reverse justify-content-between fs-6 align-items-start">
                         <!-- 頁面大標題 -->
-                        <h3 class="m-0 mt-3 content-icon-title fw-bold fz-6">角色人員管理</h3>
+                        <h3 class="m-0 mt-3 content-icon-title fw-bold fz-6">系統管理員{{角色}} - 角色人員管理</h3>
                         <nav aria-label="breadcrumb align-self-end  my-2">
                             <ol class="breadcrumb m-0 p-0 justify-content-start">
                                 <li class="breadcrumb-item m-0 p-0">
@@ -38,26 +38,28 @@
                                 <li class="breadcrumb-item m-0 p-0">
                                     <a class="text-decoration-none fz-1 me-1" href="#">系統管理</a>
                                 </li>
+                                <li class="breadcrumb-item m-0 p-0">
+                                    <a class="text-decoration-none fz-1 me-1" href="#">角色權限管理</a>
+                                </li>
                                 <li class="breadcrumb-item m-0 p-0 active">
-                                    <a class="text-decoration-none fz-1 me-1 disabled" href="auth-user-list.html">添加使用者</a>
+                                    <a class="text-decoration-none fz-1 me-1 disabled" href="auth-user-list.html">角色人員管理</a>
                                 </li>
                             </ol>
                         </nav>
                     </div>
                     <div>
-                        <div class="btn btn-primary text-light mb-2 mb-sm-0" data-bs-toggle="modal" data-bs-target="#createRoleModal">添加使用者</div>
+                        <div class="btn btn-primary text-light mb-2 mb-sm-0" data-bs-toggle="modal" data-bs-target="#createRoleUserModal">添加使用者</div>
                     </div>
                 </div>
             </div>
             <div class="page-content mx-4 mh-90 pb-4 bg-white">
-                <%- include('src/layout/tableRoleList.ejs'); -%>
+                <%- include('src/layout/tableRoleUserMapping.ejs'); -%>
             </div>
         </section>
 
 
         <!-- Modal -->
-         <%- include('src/layout/modalRoleCreate.ejs') -%>
-         <%- include('src/layout/modalRoleEdit.ejs') -%>
+         <%- include('src/layout/modalRoleUserCreate.ejs') -%>
     </div>
 
 
@@ -92,11 +94,11 @@
                         orderable: false,
                     },
                     {
-                        targets: [0, 2, 3, -1],
+                        targets: [0, 2, -1],
                         responsivePriority: 1,
                     },
                     {
-                        targets: [2, 4,],
+                        targets: [1],
                         responsivePriority: 2,
                     },
                     {
@@ -106,11 +108,52 @@
                 ],
                 columns: [
                     { width: '0px' },
-                    { width: '150px' },
-                    { width: 'auto' },
-                    { width: '100px' },
+                    { width: '180px' },
                     { width: 'auto' },
                     { width: '150px' },
+                ],
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            
+            $('#tableRoleUserCreateList').DataTable({
+                lengthChange: false,
+                searching: false,
+                autoWidth: false,
+                // pageLength: 20,
+                paging: false,
+                order: [[1, 'dec']],
+                responsive: true,
+                language: {
+                    processing:
+                        '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> ',
+                    info: '顯示第 _START_ 到第 _END_ 筆，共 _TOTAL_ 筆資料',
+                    lengthMenu: '每頁顯示 _MENU_ 筆資料',
+                },
+                columnDefs: [
+                    {
+                        targets: [0],
+                        orderable: false,
+                    },
+                    {
+                        targets: [0, 2, -1],
+                        responsivePriority: 1,
+                    },
+                    {
+                        targets: [1],
+                        responsivePriority: 2,
+                    },
+                    {
+                        targets: [0],
+                        className: 'text-lg-center',
+                    },
+                ],
+                columns: [
+                    { width: '0px' },
+                    { width: '180px' },
+                    { width: 'auto' },
                 ],
             });
         });
