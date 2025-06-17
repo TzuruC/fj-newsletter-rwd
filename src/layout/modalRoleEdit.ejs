@@ -1,0 +1,45 @@
+<div class="modal fade" id="editRoleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editRoleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="editRoleModalLabel">編輯角色</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        
+            <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                <div class="col-12 col-md-2 col-lg-3 text-start text-md-end">
+                    <label class="form-label mb-0" for="input01"><span class="text-danger">*</span>角色名稱</label>
+                </div>
+                <div class="col-12 col-md-5 col-lg-8">
+                    <input type="text" class="form-control" id="input01" name="input01" value="input01" placeholder="名稱">
+                </div>
+            </div>
+            <div class="mx-1 p-4 row align-items-center row-bg-light">
+                <div class="col-12 col-md-2 col-lg-3 text-start text-md-end">
+                    <label class="form-label mb-0" for="input02">說明</label>
+                </div>
+                <div class="col-12 col-md-5 col-lg-8">
+                    <textarea class="form-control" name="" id="input02"></textarea>
+                </div>
+            </div>
+            <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                <div class="col-5 col-md-2 col-lg-3 text-end">
+                    <label class="form-label mb-0" for="input03"><span class="text-danger">*</span>狀態</label>
+                </div>
+                <div class="col-5 col-md-5 col-lg-8">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input switch-status" type="checkbox" role="switch" id="input03" name="input03" checked>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">取消變更</button>
+        <button type="button" class="btn btn-primary text-white">儲存</button>
+        </div>
+    </div>
+    </div>
+</div>

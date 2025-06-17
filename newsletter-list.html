@@ -11,7 +11,7 @@
 <link href="/Plugin/fontawesome/css/solid.css" rel="stylesheet" />
 <!-- Bootstrap -->
 <link href="/Plugin/bootstrap-5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<!-- Datatables -->    
+<!-- DataTables -->    
 <link rel="stylesheet" href="/Plugin/DataTables/datatables.min.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
                 <!-- page-heading -->
                 <div class="pt-md-3 pb-md-4 px-md-4 p-3 d-flex justify-content-between flex-sm-row flex-column bg-white border-bottom align-items-sm-center align-items-start">
                     <div class="mb-md-0 mb-2 d-flex flex-row flex-column-reverse justify-content-between fs-6 align-items-start">
-                        <h3 class="m-0 mt-3 content-icon-title fw-bold fz-6">使用者管理</h3>
+                        <h3 class="m-0 mt-3 content-icon-title fw-bold fz-6">電子報管理</h3>
                         <nav aria-label="breadcrumb align-self-end  my-2">
                             <ol class="breadcrumb m-0 p-0 justify-content-start">
                                 <li class="breadcrumb-item m-0 p-0">
@@ -49,14 +49,13 @@
                 </div>
             </div>
             <div class="page-content mx-4 mh-90 pb-4 bg-white">
-                <%- include('src/layout/tableUserLIst.ejs'); -%>
+                <%- include('src/layout/tableNewsletterLIst.ejs'); -%>                 
             </div>
         </section>
 
 
         <!-- Modal -->
          <%- include('src/layout/modalUserCreate.ejs') -%>
-         <%- include('src/layout/modalUserEdit.ejs') -%>
     </div>
 
 
@@ -67,7 +66,7 @@
     <script src="/Plugin/jQuery/jquery-3.7.1.min.js"></script>
     <!-- 自定義 js -->
     <script src="/assets/js/sidebar/sidebars.js"></script>
-    <!-- Datatables -->    
+    <!-- DataTables -->    
     <script src="/Plugin/DataTables/datatables.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -109,7 +108,7 @@
                     { width: 'auto' },
                     { width: '70px' },
                     { width: '200px' },
-                    { width: '70px' },
+                    { width: '120px' },
                 ],
             });
         });
