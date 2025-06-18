@@ -1,0 +1,37 @@
+<div class="modal fade" id="sendNewsletterModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="sendNewsletterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="createRoleModalLabel">寄送電子報</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">     
+                <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                    寄出期數︰第 256 期
+                </div>       
+                <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                    <div class="col-12 col-md-12 col-lg-3 text-start text-lg-end">
+                        <label class="form-label mb-0" for="input01"><span class="text-danger">*</span>信件主旨︰
+                        </label>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-9">
+                        <input type="text" class="form-control" id="input01" name="input01" value="預設為「福智教育園區 - 第 256 期電子報」" placeholder="信件主旨">
+                    </div>
+                </div> 
+                <div class="mx-1 p-4 row align-items-center row-bg-gray">
+                    <div class="col-12 col-md-12 col-lg-3 text-start text-lg-end">
+                        <label class="form-label mb-0" for="input02"><span class="text-danger">*</span>收件人︰
+                        </label>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-9">
+                        <textarea class="form-control" name="input02" id="input02"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary text-white">確認寄出</button>
+            </div>
+        </div>
+    </div>
+</div>

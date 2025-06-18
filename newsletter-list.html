@@ -13,6 +13,8 @@
 <link href="/Plugin/bootstrap-5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
 <!-- DataTables -->    
 <link rel="stylesheet" href="/Plugin/DataTables/datatables.min.css">
+<!-- Quill -->
+<link href="public/Plugin/quill/quill.bubble.css" rel="stylesheet" />
 </head>
 <body>
     <!-- header -->
@@ -44,20 +46,27 @@
                         </nav>
                     </div>
                     <div>
-                        <a href="" class="btn btn-primary text-light mb-2 mb-sm-0">新增</a>
+                        <a href="newsletter-create.html" class="btn btn-primary text-light mb-2 mb-sm-0">新增</a>
+                    </div>
+                </div>
+                <!-- 搜尋欄 -->
+                <div class="bg-white">
+                    <div class="d-flex justify-content-between align-items-end p-3 mb-2">
+                        <div class="btn btn-primary btn-sm text-light mb-sm-0" data-bs-toggle="modal" data-bs-target="#editNewsletterFooterModal"><i class="fa-solid fa-window-maximize me-2"></i>電子報頁尾設定</div>
                     </div>
                 </div>
             </div>
             <div class="page-content mx-4 mh-90 pb-4 bg-white">
-                <%- include('src/layout/tableNewsletterLIst.ejs'); -%>                 
+                <%- include('src/layout/tableNewsletterLIst.ejs'); -%>   
             </div>
         </section>
 
 
         <!-- Modal -->
-         <%- include('src/layout/modalNewsletterView.ejs') -%>
+         <%- include('src/layout/modalNewsletterFooterEdit.ejs') -%>
+         <%- include('src/layout/modalNewsletterSend.ejs') -%>
     </div>
-
+    
 
     <script type="module" src="main.js"></script>
     <!-- Bootstrap -->
@@ -66,6 +75,14 @@
     <script src="/Plugin/jQuery/jquery-3.7.1.min.js"></script>
     <!-- 自定義 js -->
     <script src="/assets/js/sidebar/sidebars.js"></script>
+    <!-- Quill -->
+    <script src="/Plugin/quill/quill.js"></script>
+    <script>
+    const quill = new Quill('#editor', {
+        placeholder: 'Compose an epic...',
+        theme: 'bubble',
+    });
+    </script>
     <!-- DataTables -->    
     <script src="/Plugin/DataTables/datatables.min.js"></script>
     <script>
