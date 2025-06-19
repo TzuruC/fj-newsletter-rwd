@@ -1,18 +1,19 @@
-<div class="modal fade" id="createRoleUserModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="createRoleUserModalLabel" aria-hidden="true">
+<div class="modal fade" id="viewNewsletterModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewNewsletterModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
     <div class="modal-content">
         <div class="modal-header">
-        <h5 class="modal-title" id="createRoleUserModalLabel">添加使用者</h5>
+        <h5 class="modal-title" id="viewNewsletterModalLabel">預覽電子報</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
-            <%- include('src/layout/tableRoleUserMappingCreate.ejs'); -%>           
+預覽內容放這裡
 
         </div>
         <div class="modal-footer">
         <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">取消</button>
         <button type="button" class="btn btn-primary text-white">確認</button>
+        <button type="button" class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#sendNewsletterModal">寄送</button>
         </div>
     </div>
     </div>
