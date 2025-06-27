@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="/assets/Image/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>福智電子報</title>
+<!-- Font Awesome Solid + Brands -->
+<link href="/Plugin/fontawesome/css/fontawesome.css" rel="stylesheet" />
+<link href="/Plugin/fontawesome/css/brands.css" rel="stylesheet" />
+<link href="/Plugin/fontawesome/css/solid.css" rel="stylesheet" />
+<!-- Bootstrap -->
+<link href="/Plugin/bootstrap-5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- DataTables -->    
+<link rel="stylesheet" href="/Plugin/DataTables/datatables.min.css">
+</head>
+<body>   
+    <div class="wrapper">
+        <div class="newsletter-frontpage container">
+            <div class="dosislite-logo p-12 text-center border-bottom">                    
+                <h1 class="site-title">
+                    <a class="text-decoration-none fs-1 link-dark" href="https://bwedupark.org/">福智教育園區 </a>
+                </h1>
+            
+                <span class="tagline fs-6 text-secondary">Bliss and Wisdom Educational Park</span>
+            </div>
+            <div class="row py-12 px-10 g-0">
+                <div class="col-12 col-md-8">
+                    <h2 class="fs-5">福智全球資訊網電子報 - 第 256 期 </h2>
+                    <div class="newsletter-showcase my-0 mx-a border">
+                        <iframe class="w-100 h-100" src="newsletter-mail.html" frameborder="0">
+                            
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    
+                    <table id="nlHistoryList" class="w-100 dataTable hoverLargeImage pageTable9Hide4 table table-hover nowrap border">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h2 class="p-4 fs-5 m-0 text-center">電子報所有發行期數</h2>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row" class="p-0">
+                                    <a class=" fs-6 d-block text-decoration-none link-dark p-4 border-bottom" href="/publications/newsletter/listid-3-/mailid-467-276">
+                                        福智全球資訊網電子報 第276期
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row" class="p-0">
+                                    <a class=" fs-6 d-block text-decoration-none link-dark p-4 border-bottom" href="/publications/newsletter/listid-3-/mailid-467-276">
+                                        福智全球資訊網電子報 第276期
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script type="module" src="main.js"></script>
+    <!-- Bootstrap -->
+    <script src="/Plugin/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="/Plugin/jQuery/jquery-3.7.1.min.js"></script>
+    <!-- 自定義 js -->
+    <script src="/assets/js/sidebar/sidebars.js"></script>
+    </script>
+    <!-- DataTables -->    
+    <script src="/Plugin/DataTables/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $('#nlHistoryList').DataTable({
+                lengthChange: false,
+                searching: false,
+                autoWidth: false,
+                pageLength: 20,
+                order: [[0, 'dec']],
+                responsive: true,
+                language: {
+                    processing:
+                        '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> ',
+                    info: '顯示第 _START_ 到第 _END_ 筆，共 _TOTAL_ 筆資料',
+                    lengthMenu: '每頁顯示 _MENU_ 筆資料',
+                },
+                columns: [
+                    { width: '120px' },
+                ],
+            });
+        });
+    </script>
+  </body>
+</html>

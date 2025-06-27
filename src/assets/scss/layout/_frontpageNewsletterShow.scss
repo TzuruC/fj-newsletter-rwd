@@ -1,0 +1,10 @@
+.newsletter-frontpage.container{
+    max-width: 1080px;
+    min-height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.newsletter-showcase{
+    max-width: 600px;
+    min-height: calc(100vh - 300px);
+}

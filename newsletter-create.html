@@ -63,560 +63,100 @@
             </div>
             <!-- Page-content -->
             <div class="page-content mx-4 mh-90 p-4 bg-white">
-                <!-- 區塊標題 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-gray">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">時間資訊</p>
+                <div id="newsletterTopic">
+                                    <!-- 區塊標題 -->
+                    <div class="mx-1 p-1 row align-items-center row-bg-gray">
+                        <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
+                            <p class="m-0 fw-bold">時間資訊</p>
+                        </div>
                     </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input01">期數</label>
+                    <div class="mx-1 p-4 row align-items-center row-bg-light">
+                        <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
+                            <label class="form-label mb-0" for="input01">期數</label>
+                        </div>
+                        <div id="nlPublicNo" class="col-12 col-md-5 col-lg-5">
+                            第 256 期
+                            <!-- <input type="text" class="form-control" id="input01" name="input01" value="第 256 期" placeholder="" disabled="trues"> -->
+                        </div>
                     </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        第 256 期
-                        <!-- <input type="text" class="form-control" id="input01" name="input01" value="第 256 期" placeholder="" disabled="trues"> -->
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label" for="input01"><span class="text-danger">*</span>電子報日期</label>
-                    </div>
-                    <!-- -- -->
-                     <div class="col-12 col-md-10 col-lg-5">
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-6">
-                                <div class="row mb-1">
-                                    <div class="col-9">
-                                        <input type="text" class="form-control d-inline" id="input01" name="input01" value="input01" placeholder="名稱">
+                    <div class="mx-1 p-4 row align-items-center row-bg-light">
+                        <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
+                            <label class="form-label" for="input01"><span class="text-danger">*</span>電子報日期</label>
+                        </div>
+                        <!-- -- -->
+                        <div class="col-12 col-md-10 col-lg-5">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-lg-6">
+                                    <div class="row mb-1">
+                                        <div class="col-9">
+                                            <input type="text" class="form-control d-inline" id="nlSelectYear" name="nlSelectYear">
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="col-4 col-md-1 col-lg-1">
+                                                年
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-3">
-                                        <div class="col-4 col-md-1 col-lg-1">
-                                            年
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-6">
+                                    <div class="row">
+                                        <label for="selectMonth" class="d-none">月份：</label>
+                                        <div class="col-8">
+                                            <select class="form-select" id="nlSelectMonth" name="nlSelectMonth">
+                                                <option selected value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4">
+                                            月份
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-6">
-                                <div class="row">
-                                    <label for="selectMonth" class="d-none">請選擇國家：</label>
-                                    <div class="col-9">
-                                        <select class="form-select" id="selectMonth" name="selectMonth">
-                                            <option selected value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-3">
-                                        月份
-                                    </div>
-                                </div>
-                            </div>
+                        </div>                    
+                    </div>
+
+                    
+                    <!-- 區塊標題 -->
+                    <div class="mx-1 p-1 row align-items-center row-bg-gray">
+                        <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
+                            <p class="m-0 fw-bold">本期智慧法語</p>
                         </div>
-                     </div>                    
+                    </div>
+                    <div class="mx-1 p-4 row align-items-center row-bg-light">
+                        <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
+                            <label class="form-label mb-0" for="nlWisdom"><span class="text-danger">*</span>內容</label>
+                        </div>
+                        <div class="col-12 col-md-10 col-lg-10">
+                            <textarea class="form-control" id="nlWisdom" name="nlWisdom"></textarea>
+                            <input class="mt-2 form-control" type="text" id="nlWisdomHint" name="nlWisdomHint">
+                        </div>
+                    </div>
                 </div>
 
-                
-                <!-- 區塊標題 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-gray">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">本期智慧法語</p>
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input02"><span class="text-danger">*</span>內容</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="text" class="form-control" id="input02" name="input02" value="" placeholder="信箱">
-                    </div>
-                </div>
-                
-                <!-- 區塊標題 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-gray">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">焦點話題文章</p>
-                    </div>
-                </div>
-                <!-- 文章單位 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">第一篇</p>
-                    </div>
-                </div>
-                <!-- 文章 1 -->
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input111"><span class="text-danger">*</span>文章標籤</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input111" name="input111" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input112"><span class="text-danger">*</span>封面照片</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
-                                <input class="form-control" type="file" id="input112" name="input112">
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <!-- ʕ•͡ᴥ•ʔノ 封面圖片 -->
-                                <img src="https://placehold.jp/215x150.png" class="my-1" alt="封面圖片" />
-                            </div>
+                <div id="newsletterContent">
+                    <!-- 區塊標題 -->
+                    <div class="mx-1 p-1 row align-items-center row-bg-gray">
+                        <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
+                            <p class="m-0 fw-bold">本期文章</p>
                         </div>
                     </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input113"><span class="text-danger">*</span>主標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input113" name="input113" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input114">次標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input114" name="input114" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input115"><span class="text-danger">*</span>內容簡介</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <textarea class="form-control" name="input115" id="input115"></textarea>
-                    </div>
-                </div>
-                <!-- 文章單位 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">第二篇</p>
-                    </div>
-                </div>
-                <!-- 文章 2 -->
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input121"><span class="text-danger">*</span>文章標籤</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input121" name="input121" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input122"><span class="text-danger">*</span>封面照片</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
-                                <input class="form-control" type="file" id="input122" name="input122">
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <!-- ʕ•͡ᴥ•ʔノ 封面圖片 -->
-                                <img src="https://placehold.jp/215x150.png" class="my-1" alt="封面圖片" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input123"><span class="text-danger">*</span>主標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input123" name="input123" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input124"><span class="text-danger">*</span>次標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input124" name="input124" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input125"><span class="text-danger">*</span>內容簡介</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <textarea class="form-control" name="input125" id="input125"></textarea>
-                    </div>
-                </div>
-                <!-- 文章單位 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">第三篇</p>
-                    </div>
-                </div>
-                <!-- 文章 3 -->
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input131"><span class="text-danger">*</span>文章標籤</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input131" name="input131" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input132"><span class="text-danger">*</span>封面照片</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
-                                <input class="form-control" type="file" id="input132" name="input132">
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <!-- ʕ•͡ᴥ•ʔノ 封面圖片 -->
-                                <img src="https://placehold.jp/215x150.png" class="my-1" alt="封面圖片" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input133"><span class="text-danger">*</span>主標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input133" name="input133" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input134"><span class="text-danger">*</span>次標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input134" name="input134" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input135"><span class="text-danger">*</span>內容簡介</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <textarea class="form-control" name="input135" id="input135"></textarea>
-                    </div>
-                </div>
-                <!-- 文章單位 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">第四篇</p>
-                    </div>
-                </div>
-                <!-- 文章 4 -->
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input141"><span class="text-danger">*</span>文章標籤</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input141" name="input141" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input142"><span class="text-danger">*</span>封面照片</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
-                                <input class="form-control" type="file" id="input142" name="input142">
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <!-- ʕ•͡ᴥ•ʔノ 封面圖片 -->
-                                <img src="https://placehold.jp/215x150.png" class="my-1" alt="封面圖片" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input143"><span class="text-danger">*</span>主標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input143" name="input143" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input144"><span class="text-danger">*</span>次標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input144" name="input144" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input145"><span class="text-danger">*</span>內容簡介</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <textarea class="form-control" name="input145" id="input145"></textarea>
-                    </div>
-                </div>
-                
-                
-                <!-- 區塊標題 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-gray">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">活動報導文章</p>
-                    </div>
-                </div>
-                <!-- 文章單位 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">第一篇</p>
-                    </div>
-                </div>
-                <!-- 文章 1 -->
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input211"><span class="text-danger">*</span>文章標籤</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input211" name="input211" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input212"><span class="text-danger">*</span>封面照片</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
-                                <input class="form-control" type="file" id="input212" name="input212">
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <!-- ʕ•͡ᴥ•ʔノ 封面圖片 -->
-                                <img src="https://placehold.jp/215x150.png" class="my-1" alt="封面圖片" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input213"><span class="text-danger">*</span>主標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input213" name="input213" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input214"><span class="text-danger">*</span>次標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input214" name="input214" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input215"><span class="text-danger">*</span>內容簡介</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <textarea class="form-control" name="input215" id="input215"></textarea>
-                    </div>
-                </div>
-                <!-- 文章單位 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">第二篇</p>
-                    </div>
-                </div>
-                <!-- 文章 2 -->
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input221"><span class="text-danger">*</span>文章標籤</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input221" name="input221" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input222"><span class="text-danger">*</span>封面照片</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
-                                <input class="form-control" type="file" id="input222" name="input222">
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <!-- ʕ•͡ᴥ•ʔノ 封面圖片 -->
-                                <img src="https://placehold.jp/215x150.png" class="my-1" alt="封面圖片" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input223"><span class="text-danger">*</span>主標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input223" name="input223" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input224"><span class="text-danger">*</span>次標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input224" name="input224" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input225"><span class="text-danger">*</span>內容簡介</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <textarea class="form-control" name="input225" id="input225"></textarea>
-                    </div>
-                </div>
-                <!-- 文章單位 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">第三篇</p>
-                    </div>
-                </div>
-                <!-- 文章 3 -->
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input231"><span class="text-danger">*</span>文章標籤</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input231" name="input231" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input232"><span class="text-danger">*</span>封面照片</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
-                                <input class="form-control" type="file" id="input232" name="input232">
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <!-- ʕ•͡ᴥ•ʔノ 封面圖片 -->
-                                <img src="https://placehold.jp/215x150.png" class="my-1" alt="封面圖片" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input233"><span class="text-danger">*</span>主標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input233" name="input233" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input234"><span class="text-danger">*</span>次標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input234" name="input234" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input235"><span class="text-danger">*</span>內容簡介</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <textarea class="form-control" name="input235" id="input235"></textarea>
-                    </div>
-                </div>
-                <!-- 文章單位 -->
-                <div class="mx-1 p-1 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-start">
-                        <p class="m-0 fw-bold">第四篇</p>
-                    </div>
-                </div>
-                <!-- 文章 4 -->
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input241"><span class="text-danger">*</span>文章標籤</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input241" name="input241" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input242"><span class="text-danger">*</span>封面照片</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <div class="row">
-                            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
-                                <input class="form-control" type="file" id="input242" name="input242">
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <!-- ʕ•͡ᴥ•ʔノ 封面圖片 -->
-                                <img src="https://placehold.jp/215x150.png" class="my-1" alt="封面圖片" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input243"><span class="text-danger">*</span>主標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input243" name="input243" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input244"><span class="text-danger">*</span>次標題</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <input type="" class="form-control" id="input244" name="input244" value="" placeholder="">
-                    </div>
-                </div>
-                <div class="mx-1 p-4 row align-items-center row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input245"><span class="text-danger">*</span>內容簡介</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <textarea class="form-control" name="input245" id="input245"></textarea>
-                    </div>
-                </div>
-                <!-- <div class="mx-1 p-4 row align-items-top row-bg-light">
-                    <div class="col-12 col-md-2 col-lg-2 text-start text-md-end">
-                        <label class="form-label mb-0" for="input02"><span class="text-danger">*</span>說明</label>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-5">
-                        <textarea class="form-control" id="input02" name="input02"></textarea>
-                    </div>
-                </div> 
-                <div class="mx-1 p-4 row align-items-center row-bg-gray">
-                    <div class="col-5 col-md-2 col-lg-2 text-end">
-                        <label class="form-label mb-0" for="input03"><span class="text-danger">*</span>狀態</label>
-                    </div>
-                    <div class="col-5 col-md-5 col-lg-5">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input switch-status" type="checkbox" role="switch" id="input03" name="input03" checked>
-                        </div>
-                    </div>
-                </div>-->
 
+                    <%- include('src/layout/accordionNewsletterCreate.ejs'); -%>
 
+                </div>
                 <!-- 儲存按鈕 -->
-                <div class="btn-row d-flex justify-content-center justify-content-md-end pt-3">
+                <div class="btn-row d-flex justify-content-center justify-content-md-end pt-3 border-top">
                     <div class="m-1 btn btn-outline-primary">取消</div>
                     <div class="m-1 btn btn-primary link-light">確認儲存</div>
                 </div>
@@ -635,6 +175,10 @@
     <script src="/assets/js/sidebar/sidebars.js"></script>
     <!-- Bootstrap -->
     <script src="/Plugin/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 測試json -->
+    <script src="/assets/js/newsletterExample.js"></script>
+    <!-- 自定義 js - 新增/刪除文章 -->
+    <script src="/assets/js/newsletter/nlEditRenderer.js"></script>
     
   </body>
 </html>
