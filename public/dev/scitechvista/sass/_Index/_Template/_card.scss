@@ -1,0 +1,147 @@
+/*-------------------------------------------*\
+	inTabs.scss
+	
+	Index
+  - 1.background
+\*-------------------------------------------*/
+.card{
+  a{
+    display: block;
+    &:hover{
+      figure,
+      .embed-responsive{
+        box-shadow: 
+          0 .25rem .5rem rgba($black, .075),
+          0 .5rem .75rem rgba($black, .075);
+      }
+      img{
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+.card{  
+  &-edit{
+    font-size: $font-size-base-em;
+    line-height: $line-height-base;
+    word-wrap: break-word;
+    p {
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: $bese-link;
+      transition: all .3s ease-in-out;
+      &:hover,
+      &:focus {
+        color: $bese-link-active;
+        background: $best-link-active-bg;
+      }
+    }
+    >ul,
+    >ol {
+      margin-bottom: 1.5rem;
+    }
+
+    ul li,
+    ol li {
+      padding: .125rem 0;
+      line-height: 1.5;
+    }
+
+    @include kf-list-ul-custom;
+    @include kf-list-ol-custom;
+
+    table {
+      width: 100%;
+      margin-bottom: $spacer;
+      color: $table-color;
+      background-color: $table-bg;
+      border: $table-border-width solid $table-border-color;
+      line-height: 1.25;
+      margin-bottom: 1.5rem;
+
+      th {
+        color: $table-dark-color;
+        background-color: $primary; //$table-dark-bg;
+        border-color: $primary; //$table-dark-border-color;
+        border-right: $table-border-width solid $primary_l;
+      }
+
+      th,
+      td {
+        padding: $table-cell-padding-sm $table-cell-padding;
+        vertical-align: top;
+        border-top: $table-border-width solid $table-border-color;
+      }
+
+      td {
+        border-right: $table-border-width solid $table-border-color;
+      }
+
+      thead th {
+        vertical-align: middle;
+        border-bottom: 0;
+      }
+
+      tbody+tbody {
+        border-top: (2 * $table-border-width) solid $table-border-color;
+      }
+
+      tbody tr:nth-of-type(odd) {
+        background-color: $table-accent-bg;
+      }
+    }
+  }
+  &-txt {
+    line-height: 1.5;
+  }
+}
+// 左圖右文
+.card.d-md-flex{
+  margin: 0 -1rem;
+  @include media-breakpoint-up(md){
+    .card-body{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      .in-tit-h2,
+      .card-txt{
+        width: 100%;
+      }
+    }
+  }
+}
+// 單圖輪播
+.owl-one-wrap{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 4em;
+  &>div:last-child{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+.no-js{
+  @include media-breakpoint-up(md){    
+    .owl_col-three,
+    .owl_col-four{
+      display: flex;
+      flex-wrap: wrap;
+      width: auto;
+      margin: 0 -1rem;
+      .card{
+        margin: 1rem;
+      }
+    }
+    .owl_col-four .card {
+      width: calc((100% / 3) - 2rem);
+    }
+    .owl_col-four .card{
+      width: calc((100% / 4) - 2rem);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../sass/_Bootstrap/functions";
+@import "../../sass/_Bootstrap/variables";
+@import "../../sass/_Bootstrap/mixins";
+@import "../../sass/_CommonModule/mixins";
+///*-------------------------------------------------------------------------------*/
+///*    common 首頁主版共用                                                         */
+///*-------------------------------------------------------------------------------*/
+//// Base
+@import "../../sass/_Base/base";                                   //基本bady html 框架與無障礙定位點
+//// Megamenu
+@import "../../sass/_MegaMenu/_MegaMenuDesktop/MegaMenuBasic";     //基本樣式
+@import "../../sass/_MegaMenu/_MegaMenuDesktop/MegaMenuColumn";    //單欄
+@import "../../sass/_MegaMenu/_MegaMenuDesktop/MegaMenuFullimg";   //滿版圖片
+@import "../../sass/_MegaMenu/_MegaMenuDesktop/MegaMenuFulltxt";   //滿版文字
+@import "../../sass/_MegaMenu/_MegaMenuDesktop/MegaMenuIcon";      //ICON圖示
+@import "../../sass/_MegaMenu/MobileMenu";                         //手機版選單
+
+//// Layout
+@import "../../sass/_Layout/Header";                               //Header
+@import "../../sass/_Layout/Sticky";                               //捲動後的Header
+@import "../../sass/_Layout/FatFooter";                            //Fatfooter
+@import "../../sass/_Layout/Footer";                               //Footer
+//// Components
+@import "../../sass/_Components/SkipMain";                         //跳到主要內容
+@import "../../sass/_Components/HeaderSearch";                     //全站搜尋
+@import "../../sass/_Components/Image";                            //obj-fit 圖片設定
+@import "../../sass/_Components/ScrollTop";                        //TOP Link
+@import "../../sass/_Components/Truncate";                         //多文文字溢出
+@import "../../sass/_Components/ErrorPage";                        //Error Page
+@import "../../sass/_Components/category";                         //分類項目
+
+//// OwlCarouse
+//Owl套件所有的項目(核心、動畫、自動高度、延遲加載、影片)
+//如果專案無使用全部的項目，可以自行只import "core"
+@import '../../sass/_Vendors/OwlCarousel2-2.3.4/core';                //基本設定
+@import '../../sass/_Vendors/OwlCarousel2-2.3.4/animate';             //動態轉場
+@import '../../sass/_Vendors/OwlCarousel2-2.3.4/autoheight';          //自動高度
+@import '../../sass/_Vendors/OwlCarousel2-2.3.4/lazyload';            //延遲載入
+@import '../../sass/_Vendors/OwlCarousel2-2.3.4/video';               //影片
+// owl樣式
+@import "../../sass/_Vendors/OwlCarousel2-2.3.4/theme.default";       //顏色設定
+@import "../../sass/_Vendors/OwlCarousel2-2.3.4/theme";               //樣式設定

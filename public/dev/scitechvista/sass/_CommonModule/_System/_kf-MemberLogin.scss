@@ -1,0 +1,177 @@
+/*-------------------------------------------*\
+	_MemberSignIn.sass
+	
+	會員登入
+  - 1.wrap
+  - 2.獨立頁面的登入頁內容
+  - 3.側邊圖片
+  - 4.內容
+  - 5.表單(註冊、忘記密碼、驗證信等...)
+  - 6.表單(登入頁面)
+  - 7.google驗證碼 RWD
+  - 8.反饋頁面
+\*-------------------------------------------*/
+// 1.wrap
+.MemberLogin-wrap{
+  // background: url(../images/MemberLogin_wrap-bg.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 50vh;
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  @include media-breakpoint-up(sm){
+    padding: 2rem 5rem;
+  }
+  @include media-breakpoint-up(md){
+    padding: 0 0 5rem;
+  }
+  @include media-breakpoint-up(mx){
+    .container{ max-width: 80%;}
+  }
+}
+// 2.獨立頁面的登入頁內容
+.MemberLogin-wrap{
+  .MemberLogin-content{
+    // background: rgba($white, .8);
+    max-width: 100%;
+    padding: 2rem 1rem;
+    @include media-breakpoint-up(md){
+      width: 500px;
+    }
+  }
+  .MemberLogin-img + .MemberLogin-content{
+    @include media-breakpoint-up(lg){
+      width: calc(99.9% - 350px);
+      padding: 2rem 10%;
+    }
+  }
+}
+
+// 3.側邊圖片
+.MemberLogin-img{
+  @include media-breakpoint-up(lg){
+    width: 350px;
+  }
+}
+// 4.基本內容
+.MemberLogin-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  // 登入頁分隔線
+  .breakline{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    span{ 
+      order: 2;
+      padding: 0 1rem;
+    }
+    &:before,&:after{
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: $gray-300;
+    }
+    &:before{
+      flex-grow: 1;
+      order: 1;
+    }
+    &:after{
+      flex-grow: 1;
+      order: 3;
+    }
+  }
+  .main_tit{
+    margin-bottom: 1.5rem;
+  }
+}
+// 5.表單(註冊、忘記密碼、驗證信等...)
+.MemberLogin-forms{
+  .form-group{ 
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  // .kf-form_label{ 
+  //   max-width: 100%;
+  //   display: block;
+  //   text-align: left !important;
+  // }
+  // .col-md-8.col-lg-9{
+  //   flex: 1;
+  //   max-width: 100%;
+  // }
+  // .form-group:not(.kf-reCAPTCHA) .form-row > div{
+  //   flex: 1;
+  //   max-width: 100%;
+  // }
+  // 無障礙fieldext群組
+  fieldset{
+    @include media-breakpoint-up(md){
+      &.form-fieldset-justify{
+        legend{ 
+          position: relative;
+          padding-bottom: 0;
+         }
+        .offset-lg-3{ margin-left: 0; }
+      }
+    }
+  }
+  .txt{
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+}
+// 6.表單(登入頁面)
+.MemberLogin-forms{
+  width: 100%;
+  .MemberLogin-control{
+    display: flex;
+    align-items: center;
+    background-color: $input-bg;
+    border: $input-border-width solid $input-border-color;
+    padding: 0 1px;
+    .form-control{
+      border: 0;
+    }
+    @include border-radius($input-border-radius, 0);
+    .col-form-label{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $gray-600;
+      font-size: $font-size-lg-em;
+      width: 55px;
+      border-right: solid 1px $gray-200;
+    }
+  }
+  .alink{
+    color: $primary;
+    text-decoration: underline;
+    &:hover,&:focus{
+      color: $bese-link-active;
+    }
+  }
+}
+// 7.google驗證碼 RWD
+.Google-reCAPTCHA{
+  @media (max-width: 360px){
+    transform-origin:0;
+    transform:scale(0.85);
+  }
+}
+// 8.反饋頁面
+.MemberLogin-Feebimg{
+  .Feegimg-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $display1-size*1.125;
+    padding: 0 0 2rem;
+  }
+}

@@ -1,0 +1,29 @@
+/*-------------------------------------------*\
+	Date.scss
+
+  - 1.日期、點閱率、下載
+\*-------------------------------------------*/
+.kf-ctr,.kf-down{
+  font-size: $font-size-sm-em;
+  font-family: $font-primary-en;
+  color: $gray-700;
+  line-height: $line-height-sm;
+}
+.kf-date{
+  font-size: $font-size-sm-em;
+  font-family: $font-primary-en;
+  color: $base-color_txt;
+  line-height: $line-height-sm;
+  &.event-deta{ 
+    span{
+      @include media-breakpoint-down(xs){display: block; }
+    }
+  }
+  i{ padding-right: .25rem}
+}
+.kf-difficulty-star{
+  i{
+    color: $yellow;
+    padding-right: 0
+  }
+}

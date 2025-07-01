@@ -1,0 +1,25 @@
+/*-------------------------------------------------------------------------------*/
+/*    $Megamen-column                                                                          */
+/*-------------------------------------------------------------------------------*/
+//單欄文字選單
+.nav-column{
+  &.nav-item{ position: relative;}
+  .dropdown-menu.dropdowns{
+    width: 200px;
+    left: calc(50% - 200px/2) !important;
+    .secondary-title{ display: none; }
+  }
+  .secondary-nav{ margin: 0 ;}
+  .sec-item{
+    width: 100%;
+    padding: 0 .25rem .5rem;
+    .kf-img{ display: none;}
+    .sec-tit{
+      margin-bottom: .5rem;
+      a{
+        padding: .5rem 0;
+        border-bottom: $border-width solid $border-color;
+      }
+    }
+  }
+}

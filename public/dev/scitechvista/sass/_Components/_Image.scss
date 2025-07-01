@@ -1,0 +1,77 @@
+
+/*-------------------------------------------------------------------------------*\
+  imagelayout.scss
+  -1.kf-img 圖片設定
+  -2.objfit 
+
+/*-------------------------------------------------------------------------------*/
+
+.kf-img{
+  a{ 
+    color: $base-color_txt;
+    transition: .3s ease-in-out;
+    &:hover,&:focus{
+      color: $primary_d;
+      img{ transform:scale(1.05);}
+    }
+  }
+  figure,
+  .embed-responsive{
+    background-color: $white;
+    box-shadow: $box-shadow-sm;
+    display: flex;
+    justify-content: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: none;
+      width: 100%;
+      height: 100%;
+      transition: .3s ease-in-out;
+    }
+  }
+  &.obj-img-cover {
+      figure img,
+      .embed-responsive img{
+      object-fit: cover;
+    }
+  }
+  &.obj-img-contain {
+    figure img,
+    .embed-responsive img{
+      object-fit: contain;
+    }
+  }
+  figcaption{ 
+    font-size: $font-size-base-em;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    line-height: $line-height-base;
+  }
+}
+
+a{
+  .kf-img{transition: all .3s ease-in-out;}
+  &:hover,&:focus{
+    .kf-img{
+      img{ transform:scale(1.05);}
+    }
+  }
+}
+
+//objfit給ie用的↓
+.ie-object-fit-contain,.ie-object-fit-cover {
+  background-position:center center; //背景圖水平、垂直皆置中
+  background-repeat: no-repeat;
+  img {opacity: 0;}
+}
+.ie-object-fit-contain {
+  background-size: contain !important;
+}
+.ie-object-fit-cover {
+  background-size: cover !important;
+}

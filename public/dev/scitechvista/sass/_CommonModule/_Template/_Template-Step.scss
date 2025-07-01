@@ -1,0 +1,58 @@
+/*-------------------------------------------------------------------------------*/
+/* 步驟樣式                                                                       */
+/*-------------------------------------------------------------------------------*/
+div[class*=wcm-Step]{
+  .wcm-StepNum{
+    width: 100%;
+    margin-bottom: .5rem;
+    text-align: center;
+    line-height: $line-height-lg;
+  }
+  .kf-det-center{
+    width: 100%;
+  }
+  @include  media-breakpoint-up(md){
+    .wcm-StepNum{
+      width: auto;
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+    .kf-det-center{
+      width: auto;
+    }
+  }
+}
+
+.wcm-StepV01{
+  .wcm-StepNum{
+    font-size: $h1-font-size * 1.25;
+    font-family: $font-primary-en;
+    font-weight: bolder;
+  }
+}
+.wcm-StepV02{
+  .wcm-StepNum{
+    p{
+      display: inline-block;
+      padding: .25rem .75rem !important;
+      background: $secondary;
+      border-radius: 2rem;
+      font-family: $font-primary-en;
+      font-weight: bolder;
+      min-width: 60px;
+    }
+  }
+}
+.wcm-StepV03{
+  .wcm-StepNum{
+    display: inline-block;
+    font-weight: bold;
+    // width: 20% !important;
+    word-break: keep-all;
+    margin-right: .5rem !important;
+    p{
+      text-align: left;
+      padding-top: .25rem;
+    }
+  }
+}

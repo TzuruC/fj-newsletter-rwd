@@ -1,0 +1,97 @@
+/*-------------------------------------------*\
+	Reservation.scss
+	
+	Index
+  - 1.layout
+  - 2.breakpoint-lg
+  - 3.theme
+\*-------------------------------------------*/
+// 1.step1 說明頁設定 explain
+.explain{
+  padding: 1.5rem;
+  background-color: $gray-100;
+  &_txt {
+    line-height: 1.5;
+    color: $gray-600;
+    &+.kf_fm_cr {
+      margin-top: 1.5rem;
+    }
+    p{margin-top: 0.25rem;}
+    a{
+      padding: 0 0.25rem;
+      color: $bese-link;
+      &:hover{
+        color: $bese-link-active;
+        text-decoration: underline;
+        background-color: $primary_l;
+      }
+    }
+  }
+  &_tit{
+    margin: 1rem 0;
+    color: $primary_d;
+    font-weight: bold;
+  }
+  h3{font-size: $font-size-xl-em;}
+}
+
+.OnRes_fm{
+  .kf-form_title{
+    a{
+      color: $white;
+      &:hover,&:focus{
+        text-decoration: underline;
+      }
+    }
+  }
+  .form-group{ padding: 5rem 0; }
+  @include media-breakpoint-up(md){
+    &.kf-forms-nth-bg .form-group{ padding: 1rem 0; }
+    fieldset{
+      padding-top: 3rem !important;
+    }
+  }
+  @include media-breakpoint-up(lg){
+    &.kf-forms-nth-bg .form-group{ padding: 1rem 2rem 1rem 0; }
+    fieldset{
+      padding-top: 1rem !important;
+      legend{
+        top: add($input-padding-y, $input-border-width,);
+      }
+    }
+  }
+}
+.OnRes_fm-guide{
+  padding: 1.5rem;
+  line-height: $line-height-base;
+  span{
+    font-size: $font-size-lg-em;
+    font-weight: bold;
+    color: $primary;
+    padding: 0 .25rem;
+  }
+}
+.OnRes_fm-classtime{
+  i{
+    display: block;
+    width: 100%;
+  }
+  label{
+    display: block;
+    margin: .25rem;
+  }
+  ul{
+    margin-top: .5rem;
+    border-top: solid 1px $gray-200;
+    padding: .5rem 0;
+    line-height: $line-height-base;
+  }
+}
+
+.custom-qu{
+  .invisible{ display: none !important;}
+  input[type="text"]{
+    position: relative;
+    left: 0;
+  }
+}

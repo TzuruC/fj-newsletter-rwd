@@ -1,0 +1,198 @@
+/*-------------------------------------------*\
+  Header_Search .scss
+  
+  index
+  - 1.wrapper
+  - 2.mask
+  - 3.button
+  - 4.content
+  - 5.open
+  - 6.no-js
+\*-------------------------------------------*/
+// 1.wrapper
+.header-search {
+  position: fixed;
+  z-index: index($zid, header-search);
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &.search-mask {
+    background: rgba($black, .2);
+  }
+  noscript{color: $base-color_txt;}
+}
+// 2.button
+.search{
+  &-parent,
+  &-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    color: $black;
+    font-size: $font-size-md;
+    transition: all .5s ease-in-out;
+    &:hover,&:focus{
+      color: $primary;
+    }
+    @include media-breakpoint-up(lg){
+      top: 0;
+      right: calc((100% - 960px) / 2);
+    }
+    @include media-breakpoint-up(xl){
+      right: calc((100% - 1140px) / 2);
+    }
+    @include media-breakpoint-up(mx){
+      right: calc((100% - 1300px) / 2);
+    }
+    @include media-breakpoint-up(mxx){
+      right: calc((100% - 1500px) / 2);
+    }
+  }
+  &-parent{
+    z-index: 1;
+    pointer-events: auto;
+  }
+  &-close{
+    z-index: 3;
+  }
+}
+// 3.content
+.search-inner{
+  position: absolute;
+  pointer-events: auto;
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  padding: 60px 0 2rem;
+  background: $white;
+  box-shadow: $box-shadow-lg;
+  transform:translateY(-150px);
+  @include animate(.5s);
+  .container{
+    padding: 1.5rem;
+  }
+  @include media-breakpoint-up(lg){
+    padding-top: calc(.5rem + 60px);
+  }
+}
+// 4.open
+.search-open+.search-inner {
+  visibility: inherit;
+  opacity: 1;
+  transform:translateY(0);
+  @include animate(.5s);
+}
+// 5.form
+.search{  
+  &-txt,&-btn{
+    height: 50px;
+    background-color: rgba($gray-100, .5);
+    border: 1px solid $gray-300;
+    border-radius: .25rem;
+    &:focus{
+      outline-offset: 2px;
+      outline: 2px dotted $outline;
+    }
+  }
+  &-txt{
+    flex-grow: 1;
+    -webkit-appearance: none;
+    padding-left: .5rem;
+    color: $base-color-txt;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    @include animate(.3s);
+    &::placeholder {
+      color: $base-color-txt;
+    }
+    &:focus {
+      padding-left: 1rem;
+    }
+  }
+  &-btn {
+    width: 50px;
+    text-indent: 50px;
+    background: url(../images/icon-search-btn.svg) no-repeat center rgba($gray-100, .5) !important;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }  
+}
+// 6.keywords
+.search-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  color: $base-color-txt;
+  &-tit,
+  &-cotent,
+  &-cotent li{
+    display: inline-block;
+  }
+  &-tit{
+    margin: .125rem;
+    padding: 0.25rem 0;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  a{
+    margin: .125rem;
+  }
+}
+@include media-breakpoint-up(lg){
+  .search-form,.search-keywords{
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+// 7.no-js
+.no-js {
+  noscript{
+    display: block;
+    padding: .5rem;
+    font-size: $font-size-base;
+    line-height: 1.2;
+    a {
+      display: inline-block;
+      padding: 0 .25rem;
+      color: $primary;
+      pointer-events: auto;
+    }
+  }
+  .search-parent{
+    pointer-events: none;
+  }
+  .search-inner{
+    display: none;
+  }
+  .header-search noscript{
+    .container{
+      font-size: $font-size-sm;
+      text-align: right;
+    }
+    @include media-breakpoint-down(md){
+      position: relative;
+      .container{
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: calc(100% - 100px);
+      }
+    }
+    @include media-breakpoint-up(lg){
+      .container{
+        position: relative;
+        top: calc(110px - 2em);
+      }
+    }
+  }
+}

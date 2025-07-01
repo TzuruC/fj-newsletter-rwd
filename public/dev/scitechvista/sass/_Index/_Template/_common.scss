@@ -1,0 +1,61 @@
+/*-------------------------------------------*\
+	_inVideo.scss
+	
+	Index
+  - 1.wrap
+\*-------------------------------------------*/
+.contents_wrap{
+  transition: padding-top .5s ease-in-out;
+  @include  media-breakpoint-up(lg){padding-top: $desktopNav-height + 38px;}
+}
+
+// 1.title
+.in-tit-h2{
+  display: block;
+  position: relative;
+  font-weight: bold;
+  color: $gray-800;
+}
+// 2.owl focus
+.owl-item a{
+  &:focus{
+    outline: none;
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      outline-offset: -2px;
+      outline: 2px dotted $outline;  
+    }
+    &:not(:focus-visible){
+      &::after{
+        outline: 0;
+      }
+    }
+    &-visible{
+      &::after {
+        outline: 2px dotted $outline;
+      }
+    }
+  }
+}
+// 3.more
+.btn-more{
+  width: 200px;
+  padding: 0.75rem;
+  color: $white !important;
+  background-color: $gray-800;
+  border-radius: 2rem;
+  &:hover{
+    background-color: $primary;
+  }
+  &:focus{
+    outline-offset: 1px;
+    outline: 2px dotted $outline;
+  }
+}

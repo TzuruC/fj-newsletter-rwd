@@ -1,0 +1,97 @@
+/*-------------------------------------------*\
+	_Weblink.scss.
+
+  - 1.card改變卡片間距
+  \*-------------------------------------------*/
+.Stv-Recommend{
+  padding-bottom: 0 !important;
+  .kf-item {
+    margin-bottom: .5rem;
+    .kf-title{
+    height: auto;
+    }
+  }
+}
+
+
+//收合
+.accordion {
+	width: 100%;
+	// 01_標題
+	// .tit {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	font-weight: bold;
+	// 	&:after {
+	// 		content: "";
+	// 		width: 100%;
+	// 		border-bottom: solid 1px $gray-300;
+	// 	}
+	// 	& span {
+	// 		flex: 0 0 auto;
+	// 		width: auto;
+	// 		max-width: 100%;
+	// 		padding-right: 0.5rem;
+	// 	}
+	// }
+	// 02_展開更多
+	.collapse-more{
+    width: 100%;
+    span{
+      &:after{
+        content: "\f068";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+      }
+      &::before{
+        margin-right: -4px;
+        content: "收合";
+      }
+    }
+    &.collapsed{
+      span{
+        &:after{
+          content: "\f067";
+        }
+        &::before{
+          content: "展開";
+        }
+      }
+    }
+    @include media-breakpoint-up(lg){
+      width: 250px;
+    }
+	}
+}
+
+// 02_隱藏區塊
+// .submenu {
+// 	display: none;
+// }
+
+// .panel-heading {
+// 	padding: 0;
+// 	border: 0;
+// }
+// .panel-title > a,
+// .panel-title > a:active {
+// 	display: block;
+// 	padding: 15px;
+// 	color: #555;
+// 	font-size: $font-size-base-em;
+// 	font-weight: bold;
+// 	text-transform: uppercase;
+// 	letter-spacing: 1px;
+// 	word-spacing: 3px;
+// 	text-decoration: none;
+// }
+// .panel-heading a:before {
+// 	content: "\f078";
+// 	float: right;
+// 	transition: all 0.5s;
+// }
+// .panel-heading.active a:before {
+// 	-webkit-transform: rotate(180deg);
+// 	-moz-transform: rotate(180deg);
+// 	transform: rotate(180deg);
+// }

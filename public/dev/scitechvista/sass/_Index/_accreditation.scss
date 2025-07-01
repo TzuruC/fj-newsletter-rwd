@@ -1,0 +1,89 @@
+/*-------------------------------------------*\
+	_common.scss
+	
+	Index
+  - 1.wrap
+\*-------------------------------------------*/
+:root {
+  --acc-gradient01-1: #4540d8;
+	--acc-gradient01-2: #153a79;
+	--acc-gradient02-1: #38ACE0;
+	--acc-gradient02-2: #007FFF;
+  --acc-gradient03-1: #E3FF48;
+	--acc-gradient03-2: #FFB100;
+}
+// item
+.acc-item{
+  display: block;
+  position: relative;
+  z-index: 0;
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+  }
+  &:focus,
+  &:hover{
+    &::after{opacity: 1;}
+  }
+  &:focus{
+    outline-offset: -4px;
+    outline-color: $outline-lighten;
+  }
+  span{
+    display: block;
+    padding: 1.5rem;
+    font-size: $h2-font-size;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: 90% bottom;
+    @include media-breakpoint-up(md){
+      padding: 2.5rem 1.5rem;
+    }
+    @include media-breakpoint-up(lg){
+      height: 356px;
+      padding-top: 4rem;
+      padding-left: 4.5rem;
+      background-size: 90%;
+      background-position: center bottom;
+    }
+    @include media-breakpoint-up(mx){
+      background-size: 462px 258px;
+    }
+  }
+}
+// background
+.acc{
+  &-item01{
+    background-image: linear-gradient(0deg, var(--acc-gradient01-1), var(--acc-gradient01-2));
+    span{background-image: url(../images/accreditation01.svg);}
+    &::after{
+      background-image: linear-gradient(0deg, var(--acc-gradient01-2), var(--acc-gradient01-1));
+    }
+  }
+  &-item02{
+    background-image: linear-gradient(0deg, var(--acc-gradient02-1), var(--acc-gradient02-2));
+    span{background-image: url(../images/accreditation02.svg);}
+    &::after{
+      background-image: linear-gradient(0deg, var(--acc-gradient02-2), var(--acc-gradient02-1));
+    } 
+  }
+  &-item03{
+    background-image: linear-gradient(0deg, var(--acc-gradient03-1), var(--acc-gradient03-2));
+    span{background-image: url(../images/accreditation03.svg);}
+    &::after{
+      background-image: linear-gradient(0deg, var(--acc-gradient03-2), var(--acc-gradient03-1));
+    }
+    &:focus{
+      outline-color: $outline;
+    }   
+  }
+}

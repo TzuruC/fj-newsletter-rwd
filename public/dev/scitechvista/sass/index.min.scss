@@ -1,0 +1,15 @@
+@import "_Bootstrap/functions";
+@import "_Bootstrap/variables";
+@import "_Bootstrap/mixins";
+@import "_CommonModule/mixins";
+// Template
+@import "_Index/common";           //首頁共用元件
+@import "_Index/card";             //Card 圖文
+@import "_Index/FirstView";        //owl firstView 輪播
+@import "_Index/network";          //學科學習網
+@import "_Index/join";             //加入會員
+@import "_Index/science";          //科學專題
+@import "_Index/activity";         //推薦活動
+@import "_Index/inVideo";          //影音專區
+@import "_Index/accreditation";    //影音專區
+@import "_Index/follow";           //聯絡我們

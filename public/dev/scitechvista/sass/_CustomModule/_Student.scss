@@ -1,0 +1,270 @@
+/*-------------------------------------------*\
+	_Student.sass
+	功能內容區塊
+
+  - 01_Banner
+  - 02_編輯精選
+  - 03_title
+  - 04_影音專區
+  - 05_課外充電站 black Tabs
+  - 06_科學職人 black Tabs
+  - 07_學科學習網
+  - 08_學生專區每區塊間距
+  - no-js 
+	
+\*-------------------------------------------*/
+
+// 01_Banner
+.student_banner {
+	@include media-breakpoint-down(md) {
+		.student_banner::after {
+			height: 100%;
+			z-index: 1;
+		}
+	}
+	position: relative;
+	background: url(../images/student/student_banner.jpg) no-repeat center center;
+	background-size: cover;
+	height: 21em;
+	.main_tit,
+	.breadcrumbs a {
+		color: $white;
+	}
+	&::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		left: 0;
+		@include media-breakpoint-down(md) {
+			background-image: linear-gradient(360deg, $black_transparent-1 10%, $black_transparent-2 100%);
+		}
+	}
+	.main_tit {
+		color: $white;
+		position: relative;
+		z-index: 2;
+	}
+	.breadcrumbs,
+	.breadcrumbs_u li:after {
+		position: relative;
+		color: $white;
+		z-index: 2;
+	}
+}
+// 02_編輯精選
+.writings_bsnner {
+	.p-05 {
+		padding: 0.5em;
+	}
+	.kf-img:hover .kf-title,
+	.item:hover .kf-title {
+		color: $secondary;
+	}
+}
+// 03_title
+.in_title {
+	.in-tit-h3 {
+		display: block;
+		position: relative;
+		padding: 0.75rem 0.75rem 0.25rem;
+		font-family: $font-sans-serif-en;
+		color: $primary;
+		font-weight: bold;
+		text-transform: uppercase;
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+		}
+		&::before {
+			left: 0;
+			width: 25px;
+			height: 22px;
+			border-top: 5px solid $secondary;
+			border-left: 5px solid $secondary;
+		}
+		&::after {
+			left: 25px;
+			width: 5px;
+			height: 10px;
+			border-left: 5px solid $secondary;
+		}
+	}
+}
+// 04_影音專區
+.student_video {
+	.kf-diagramtext-list .kf-diagramtext-col {
+		margin-bottom: 0.5rem;
+	}
+	background-image: url(../images/video-bg.jpg);
+	background-size: cover;
+	.kf-diagramtext-col {
+		&:hover .border-bottom {
+			border-bottom: 2px solid $secondary !important;
+		}
+	}
+	.border-bottom {
+		border-bottom: 1px solid $gray-600 !important;
+	}
+	.kf-item {
+		padding-bottom: 1em;
+		.kf-bookmark {
+			margin-bottom: -68px;
+		}
+		&:hover,
+		&:focus {
+			border: 2px solid $secondary;
+			border-radius: 10px;
+			padding: 1em 0.5em;
+			@include media-breakpoint-down(sm) {
+				padding: 0.2em 0.5em;
+			}
+			//標題
+			.kf-title a {
+				color: $secondary !important;
+				transition: all 0.3s ease-in-out;
+			}
+			&:hover .kf-title,
+			.Article-AuthorRow,
+			.kf-bookmark {
+				color: $secondary !important;
+			}
+		}
+	}
+	.Article-AuthorRow,
+	.kf-bookmark {
+		color: $gray-200 !important;
+	}
+	.kf-bookmark {
+		z-index: 2 !important;
+	}
+	@include media-breakpoint-down(sm) {
+		.kf-bookmark {
+			color: $gray-900 !important;
+		}
+		.student_video {
+			.kf-diagramtext-list .kf-diagramtext-col {
+				margin-bottom: auto;
+			}
+		}
+	}
+}
+// 05_課外充電站 black Tabs
+.extracurricular {
+	a {
+		display: block;
+	}
+	.kf-text-content:hover .kf-title {
+		color: $primary !important;
+	}
+	.hover-item {
+		background: $white;
+		display: block;
+	}
+	@include media-breakpoint-down(sm) {
+		.in-TabBtn a {
+			color: $black;
+		}
+		.in-TabBtn:active {
+			color: $white;
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		.in-TabBtn a {
+			color: $white;
+		}
+	}
+}
+// 06_科學職人 black Tabs
+.scientific_staff {
+	.in-tit-h2,
+	.in-TabBtn a,
+	.kf-title,
+	.kf-bookmark {
+		color: $white !important;
+	}
+	a.kf-item {
+		&:hover .kf-title {
+			color: $primary !important;
+		}
+	}
+	.kf-txt,
+	.Article-AuthorRow {
+		color: $gray-400 !important;
+	}
+	// 四分類排版
+	.in-TabBtn {
+		a.active {
+			z-index: 2;
+			position: relative;
+			color: $secondary !important;
+		}
+		@include media-breakpoint-up(sm) {
+			top: 1rem;
+			width: calc((100% - 2rem) / 4);
+			&:nth-child(1) {
+				left: 6rem;
+			}
+			&:nth-child(3) {
+				left: calc((100% - 2rem) / 5 + 6rem);
+			}
+			&:nth-child(5) {
+				left: calc((100% - 2rem) / 5 * 2 + 6rem);
+			}
+			&:nth-child(7) {
+				left: calc((100% - 2rem) / 5 * 3 + 6rem);
+			}
+			a {
+				// color: $base-color-txt;
+				background: transparent;
+			}
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		.kf-bookmark {
+			color: $gray-900 !important;
+		}
+		.text-white.kf-bookmark {
+			color: $white !important;
+		}
+	}
+}
+// 07_學科學習網
+.subject {
+	.ThemesGroup-list {
+		a {
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+// 08_學生專區每區塊間距
+.student_section {
+	padding: 60px 0;
+}
+.kf-bookmark {
+	z-index: 2;
+}
+.bt-25{
+	bottom: 25px;
+	@include media-breakpoint-down(md){
+		bottom: 11em;
+	}
+	@include media-breakpoint-down(xs){
+		bottom: 11em;
+		position: relative;
+	}
+
+}
+
+/*========no-js ========*/
+.no-js {
+	.in-TabBtn a {
+		color: $white;
+		
+	}
+}

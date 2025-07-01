@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>電子報-列表</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Common CSS 首頁主版共用 -->
+  <link rel="stylesheet" href="css/common.min.css">
+  <!-- Main CSS 主版 -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Components CSS 標準功能-->
+  <link rel="stylesheet" href="css/kf-components.min.css">
+  <!-- Custom CSS 客制功能 -->
+  <link rel="stylesheet" href="css/custom.min.css">
+  <!-- Optional JavaScript -->
+  <script src="Scripts/lib/modernizr-custom.min.js"></script>
+  <script src="Scripts/lib/jquery_kf.js"></script>
+  <script src="Scripts/common.js"></script>
+  <script src="Scripts/main.js"></script>
+</head>
+
+<body>
+  <div id="mainbody">
+    <h2 class="main_tit">初始頁面</h2><!-- 測試FreeGo 才放的h2 -->
+    <div class="main_body">
+      <!-- container 請依照介面選擇mx、xl、lg等 -->
+      <div class="container-mx">
+        <!-- 定閱 -->
+        <div class="form-row flex-wrap pt-5 mb-2 align-items-center">
+          <div class="col-12 col-lg-auto">
+            <div class="custom-control custom-radio custom-control-inline mb-2">
+              <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+              <label class="custom-control-label" for="customRadioInline1">我要訂閱</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline mb-2">
+              <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+              <label class="custom-control-label" for="customRadioInline2">取消訂閱</label>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 mb-2 form-row align-items-start pr-lg-4">
+            <div class="col">
+              <label class="sr-only" for="validationCustom01">請輸入Email</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="請輸入Email" required>
+              <div class="invalid-feedback">請輸入Email</div>
+            </div>
+            <input class="btn btn-primary kf-search-btn" type="submit" value="送出">
+          </div>
+          <div class="col-12 col-lg-4 mb-2 form-row align-items-start">
+            <div class="col">
+              <label class="sr-only" for="validationCustom02">請輸入關鍵字</label>
+              <input type="text" class="form-control" id="validationCustom02" placeholder="請輸入關鍵字" required>
+              <div class="invalid-feedback">請輸入關鍵字</div>
+            </div>
+            <input class="btn btn-secondary kf-search-btn" type="submit" value="搜尋">
+          </div>
+        </div>
+        <!-- 列表 -->
+        <div class="kf-div-table align-items-center mt-3">
+          <div class="kf-div-th row d-none d-md-flex bg-dark text-center text-white">
+            <div class="col-md-1">編號</div>
+            <div class="col-md">檔案名稱</div>
+            <div class="col-md-2">發布日期</div>
+          </div>
+          <div class="row p-3 p-md-1 align-items-center">
+            <div class="col-12 col-md-1 d-none d-md-block text-md-center ">1</div>
+            <div class="col-12 col-md"><a href="#" class="txt-link"><span
+                  class="badge badge-danger">New</span>標題名稱標題名稱標題名稱標題名稱標題名稱</a></div>
+            <div class="col-12 col-md-2 text-md-center kf-date text-break"><i class="fa fa-calendar-alt"
+                aria-hidden="true"></i>2019/07/09</div>
+          </div>
+          <div class="row p-3 p-md-1 align-items-center">
+            <div class="col-12 col-md-1 d-none d-md-block text-md-center ">1</div>
+            <div class="col-12 col-md"><a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a></div>
+            <div class="col-12 col-md-2 text-md-center kf-date text-break"><i class="fa fa-calendar-alt"
+                aria-hidden="true"></i>2019/07/09</div>
+          </div>
+          <div class="row p-3 p-md-1 align-items-center">
+            <div class="col-12 col-md-1 d-none d-md-block text-md-center ">1</div>
+            <div class="col-12 col-md"><a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a></div>
+            <div class="col-12 col-md-2 text-md-center kf-date text-break"><i class="fa fa-calendar-alt"
+                aria-hidden="true"></i>2019/07/09</div>
+          </div>
+          <div class="row p-3 p-md-1 align-items-center">
+            <div class="col-12 col-md-1 d-none d-md-block text-md-center ">1</div>
+            <div class="col-12 col-md"><a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a></div>
+            <div class="col-12 col-md-2 text-md-center kf-date text-break"><i class="fa fa-calendar-alt"
+                aria-hidden="true"></i>2019/07/09</div>
+          </div>
+          <div class="row p-3 p-md-1 align-items-center">
+            <div class="col-12 col-md-1 d-none d-md-block text-md-center ">1</div>
+            <div class="col-12 col-md"><a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a></div>
+            <div class="col-12 col-md-2 text-md-center kf-date text-break"><i class="fa fa-calendar-alt"
+                aria-hidden="true"></i>2019/07/09</div>
+          </div>
+          <div class="row p-3 p-md-1 align-items-center">
+            <div class="col-12 col-md-1 d-none d-md-block text-md-center ">1</div>
+            <div class="col-12 col-md"><a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a></div>
+            <div class="col-12 col-md-2 text-md-center kf-date text-break"><i class="fa fa-calendar-alt"
+                aria-hidden="true"></i>2019/07/09</div>
+          </div>
+          <div class="row p-3 p-md-1 align-items-center">
+            <div class="col-12 col-md-1 d-none d-md-block text-md-center ">1</div>
+            <div class="col-12 col-md"><a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a></div>
+            <div class="col-12 col-md-2 text-md-center kf-date text-break"><i class="fa fa-calendar-alt"
+                aria-hidden="true"></i>2019/07/09</div>
+          </div>
+          <div class="row p-3 p-md-1 align-items-center">
+            <div class="col-12 col-md-1 d-none d-md-block text-md-center ">1</div>
+            <div class="col-12 col-md"><a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a></div>
+            <div class="col-12 col-md-2 text-md-center kf-date text-break"><i class="fa fa-calendar-alt"
+                aria-hidden="true"></i>2019/07/09</div>
+          </div>
+          <div class="row p-3 p-md-1 align-items-center">
+            <div class="col-12 col-md-1 d-none d-md-block text-md-center ">1</div>
+            <div class="col-12 col-md"><a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a></div>
+            <div class="col-12 col-md-2 text-md-center kf-date text-break"><i class="fa fa-calendar-alt"
+                aria-hidden="true"></i>2019/07/09</div>
+          </div>
+          <div class="row p-3 p-md-1 align-items-center">
+            <div class="col-12 col-md-1 d-none d-md-block text-md-center ">1</div>
+            <div class="col-12 col-md"><a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a></div>
+            <div class="col-12 col-md-2 text-md-center kf-date text-break"><i class="fa fa-calendar-alt"
+                aria-hidden="true"></i>2019/07/09</div>
+          </div>
+        </div>
+        <!-- 分頁 -->
+        <nav aria-label="Page navigation example" class="kf-paginator my-5">
+          <ul class="pagination">
+            <li class="page-item kf-page-first">
+              <a class="page-link" href="#" aria-label="第一頁">
+                <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+                <span class="sr-only">第一頁</span>
+              </a>
+            </li>
+            <li class="page-item kf-page-prev">
+              <a class="page-link" href="#" aria-label="第一頁">
+                <i class="fas fa-angle-left" aria-hidden="true"></i>
+                <span class="sr-only">上一頁</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item active"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">6</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item kf-page-next">
+              <a class="page-link" href="#" aria-label="下一頁">
+                <i class="fas fa-angle-right" aria-hidden="true"></i>
+                <span class="sr-only">下一頁</span>
+              </a>
+            </li>
+            <li class="page-item kf-page-last">
+              <a class="page-link" href="#" aria-label="最後一頁">
+                <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+                <span class="sr-only">最後一頁</span>
+              </a>
+            </li>
+          </ul>
+          <span class="kf-paginator-date">資料筆數【200】頁數【1/10】</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>會員註冊</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Common CSS 首頁主版共用 -->
+  <link rel="stylesheet" href="css/common.min.css">
+  <!-- Main CSS 主版 -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Components CSS 標準功能-->
+  <link rel="stylesheet" href="css/kf-components.min.css">
+  <!-- Custom CSS 客制功能 -->
+  <link rel="stylesheet" href="css/custom.min.css">
+  <!-- Optional JavaScript -->
+  <script src="Scripts/lib/modernizr-custom.min.js"></script>
+  <script src="Scripts/lib/jquery_kf.js"></script>
+</head>
+<body>
+  <div id="mainbody">
+    <h2 class="main_tit">初始頁面</h2><!-- 測試FreeGo 才放的h2 -->
+    <div class="main_body">
+      <!-- container 請依照介面選擇mx、xl、lg等 -->
+      <div class="MemberLogin-wrap">
+        <div class="MemberLogin-content">
+          <h2 class="main_tit">會員登入以收藏文章</h2>
+          <p class="mb-3 col-12 text-center">歡迎使用會員服務！</p>
+          <!-- 錯誤訊息 -->
+          <div class="alert alert-danger mb-4">
+            錯誤：帳號或密碼錯誤，google無法使用！
+          </div>
+          <!-- 社群登入 此專案不使用 -->
+          <div class="col-12 row px-0 justify-content-start">
+            <div class="col-12 mb-2">
+              <a href="#" class="w-100 btn btn-Facebook text-left"><i
+                  class="fab fa-facebook-f pr-4 text-primary"></i>Facebook 登入</a>
+            </div>
+            <div class="col-12 mb-2">
+              <a href="#" class="w-100 btn btn-GooglePlus text-left"><span class="pr-3"><img src="images/google.svg"
+                    alt=""></span>Google登入</a>
+            </div>
+          </div>
+          <!-- 分隔線 此專案不使用 -->
+          <div class="col-12 breakline my-3">
+            <span>or</span>
+          </div>
+          <!-- 登入 -->
+          <div class="col-12 MemberLogin-forms">
+            <!-- 帳號 -->
+            <div class="form-group">
+              <div class="MemberLogin-control row no-gutters">
+                <label for="onlineform01" class="col-form-label">
+                  <i class="fas fa-user" aria-hidden="true" title="帳號"></i>
+                </label>
+                <div class="col">
+                  <input id="onlineform01" class="form-control" type="text" placeholder="帳號名稱">
+                </div>
+              </div>
+              <!-- 錯誤回饋請設定 display: block; -->
+              <div class="invalid-feedback">找不到此帳號，請連絡相關人員或註冊帳戶</div>
+            </div>
+            <!-- 密碼 -->
+            <div class="form-group">
+              <div class="MemberLogin-control row no-gutters">
+                <label for="onlineform02" class="col-form-label">
+                  <i class="fas fa-key" aria-hidden="true" title="密碼"></i>
+                </label>
+                <div class="col">
+                  <input id="onlineform02" class="form-control" type="password" placeholder="6-18 位數密碼，請區分大小寫">
+                </div>
+              </div>
+              <!-- 錯誤回饋請設定 display: block; -->
+              <div class="invalid-feedback">輸入的密碼錯誤</div>
+            </div>
+
+            <!-- 驗證碼  google -->
+            <div class="d-flex justify-content-center">
+              <div class="reCAPTCHA">
+                <div class="g-recaptcha" data-sitekey="網站金鑰位置"></div>
+              </div>
+            </div>
+
+            <!-- btn -->
+            <div class="d-flex flex-wrap justify-content-center flex-sm-row-reverse mt-3">
+              <input class="btn btn-warning flex-fill col m-1" type="submit" value="登入">
+            </div>
+            <div class="row no-gutters align-items-center justify-content-between pt-3 pb-3">
+              <div class="text-right"><a href="#" class="alink">忘記密碼?</a></div>
+            </div>
+
+            <div class="d-flex flex-wrap bg-white p-4 justify-content-center">
+              <p>還沒有會員嗎?請來此<a href="#" class="alink">註冊</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--google 驗證  recaptcha 切版測試 -->
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+</body>
+
+</html>

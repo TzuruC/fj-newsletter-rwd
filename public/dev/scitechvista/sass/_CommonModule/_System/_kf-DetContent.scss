@@ -1,0 +1,65 @@
+/*-------------------------------------------*\
+	DetContent.scss
+
+  - 1.編輯器文字行高連結
+  - 2.項目符號
+  - 3.表格
+\*-------------------------------------------*/
+.kf-det-content{
+  font-size: $font-size-md-em;
+  line-height: $line-height-lg;
+  word-wrap: break-word;
+  p{ margin-bottom: 1rem;}
+  a{
+    color: $bese-link;
+    transition: all .3s ease-in-out;
+    &:hover,&:focus{
+      color: $bese-link-active;
+      background: $best-link-active-bg;
+    }
+  }
+  > ul,> ol{ margin-bottom: 1rem;}
+  ul li,ol li{ padding: .125rem 0 ; line-height: 1.5;}
+  // ul li:before {
+  //   background: $secondary !important;
+  // }
+  @include kf-list-ul-custom;
+  @include kf-list-ol-custom;
+  table{
+    width: 100%;
+    margin-bottom: $spacer;
+    color: $table-color;
+    background-color: $table-bg;
+    border: $table-border-width solid $table-border-color;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    th {
+      color: $table-dark-color;
+      background-color: $primary; //$table-dark-bg;
+      border-color: $primary; //$table-dark-border-color;
+      border-right: $table-border-width solid $primary_l;
+      p{ margin-bottom: 0;}
+    }
+    th,
+    td {
+      padding: $table-cell-padding-sm $table-cell-padding;
+      vertical-align: top;
+      border-top: $table-border-width solid $table-border-color;
+    }
+    td{
+      border-right: $table-border-width solid $table-border-color;
+    }
+
+    thead th {
+      vertical-align: middle;
+      border-bottom: 0;
+    }
+
+    tbody + tbody {
+      border-top: (2 * $table-border-width) solid $table-border-color;
+    }
+    tbody tr:nth-of-type(odd) {
+      background-color: $table-accent-bg;
+    }
+  }
+}

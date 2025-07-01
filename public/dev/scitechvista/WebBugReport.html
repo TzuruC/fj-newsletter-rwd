@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="email=no" name="format-detection" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>網站除錯報馬仔</title>
+	<link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Common CSS 首頁主版共用 -->
+  <link rel="stylesheet" href="css/common.min.css">
+  <!-- Main CSS 主版 -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Components CSS 標準功能-->
+  <link rel="stylesheet" href="css/kf-components.min.css">
+  <!-- Optional JavaScript -->
+	<script src="Scripts/lib/modernizr-custom.min.js"></script>
+  <script src="Scripts/lib/jquery_kf.js"></script>
+  <script src="Scripts/common.js"></script>
+  <script src="Scripts/main.js"></script>
+</head>
+<body>    <!-- main_wrap -->
+  <div id="mainbody">
+    <h2 class="main_tit">網站除錯報馬仔</h2><!-- 測試FreeGo 才放的h2 -->
+    <div class="main_body">
+      <div class="container-mx">
+        <div class="text-body text-sm-center">
+          若您發現網頁上有錯誤資訊，請您填寫回報資料告知我們。謝謝您。
+        </div>
+        <div class="kf-forms mt-4">
+          <!-- 姓名 -->
+          <div class="form-group row">
+            <label for="onlineform01" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+              姓名<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr>
+            </label>
+            <div class="col-md-8 col-lg-9">
+              <div class="form-row">
+                <div class="col-sm-8">
+                  <input id="onloneform01 " class="form-control" type="text" placeholder="請輸入姓名(必填)">
+                </div>
+              </div>
+              <!-- 錯誤回饋請設定 display: block; -->
+              <div class="invalid-feedback">請輸入姓名</div>
+            </div>
+          </div>
+          <!-- E-mail -->
+          <div class="form-group row">
+            <label for="onlineform02" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+              E-mail<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr>
+            </label>
+            <div class="col-md-8 col-lg-9">
+              <div class="form-row">
+                <div class="col-sm-8">
+                  <input id="onloneform02 " class="form-control" type="text" placeholder="請輸入你的E-mail(必填)">
+                </div>
+              </div>
+              <div class="invalid-feedback">請輸入您的E-mail</div>
+            </div>
+          </div>
+          <!-- 網址 -->
+          <div class="form-group row align-items-sm-center">
+            <div for="onlineform02" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">網址</div>
+            <div class="col-md-8 col-lg-9">
+              <div class="form-row">                    
+                <div class="col-sm-8"><a class="text-primary_d" href="#">網站簡述</a></div>
+              </div>
+            </div>
+          </div>
+          <!-- 錯誤問題 -->
+          <div class="form-group row">
+            <label for="onlineform07" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                錯誤問題<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr>
+            </label>
+            <div class="col-md-8 col-lg-9">
+              <div class="form-row">
+                <div class="col-sm-8">
+                  <textarea class="form-control" id="onlineform07" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="invalid-feedback">請輸入內容</div>
+            </div>
+          </div>
+          <!-- 驗證碼 -->
+          <div class="form-group row">
+            <label for="onlineform07" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+              驗證碼<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr>
+            </label>
+            <div class="reCAPTCHA col-md-8 col-lg-9">
+              <div class="g-recaptcha" data-sitekey="網站金鑰位置"></div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center my-5">
+          <input class="btn btn-outline-secondary text-dark flex-fill col-sm-2 m-1" type="reset" value="清除">
+          <input class="btn btn-secondary flex-fill col-sm-2 m-1" type="submit" value="查詢">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--google 驗證  recaptcha 切版測試 -->
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/*-------------------------------------------------------------------------------*/
+/*    $Megamen-Fullimg                                                           */
+/*-------------------------------------------------------------------------------*/
+//滿版圖片選單
+.nav-fullimg{
+  .dropdowns{
+    .container{ 
+      flex-wrap: wrap;
+    }
+    .secondary-title{
+      .kf-img{ display: none;}
+    }
+  }
+  .secondary-nav{
+    justify-content: center;
+  }
+  .sec-item{
+    width: calc(99.9% / 6);
+    // flex:1;
+    .sec-tit{ text-align: center; }
+     //預設定顯示是第三層，不顯是請display:none;
+    //.third-item{ display: none;}
+  }
+}

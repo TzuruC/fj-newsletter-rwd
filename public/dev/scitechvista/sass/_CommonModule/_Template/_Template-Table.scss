@@ -1,0 +1,105 @@
+/*-------------------------------------------------------------------------------*/
+/* 表格樣式                                                                       */
+/*-------------------------------------------------------------------------------*/
+//主要桌機版表格樣式會吃標準的 css-module>module>kf-
+.wcm-TableCustomRWD-V01{
+  @include  media-breakpoint-down(sm){
+    table{
+      border: 0;
+      background-color: $table-bg;
+      thead{
+        th {
+          display: none;
+        }
+      }
+      th,
+      td {
+        display: flex;
+        border-top: 0;
+        &:before{
+          content: attr(data-type);
+          font-weight: bold;
+          text-align: right;
+          min-width: 6rem;
+          margin-right: .125rem;
+          display: inline-block;
+        }
+      }
+      td{
+        border-right: 0;
+      }
+    }
+    tbody tr{
+      display: block;
+      padding: .5rem 0;
+      margin-bottom: .5rem;
+      border-left: 3px solid $primary;
+      background-color: $table-accent-bg;
+      &:nth-of-type(odd){
+        background-color: $table-accent-bg;
+      }
+    }
+  }
+}
+.wcm-TableCustomRWD-V02{
+  @include  media-breakpoint-down(sm){
+    table{
+      border: 0;
+      background-color: $table-bg;
+      thead{
+        th {
+          display: none;
+        }
+      }
+      th,
+      td {
+        display: flex;
+        flex-wrap: wrap;
+        border-top: 0;
+        border-bottom: 5px solid $white;
+        &:last-child{ border-bottom: 0;}
+        &:before{
+          content: attr(data-type);
+          font-weight: bold;
+          text-align: left;
+          width: 100%;
+          margin-right: .125rem;
+          padding-bottom: .25rem;
+          display: block;
+        }
+      }
+      td{
+        border-right: 0;
+      }
+    }
+    tbody tr{
+      display: block;
+      padding: .5rem 0;
+      margin-bottom: 1rem;
+      border-left: 3px solid $primary;
+      background-color: $table-accent-bg;
+      &:nth-of-type(odd){
+        background-color: $table-accent-bg;
+      }
+    }
+  }
+}
+//純線框
+.wcm-TableWire-V01{
+  table{
+    th,td {
+      color: $table-color;
+      background-color: $white;
+      border-color: $table-border-color; //$table-dark-border-color;
+    }
+  }
+}
+.wcm-Table-V01{
+  table{
+    th {
+      color: $table-dark-color;
+      background-color: $table-dark-bg; //$table-dark-bg;
+      border-color: $table-dark-border-color; //$table-dark-border-color;
+    }
+  }
+}

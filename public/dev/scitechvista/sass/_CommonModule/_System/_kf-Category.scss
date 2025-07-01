@@ -1,0 +1,26 @@
+
+/*-------------------------------------------*\
+ kf-Category 主題分類 
+ 01-框架
+	
+\*-------------------------------------------*/
+.kf-category-group{
+  a{
+    color: $base-color_txt;
+    font-size: $font-size-base;
+    line-height: $headings-line-height;
+    padding: $list-group-item-padding-y $list-group-item-padding-x;
+    border-bottom: 1px solid $list-group-border-color;
+    transition: all .5s ease-in-out;
+    &:hover,&:focus{
+      color: $bese-link-active;
+      background: $gray-200;
+    }
+    &:focus{
+      outline-offset: -2px;
+    }
+    .badge{
+      font-size: $font-size-sm-em;
+    }
+  }
+}

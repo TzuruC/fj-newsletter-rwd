@@ -5,7 +5,7 @@
 
 // Bootstrap - customize
 @import './utils/variables';
-
+@import '../../Plugin/bootstrap-5.1.1/scss/bootstrap';
 
 $logoWidth: 200px;
 $logoHight: 72px;
@@ -25,7 +25,6 @@ $logoHight: 72px;
 @import './layout/frontpageNewsletterShow';
 
 
-@import '../../Plugin/bootstrap-5.1.1/scss/bootstrap';
 
 .main-signin {
     height: 100vh;

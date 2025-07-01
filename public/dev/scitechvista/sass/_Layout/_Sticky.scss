@@ -1,0 +1,52 @@
+/*-------------------------------------------*\
+  sticky.scss
+  
+  index
+  - 1.breakpoint lg
+  - 2.breakpoint xl
+  - 3.breakpoint mx
+  - 4.breakpoint mxx
+\*-------------------------------------------*/
+// 1.breakpoint lg
+@include media-breakpoint-up(lg){
+  .header-row,
+  .header-search,
+  .category-bar,
+  .megamenu{
+    &.sticky{
+      transition: all .5s ease-in-out;
+    }
+  }
+  // header
+  .header-row.sticky{
+    box-shadow: 
+      0 .125rem .25rem rgba($black, .075),
+      0 .25rem .5rem rgba($black, .075);      
+    .container{
+      height: 40px;
+      transition: all .5s ease-in-out;
+    }
+    .header-logo{
+      height: 40px;
+      transition: all .25s ease-in-out;
+    }
+    .topNav-row{
+      align-self: auto;
+    }
+  }
+  // header-search
+  .header-search.sticky{
+    .search-parent{
+      top: 0; 
+      height: 40px;    
+    }
+  }
+  .category-bar,.megamenu{
+    &.sticky{
+      top: 41px;
+    }
+  }
+}
+.contents_wrap.sticky{
+  padding-top: 0;
+}

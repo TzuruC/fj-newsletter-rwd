@@ -1,0 +1,40 @@
+
+/*-------------------------------------------------------------------------------*\
+  FontSize.scss
+  -1. 按鈕切換
+  -2. 內容區塊文字放大
+
+/*-------------------------------------------------------------------------------*/
+//1. 按鈕切換
+.sc_font {
+  position: relative;
+    &:before,&:after{
+      content: "A";
+      position: absolute;
+      top: 0;
+      font-family: $font-sans-serif-en;
+      font-weight: bold;
+    }
+    &:before{
+      left: 8px;
+    }
+    &:after{
+      right: 8px;
+      font-size: $font-size-sm-em;
+    }
+  span{
+    color: transparent;
+  }
+  &.font_bigger{
+    &:after{
+      right: 8px;
+      font-size: $font-size-base-em;
+    }
+  }
+}
+//2. 內容區塊文字放大
+.main_content{
+  &.font_bigger{
+    font-size: 120%;
+  }
+}

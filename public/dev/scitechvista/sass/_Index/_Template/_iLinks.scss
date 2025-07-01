@@ -1,0 +1,29 @@
+/*-------------------------------------------*\
+	iLinks.scss
+	
+	Index
+  - 1.wrapper
+\*-------------------------------------------*/
+.iLink_pic{
+  display: block;
+  border: 1px solid $gray-200;
+}
+.no-js{
+  .owl_iLinks{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .iLink_pic{
+    display: block;
+    width: calc(100% / 3);
+    @include media-breakpoint-up(lg){
+      width: calc(100% / 4);
+    }
+    @include media-breakpoint-up(xl){
+      width: calc(100% / 5);
+    }
+    @include media-breakpoint-up(mx){
+      width: calc(100% / 7);
+    }
+  }
+}

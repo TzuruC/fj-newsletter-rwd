@@ -1,0 +1,15 @@
+/*-------------------------------------------*\
+	_Frameset.sass
+	
+	功能內容區塊
+  - 1.主要框架
+\*-------------------------------------------*/
+// 1.主要框架
+.Stv-Frameset{
+	// @include rb;
+	@include media-breakpoint-up(lg){
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}

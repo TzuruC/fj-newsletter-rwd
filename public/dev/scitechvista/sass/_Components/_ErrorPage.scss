@@ -1,0 +1,47 @@
+/*-------------------------------------------------------------------------------*/
+/*    $Error Page                                                                           */
+/*-------------------------------------------------------------------------------*/
+.error{
+  &-row{
+    .kf-det-content{
+      p{ margin-bottom: .5rem;}
+    }
+    @include  media-breakpoint-up(md){
+      width: 60%;
+      margin: 0 auto;
+    }
+    @include  media-breakpoint-up(mx){
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+  &-img{
+    text-align: center;
+  }
+  &-title{
+    text-align: center;
+    margin-bottom: 2rem;
+    h1{ 
+      font-size: $h1-font-size;
+      font-family: $font-sans-serif-en;
+    }
+    .h2{ 
+      font-weight: bold; 
+    }
+  }
+  &-link{
+    justify-content: center;
+    li{
+      position: relative;
+      &:after{
+        position: absolute;
+        right: 0;
+        content: "|";
+      }
+    }
+  }
+  &-foot{
+    margin: 2rem 0;
+    line-height: $line-height-base;
+  }
+}

@@ -1,0 +1,73 @@
+/*-------------------------------------------------------------------------------*/
+/* 按鈕樣式                                                                       */
+/*-------------------------------------------------------------------------------*/
+.wcm-btn{
+  span{
+    a{
+      display: inline-block;
+      font-family: $btn-font-family;
+      font-weight: $btn-font-weight;
+      color: $body-color;
+      min-width: 150px;
+      text-align: center;
+      vertical-align: middle;
+      user-select: none;
+      background-color: transparent;
+      border: $btn-border-width solid transparent;
+      @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+      @include transition($btn-transition);
+    }
+  }
+}
+
+$colors: (
+  primary:  $primary,
+  secondary: $secondary,
+);
+
+@each $color-name, $btn-color in $colors {
+  .wcm-btn .wcm-btn-#{$color-name}{
+    a{
+      color: $white;
+      background-color: $btn-color;
+      border-color: $btn-color;
+      margin: .25rem;
+      &:hover,&:focus{
+        background-color: darken($btn-color, 15%);
+        border-color: darken($btn-color, 15%);
+      }
+      &:focus{
+        box-shadow: 0 0 0 0.2rem rgba($btn-color, 0.5);
+        outline: 0;
+      }
+    }
+  }
+}
+@each $color-name, $btn-color in $colors {
+  .wcm-btn .wcm-btn-outline-#{$color-name}{
+    a{
+      color: $btn-color;
+      background-color: transparent;
+      border-color: $btn-color;
+      margin: .25rem;
+      &:hover,&:focus{
+        color: $white;
+        background-color: darken($btn-color, 15%);
+        border-color: darken($btn-color, 15%);
+      }
+      &:focus{
+        box-shadow: 0 0 0 0.2rem rgba($btn-color, 0.5);
+        outline: 0;
+      }
+    }
+  }
+}
+.wcm-btn .wcm-btn-secondary,
+.wcm-btn .wcm-btn-outline-secondary{
+  a{
+    color: $black;
+    &:hover,&:focus{ 
+      color: $black;
+    }
+  }
+}

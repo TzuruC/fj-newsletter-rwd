@@ -1,0 +1,16 @@
+@import "../../sass/_Bootstrap/functions";
+@import "../../sass/_Bootstrap/variables";
+@import "../../sass/_Bootstrap/mixins";
+@import "../../sass/_CommonModule/mixins";
+///*-------------------------------------------------------------------------------*/
+///*    main 主版                                                                  */
+///*-------------------------------------------------------------------------------*/
+// _Layout
+@import "../../sass/_Layout/Main";                  //主體
+@import "_Layout/Main";
+
+// _Components
+@import "../../sass/_Components/Switcher";          //字型大中小、列印、社群分享
+@import "../../sass/_Components/Breadcrumbs";           //麵包屑
+
+

@@ -1,0 +1,516 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>worklist</title>
+<style>
+	/*------base-------*/
+	body{
+		background: #241733;
+    font-family: "Microsoft Jhenghei", "微軟正黑體", "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	.wrapper{
+		max-width: 900px;
+		margin: 2rem auto;
+	}	
+	.container:after {
+		content: "";
+		display: table;
+    clear: both;
+	}
+	/*------txt-wrap-------*/
+  .txt-wrap{ color: #9f9fb7;}
+	.wrap-tit{color: #e6e5f7;text-align: center;}	
+  .txt-wrap .date{ display: flex;}
+  .txt-wrap .date p{ flex: 50%;}
+  .txt-wrap .date p:last-child{ text-align: right;}
+	.supplement span{color: #ffffff;}
+  .expound{font-size: .875em;}
+	ol,ul{margin: 0;padding: .25rem 1rem;}
+	/*------table-------*/
+	table{width: 100%;}
+	table th,table td{padding: .5rem .75rem;font-size: .875em;}
+	table td a{
+		color: #4fcd90;
+		text-decoration:none;
+	}
+	table td a:hover{	
+		text-decoration:underline;
+	}
+	/*------table style-------*/
+	thead,.row-lang{background: #4fcd90;}
+	.row-tit1,.row-tit2.row-tit3.row-tit4{
+		font-weight: bold;
+	}
+	.txt-blue{color: #5ea4f4;}
+  .txt-yellow{color: #FFEB3B;}
+  .txt-pink{color: #c637c7;}
+	.row-tit1{background: #c6d65c;}
+	.row-tit2{background: #edbc47;}
+	.row-tit3{background: #e0d856;}
+	.row-tit4{background: #82bf6a;}
+  .row-tit5 {background: #b99d7b;}
+  .row-tit6 {background: #5ea4f4;}
+	.row-bg1{
+		color: #eae1f2;
+		background: #34225d;
+	}
+	.row-bg2{
+		color: #eae1f2;
+		background: #524c8d;
+	}
+  .sticky-bar{
+    position: sticky;
+    top: 0;
+    background: #edbc47;
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <h1 class="wrap-tit">1118科技大觀園</h1>
+	<div class="txt-wrap container">
+    <div class="date">
+      <p>更新日期：2021/02/05</p>
+		  <p>完成日期：</p>
+    </div>
+		<div class="supplement">
+      檔案路徑：<span>\\192.168.1.30\design\2021\1118-SciTechVista\html</span>
+    </div>
+    <!-- <h3 style="margin: 1rem 0 .5rem;">使用方式：</h3> -->
+    <div class="expound">
+      <ul>
+        <li>圖片尺寸：請說明該頁面圖片適合的尺寸與比例</li>
+        <li>版面說明：
+          <ul>
+            <li><span class="txt-blue">(標準)</span> 使用v28標準介面</li>
+            <li><span class="txt-blue">(標準調整)</span> 使用v28標準介面調整</li>
+            <li><span class="txt-yellow">(客制)</span> 完全客制介面</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+	<table class="construct">
+		<thead>
+			<tr>
+				<th style="width: 100px;">頁面名稱</th>
+        <th style="width: 100px;">連結</th>
+        <th style="width: calc((100% - 260px)/2);">圖片尺寸</th>
+        <th style="width: calc((100% - 260px)/2);">版面說明</th>
+        <th style="width: 50px;">人員</th>
+        <th style="width: 10px;">-</th>
+			</tr>
+		</thead>	
+		<tbody>
+			<tr class="row-tit2">
+				<td class="sticky-bar"  colspan="6" style="text-align: center;"><input type="checkbox" checked id="chkOriginal"/><span>檢視內容頁，不含主版</span></td>
+			</tr>
+			<tr class="row-bg1">
+				<td>首頁</td>
+        <td><a href="index.html" target="_blank">index</a></td>
+        <td>
+          <ol>
+            <li>主視覺大圖:726*588</li>
+            <li>主視覺小圖:355*267</li>
+            <li>學科學習網小圖:355*267</li>
+            <li>科學專題:479*479</li>
+            <li>推薦活動大圖:726*545</li>
+            <li>影音專區大圖:726*545</li>
+            <li>影音專區小圖:200*150</li>
+          </ol>
+        </td>
+        <td><span class="txt-yellow">(客製)</span></td>
+        <td>Rex</td>
+        <td class="txt-pink">v</td>
+      </tr>
+			<tr class="row-bg1">
+				<td>內頁-列表功能主版使用</td>
+        <td><a href="main-v01.html" target="_blank">main-v01</a></td>
+        <td></td>
+        <td><span class="txt-yellow">(客製)</span><br/>
+        header與footer等首頁切板處理。</td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+			</tr>
+      <tr class="row-bg1">
+				<td>內頁-內容功能主版使用</td>
+        <td><a href="main-v02.html" target="_blank">main-v02</a></td>
+        <td></td>
+        <td><span class="txt-yellow">(客製)</span><br/>
+          header與footer等首頁切板處理。<br/>
+          分享與功能標題的位置與v01不同。
+        </td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+			</tr>
+      <tr class="row-bg1">
+				<td>學生專區</td>
+        <td><a href="SiteStudent/worklist.html" target="_blank">StudentWorklist</a></td>
+        <td></td>
+        <td><span class="txt-yellow">(客製)</span><br/>
+        </td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+			</tr>
+			<tr class="row-bg1">
+				<td>404</td>
+        <td><a href="ErrorPage404.html" target="_blank">ErrorPage404</a></td>
+        <td></td>
+        <td>
+          <span class="txt-blue">(標準)</span><br/>
+          頁面不存在
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="row-bg1">
+				<td>500</td>
+        <td><a href="ErrorPage500.html" target="_blank">ErrorPage500</a></td>
+        <td></td>
+        <td>
+          <span class="txt-blue">(標準)</span><br/>
+          伺服器錯誤
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="row-bg1">
+				<td>Under construction</td>
+        <td><a href="ErrorPageUnderConstruction.html" target="_blank">ErrorPageUnderConstruction</a></td>
+        <td></td>
+        <td>
+          <span class="txt-blue">(標準)</span><br/>
+          網站建置中/維護中
+        </td>
+        <td></td>
+        <td></td>
+			</tr>
+			<tr class="row-bg1">
+				<td>wcmstyle</td>
+        <td>
+          <a href="wcmstyle.html" target="_blank">wcmstyle</a><br/>
+          <a href="wcmstyle-img.html" target="_blank">wcmstyle-img</a><br/>
+          <a href="wcmstyle-imgtxt.html" target="_blank">wcmstyle-imgtxt</a><br/>
+          <a href="wcmstyle-table.html" target="_blank">wcmstyle-table</a>
+        </td>
+        <td>
+          無特別設定圖片尺寸不過有以下比例可使用
+          <ul>
+            <li>673*378 (16:9)</li>
+            <li>673*504 (4:3)</li>
+          </ul>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+			</tr>
+    </tbody>
+    <!-- 客制功能 -->
+    <tbody><tr class="row-tit3"><td colspan="6">客制功能</td></tr></tbody>
+    <tbody>
+      <tr class="row-bg2">
+        <td colspan="6">文章管理</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>文章-列表</td>
+        <td><a href="ArticleList.html" target="_blank">ArticleList</a></td>
+        <td>圖片：533*400 (3:4)</td>
+        <td><span class="txt-yellow">(客制)</span><br/>
+          新增使用側邊搜尋後的"搜尋結果頁"的搜尋bar與文字。
+        </td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>文章-內容</td>
+        <td><a href="ArticleDetail.html" target="_blank">ArticleDetail</a></td>
+        <td></td>
+        <td><span class="txt-yellow">(客制)</span><br/>
+          框架與功能先處理，樣版另外。
+        </td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>專題-列表</td>
+        <td><a href="ThemesGroup.html" target="_blank">ThemesGroup</a></td>
+        <td>圖片：533*400 (3:4)</td>
+        <td><span class="txt-yellow">(客制)</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>專題-列表(搜尋結果頁)</td>
+        <td><a href="ThemesGroup-SearchResul.html" target="_blank">ThemesGroup-SearchResul</a></td>
+        <td></td>
+        <td><span class="txt-yellow">(客制)</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>專題-文章列表</td>
+        <td><a href="Themes.html" target="_blank">Themes</a></td>
+        <td>
+          Banner宣傳圖：寬度1920px 高度350px以上<br/><br/>
+          圖片：533*400 (3:4)
+        </td>
+        <td>
+          <span class="txt-yellow">(客制)</span><br/>
+          後台會上傳一張圖品，請寫入html 背景，不然標題文字數量無法完整呈現。<br/>
+          圖片寬度1920px 高度350px以上 標題如果過長，圖片高度不夠容易跑出黑邊<br/>
+          如後台無上圖請使用預設圖<br/>
+          預設圖：defaul-ThemesBanner.jpg
+        </td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+    </tbody>
+    <tbody><tr class="row-tit6"><td colspan="6">標準功能</td></tr></tbody>
+    <!-- 活動管理 -->
+    <tbody>
+      <tr class="row-bg2">
+        <td colspan="6">活動管理</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>活動-列表</td>
+        <td><a href="EventList.html" target="_blank">EventList</a></td>
+        <td>圖片：784*588 (4:3)</td>
+        <td>
+          <span class="txt-blue">(標準調整)</span>
+          <br/>
+          <!-- <span class="txt-pink">目前成吉思汗為圖文列表式，但此頁面有保留兩種方式呈現，請專案設計師務必與PM溝通後刪除未用到的。</span> -->
+        </td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>活動-內容頁</td>
+        <td><a href="EventDetail.html" target="_blank">EventDetail</a></td>
+        <td></td>
+        <td>
+          <span class="txt-blue">(標準調整)</span>
+          <br/>
+          <!-- <span class="txt-pink">此內容頁不包含線上報名功能與內容樣板管理</span> -->
+        </td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+    </tbody>
+    <!-- 會員登入註冊 -->
+    <tbody>
+      <tr class="row-bg2">
+        <td colspan="6">會員登入註冊</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>登入頁</td>
+        <td><a href="LogIn.html" target="_blank">LogIn</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td>Doris</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <!-- <tr class="row-bg1">
+        <td>同意須知說明頁</td>
+        <td>
+          <a href="Explain.html" target="_blank">Explain</a><br/>
+        </td>
+        <td></td>
+        <td>
+          <span class="txt-blue">(標準)</span>
+          <br/>可共通使用。 
+          <br/><span class="txt-pink">會員流程使用主版的才使用此頁面，滿版的會在註冊頁用popup方式勾選。</span>
+        </td>
+        <td></td>
+        <td></td>
+      </tr> -->
+      <tr class="row-bg1">
+        <td>會員註冊</td>
+        <td><a href="Register.html" target="_blank">Register</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td>Doris</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>忘記密碼</td>
+        <td><a href="ForgottenPassword.html" target="_blank">ForgottenPassword</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td>Doris</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>重設密碼</td>
+        <td><a href="ResetPassword.html" target="_blank">ResetPassword</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td>Doris</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>變更密碼</td>
+        <td><a href="ChangePassword.html" target="_blank">ChangePassword</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td>Doris</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>反饋頁</td>
+        <td><a href="FeedbackPage.html" target="_blank">FeedbackPage</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <!-- 相關連結（夥伴） -->
+    <tbody>
+      <tr class="row-bg2">
+        <td colspan="6">相關連結（夥伴）</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>相關連結（夥伴）</td>
+        <td><a href="Weblink.html" target="_blank">Weblink</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準調整)</span></td>
+        <td>Doris</td>
+        <td class="txt-pink">v</td>
+      </tr>
+    </tbody>
+    <!-- 會員管理 -->
+    <tbody>
+      <tr class="row-bg2">
+        <td colspan="6">會員管理</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>個人首頁</td>
+        <td><a href="MemberIndex.html" target="_blank">MemberIndex</a></td>
+        <td></td>
+        <td><span class="txt-yellow">(客制)</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>科普個人圖書館</td>
+        <td><a href="MemberKeep.html" target="_blank">Memberkeep</a></td>
+        <td></td>
+        <td><span class="txt-yellow">(客制)</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>訂閱關鍵字</td>
+        <td><a href="MemberTags.html" target="_blank">MemberTags</a></td>
+        <td></td>
+        <td><span class="txt-yellow">(客制)</span></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="row-bg1">
+        <td>瀏覽紀錄</td>
+        <td><a href="MemberRecord.html" target="_blank">MemberRecord</a></td>
+        <td></td>
+        <td><span class="txt-yellow">(客制)</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>帳戶設定</td>
+        <td><a href="MemberSettings.html" target="_blank">MemberSettings</a></td>
+        <td></td>
+        <td><span class="txt-yellow">(客制)</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+    </tbody>
+    <!-- 電子報管理 -->
+    <tbody>
+      <tr class="row-bg2">
+        <td colspan="6">電子報管理</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>電子報-列表</td>
+        <td><a href="EpaperList.html" target="_blank">EpaperList</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td>Doris</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>電子報-寄發列表(無障礙 Html)</td>
+        <td>
+          <a href="epaper/epaper_list_web_Event.html" target="_blank">主推活動</a><br/>
+          <a href="epaper/epaper_list_web_Themes.html" target="_blank">主推本月內容(科學專題)</a><br/>
+          <a href="epaper/epaper_list_web_Video.html" target="_blank">主推本月內容(影音)</a>
+        </td>
+        <td></td>
+        <td><span class="txt-yellow">(客制)<br/>都需要依照客戶需求調整</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>電子報-寄發列表(Table)</td>
+        <td>
+          <a href="epaper/epaper_list_Event.html" target="_blank">主推活動</a><br/>
+          <a href="epaper/epaper_list_Themes.html" target="_blank">主推本月內容(科學專題)</a><br/>
+          <a href="epaper/epaper_list_Video.html" target="_blank">主推本月內容(影音)</a>
+        </td>
+        <td>
+          <ol>
+            <li>Banner：800*600(3:4)</li>
+            <li>卡片列表：352*264(3:4)</li>
+            <li>full卡片：400*300(3:4)</li>
+            <li>小圖列表：130*98(3:4)</li>
+          </ol>
+        </td>
+        <td><span class="txt-yellow">(客制)<br/>都需要依照客戶需求調整</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+    </tbody>
+    <!-- 通用 -->
+    <tbody>
+      <tr class="row-bg2">
+        <td colspan="6">通用</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>主題分類</td>
+        <td><a href="Category.html" target="_blank">Category</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>網站錯誤回饋(報馬仔)</td>
+        <td><a href="WebBugReport.html" target="_blank">WebBugReport</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>全站搜尋/一般功能搜尋</td>
+        <td><a href="Search.html" target="_blank">Search</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+      <tr class="row-bg1">
+        <td>網展導覽/資料夾頁</td>
+        <td><a href="Sitemap.html" target="_blank">Sitemap</a></td>
+        <td></td>
+        <td><span class="txt-blue">(標準)</span></td>
+        <td>Daffy</td>
+        <td class="txt-pink">v</td>
+      </tr>
+    </tbody>
+	</table>
+</div>
+<script src="Scripts/lib/jquery_kf.js"></script>
+<script src="Scripts/app.js"></script>
+</body>
+</html>

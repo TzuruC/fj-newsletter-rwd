@@ -1,0 +1,105 @@
+///*-------------------------------------------------------------------------------*/
+///*    SiteMap                                                                                  */
+///*-------------------------------------------------------------------------------*/
+$site-Bese-color: $primary;
+$site-BeseText-color: $white;
+
+.w_sitemap_inner{
+  margin-top: 2rem;
+  line-height: $line-height-base*1.25;
+	a{
+		display: block;
+		&:hover,&:focus{
+			color: $bese-link-active;
+			transition: padding .5s ease;
+		}
+	}
+	@include media-breakpoint-up(sm){
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -.75rem;
+		margin-right: -.75rem;
+	}
+}
+///*--------------------------第一層標題----------------------------*/
+.site_item1{ 
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.site_tit1{
+	font-size: $font-size-xl-em;
+  font-weight: bold;
+	a{
+		padding: .75rem .5rem;
+    color: $site-BeseText-color;
+    background: $site-Bese-color;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+    &:hover,&:focus{
+      color:$site-BeseText-color;
+      background: darken($site-Bese-color,7.5%);
+    }
+	}
+}
+///*--------------------------第二層以下----------------------------*/
+.site_item2{
+  font-size: $font-size-md-em;
+  font-weight: bold;
+  background: $gray-100;
+  padding: .75rem;
+	a{
+		padding: .125rem 0;
+		color: $base-color-txt;
+		&:hover,&:focus{
+			transition: padding .5s ease;
+		}
+	}	
+}
+///*--------------------------第三以下----------------------------*/
+.site_item2 ul{
+  font-size: $font-size-base-em;
+  background: $white;
+  padding: .75rem;
+  margin: .25rem 0;
+	a{
+		padding: .125rem 0;
+  		&:hover,&:focus{
+			transition: padding .5s ease;
+		}
+	}	
+}
+
+///*--------------------------480以上----------------------------*/
+@include media-breakpoint-up(lg){
+	.site_item1{
+		width: calc(99.9% / 3);
+		padding: 1rem .75rem 0;
+	}
+	.site_item2{
+		ul{
+			padding-top: .25rem;
+			padding-bottom: .25rem;
+			padding-left: 1rem;
+		}
+	}
+}
+///*------------------------------print----------------------------------*/
+@media print{
+	.w_sitemap_inner{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -.75rem;
+		margin-right: -.75rem;		
+	}
+	.site_item1{
+		width: 50%;
+		padding: 1rem .75rem 0;
+	}
+	.site_item2{
+		// &>li>a{font-weight: bold;}
+		ul{
+			padding-top: .25rem;
+			padding-bottom: .25rem;
+			padding-left: 1rem;
+		}
+	}	
+}

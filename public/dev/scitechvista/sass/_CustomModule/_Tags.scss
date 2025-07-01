@@ -1,0 +1,60 @@
+/*-------------------------------------------*\
+  Tags.scss
+  01-checkbox btn
+	
+\*-------------------------------------------*/
+.checkBtn{
+  position: relative;
+  margin-bottom: 1rem;
+  input{
+    position: absolute;
+    left: -9999px;
+  }  
+  label{
+    display: block;
+    border: none;
+  }
+  input[type='checkbox'],input[type='radio']{
+    &:hover{
+      &+label{
+        background-color: $gray-300;        
+      }
+    }
+    &:checked{
+      &+label{
+        color: $white;
+        background-color: $primary;        
+      }
+    }
+    &:focus{
+      &+label{
+        box-shadow: 0 0 0 0.2rem rgba($primary, .25);
+      }
+    }
+  }
+}
+
+.Subscribed{
+  .checkBtn{
+    input{
+      &:checked{
+        &+label{
+          &::before{
+            content: "\f00c";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-right: .5rem;
+          }
+        }
+      }
+    }
+    // label{
+    //   &::before{
+    //     content: "\f00c";
+    //     font-family: 'Font Awesome 5 Free';
+    //     font-weight: 900;
+    //     margin-right: .5rem;
+    //   }
+    // }
+  }
+}

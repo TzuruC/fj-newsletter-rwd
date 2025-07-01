@@ -1,0 +1,22 @@
+/*-------------------------------------------*\
+	_footer.scss
+
+
+  - 1.base
+  - 2.card & list
+\*-------------------------------------------*/
+.Footer-Wrap{
+  padding: 32px;
+  background: $gray-900;
+  text-align: center;
+  .txt{
+    color: $white;
+    line-height: 1.75;
+  }
+  .alink{
+    color: $white;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,225 @@
+/*-------------------------------------------*\
+	_MemberSysadm.scss.
+
+  - 1.會員頁籤
+  - 2.會員雙欄列表
+  - 3.會員活動卡片
+  - 4.會員圖書館
+  - 4-1.資料夾分類
+  - 4-2.文章列表
+\*-------------------------------------------*/
+
+// 1.會員頁籤
+.MemberTabRow{
+  // &.fixed{
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   background: $gray-100;
+  //   padding: 0 .5rem;
+  //   z-index: index($zid, MemberTabRow);
+  // }
+  .container-mx{
+    // display: flex;
+    a{
+      display: block;
+      color: $base-color-txt;
+      font-size: $font-size-sm-em;
+      line-height: $line-height-sm;
+      text-align: center;
+      background: $white;
+      padding: .5rem .25rem;
+      margin: .125rem;
+      &:hover,&:focus,&.active{
+        color: $white;
+        background: $base-color-txt;
+      }
+    }
+    @include media-breakpoint-down(sm){ 
+      span{ display: none;}
+    }
+    @include media-breakpoint-up(sm){
+      display: flex;
+    }
+    @include media-breakpoint-up(md){
+      a{ 
+        font-size: $font-size-md-em;
+        font-weight: bold;
+        padding: 1.5rem .5rem;
+        margin: .125rem;
+      }
+    }
+  }
+}
+
+// 2.會員雙欄列表
+.MemberTwoCol{
+  @include media-breakpoint-up(xl){
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    .kf-diagramtext-col {
+      min-height: auto;
+      padding: 0 1.5rem;
+    }
+  }
+}
+.MemberRecordList{
+  margin-top: 2rem;
+  .kf-diagramtext-col{
+    margin-bottom: 3rem;
+  }
+  .kf-bookmark{
+    margin-bottom: -2rem;
+    margin-right: .5rem;
+  }
+  .BadgeGroup{
+    padding-right: 2rem;
+  }
+}
+// 3.會員活動卡片
+.MemberCard{
+  margin: 0;
+  .kf-diagramtext-col{
+    .kf-item{
+      box-shadow: $box-shadow-sm;
+      .kf-img{
+        figure{ box-shadow: none; }
+      }
+    }
+  }
+}
+// 4.會員圖書館
+body{
+  &:after{
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    transition: .8s;
+  }
+  &.OpenKeepClass{
+    overflow: hidden;
+    &:after{
+      visibility: visible;
+      opacity: 1;
+    }
+    .header-row{ z-index: 0;}
+  }
+}
+@include media-breakpoint-down(lg){
+  .KeepClassBtn{
+    margin: .5rem .5rem 2.5rem;
+  }
+  .MemderKeepClass{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100vh;
+    background: $white;
+    padding: 0;
+    overflow: auto;
+    z-index: 98;
+    margin-left: -450px;
+    @include animate(.3s);
+    .itembottom{
+      position: fixed;
+      width: 320px;
+      z-index: 1;
+      bottom: 0;
+      background: $white;
+      box-shadow: -5px 0px 20px rgba($black, .25);
+      padding: .5rem;
+    }
+  }
+  .OpenKeepClass .MemderKeepClass{
+    margin-left: 0;
+  }
+}
+@include media-breakpoint-down(sm){
+  .MemderKeepClass{
+    width: 85vw;
+    margin-left: -85vw;
+    .itembottom{
+      width: 85vw;
+    }
+  }
+}
+@include media-breakpoint-up(xl){
+  .KeepClassBtn{ display: none;}
+  .MemderKeep-row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .MemderKeepClass{
+    width: 400px;
+  }
+  .MemderKeepList{
+    width: calc(100% - 400px);
+    padding-left: 50px;
+  }
+}
+@include media-breakpoint-up(mx){
+  .MemderKeepList{
+    padding-left: 100px;
+  }
+}
+// 4-1.資料夾分類
+.MemderKeepClass{
+  .item{
+    display: flex;
+    background: $white;
+    padding: .25rem;
+    min-height: 56px;
+    box-shadow:  $box-shadow-sm;
+    border-top: solid 3px $secondary;
+    .ClassFolder{
+      display: flex;
+      justify-content: space-between;
+      padding: .75rem 1rem;
+      color: $base-color-txt;
+      &:hover,&:focus{
+        color: $primary;
+      }
+    }
+  }
+}
+.KeepClassList{
+  .item{
+    border-bottom: solid 1px $gray-200;
+    border-top: none;
+    &:last-child{
+      border-bottom: none;
+    }
+    .ClassFolder{
+      border-right: solid 1px $gray-200;
+    }
+  }
+}
+.ClassFolder,.ClassBtn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ClassBtn{
+  button{
+    border: none;
+    background: transparent;
+    padding: .5rem;
+    margin: 0 .125rem;
+  }
+}
+// 4-2.文章列表
+.MemderKeepList{
+  .kf-diagramtext-list{
+    margin-top: -1.5rem;
+  }
+}

@@ -1,0 +1,21 @@
+/*-------------------------------------------------------------------------------*/
+/*    $MainFoot                                                                  */
+/*-------------------------------------------------------------------------------*/
+.mfoot{	
+	position: absolute;
+	bottom: 0;
+  right: 0;	
+  width: 100%;
+  &_inner{
+    padding: 1rem;
+  }
+  .btn{
+    width: 100%;
+  }
+  @include  media-breakpoint-up(md){
+    text-align: right;
+    .btn{
+      width: auto;
+    }
+  }
+}

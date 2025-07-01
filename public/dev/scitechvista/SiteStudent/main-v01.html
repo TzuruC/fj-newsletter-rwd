@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="email=no" name="format-detection" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>主版V01</title>
+	<link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Common CSS 首頁主版共用 -->
+  <link rel="stylesheet" href="css/common.min.css">
+  <!-- Main CSS 主版 -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Components CSS 標準功能-->
+  <link rel="stylesheet" href="css/kf-components.min.css">
+  <!-- Custom CSS 客制功能 -->
+  <link rel="stylesheet" href="css/custom.min.css">
+  
+	<script src="Scripts/lib/modernizr-custom.min.js"></script>
+	<script src="Scripts/lib/jquery_kf.js"></script>
+</head>
+<body>
+  <a class="skip-main" href="#tabC" title="跳到主要內容">跳到主要內容</a>
+  <header class="header-row bg-white">
+    <div class="container d-flex">
+      <h1 class="header-logo text-center">
+        <a title="回首頁" href="#回首頁">
+          <img src="images/header-logo.svg" alt="科技大觀園"/>
+        </a>
+      </h1>
+      <div class="topNav-row align-items-center">
+        <a id="tabU" href="#" title="上方導覽連結區" accesskey="U">:::</a>
+        <div class="d-flex align-items-center">
+          <div class="topNav-item">
+            <a href="#">
+              <span>xxx 您好，歡迎登入xxxx</span>
+            </a>
+          </div>
+          <div class="topNav-item">
+            <a href="#">
+              <span>登入</span>
+            </a>
+          </div>
+          <div class="topNav-item">
+            <a href="#">
+              <span>註冊</span>
+            </a>
+          </div>
+          <div class="topNav-item topNav-item-fas">
+            <a href="#">
+              <i class="fas fa-sitemap" aria-hidden="true"></i>
+              <span class="sr-only">網站導覽</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+	<!-- search -->
+  <div class="header-search">
+    <div class="search-content">
+      <a class="search-parent" href="#Search" title="展開搜尋">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <span class="sr-only">展開搜尋</span>
+      </a>
+      <div class="search-inner">
+        <div class="container">
+          <label for="tbTopSearch" class="sr-only">全站搜尋</label>
+          <div class="search-form d-flex">
+            <input class="search-txt" type="text" title="搜尋字詞" placeholder="全站搜尋" id="tbTopSearch"/>
+            <input class="search-btn" type="submit" name="checkb" value="搜尋"/>
+          </div>
+          <div class="search-keywords">
+            <i class="search-keywords-tit">熱門關鍵字：</i>
+            <ul class="search-keywords-cotent">
+              <li>
+                <a href="#" class="badge badge-primary">關鍵字</a>
+              </li>
+              <li>
+                <a href="#" class="badge badge-primary">關鍵字</a>
+              </li>
+              <li>
+                <a href="#" class="badge badge-primary">關鍵字</a>
+              </li>
+              <li>
+                <a href="#" class="badge badge-primary">關鍵字</a>
+              </li>
+            </ul>
+          </div>
+          <a class="search-close" href="#close" title="關閉搜尋功能">
+            <i class="fas fa-times" aria-hidden="true"></i>
+            <span class="sr-only">關閉搜尋</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <noscript>
+      <div class="container">
+        您的瀏覽器不支援此script語法，請點選<a id="aSearchLink" title="前往搜尋頁面_開啓新視窗" target="_blank" href="#search">搜尋頁面</a>使用搜尋功能。
+      </div>
+    </noscript>
+  </div>
+  <!-- 分類 -->
+  <div class="category-bar">
+    <div class="container">
+      <button class="category-open">
+        <i class="fas fa-tags" aria-hidden="true"></i>
+        <span>分類</span>
+      </button>
+    </div>
+  </div>
+  <div class="category-side">
+    <div class="category-body">
+      <div class="category-head">
+        <span class="h5 font-weight-bold mb-0">分類項目</span>
+        <button class="category-close">
+          <i class="fas fa-times" aria-hidden="true"></i>
+          <span class="sr-only">關閉分類項目</span>
+        </button>
+      </div>
+      <div class="category-content">
+        <ul class="category-list">
+          <li><a href="#">地科</a></li>
+          <li><a href="#">天文</a></li>
+          <li><a href="#">生物</a></li>
+          <li><a href="#">物理</a></li>
+          <li><a href="#">化學</a></li>
+          <li><a href="#">數學</a></li>
+          <li><a href="#">醫療</a></li>
+          <li><a href="#">心理</a></li>
+          <li><a href="#">科技</a></li>
+          <li><a href="#">環境</a></li>
+          <li><a href="#">人類文明</a></li>
+          <li><a href="#">社會科學</a></li>
+          <li><a href="#">生活科學</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+	<!-- MegaMenu -->
+	<div class="megamenu">
+		<!-- mobile-menu -->
+		<div id="mobile-nav-wrap">
+			<a class="mobile-nav-link" href="#" title="選單按鈕">Menu</a>
+			<nav id="mobile-nav" class="mobile-nav">
+				<ul>
+					<li class="has-submenu">
+						<a href="#">關於我們</a>
+						<ul class="sub-menu">
+							<li class="has-submenu"><a href="#">最新消息</a></li>
+						</ul>
+					</li>
+					<li class="has-submenu">
+						<a href="#">文章</a>
+						<ul class="sub-menu">
+							<li class="has-submenu">
+								<a href="#">熱門文章</a>
+								<ul class="third-menu">
+									<li><a href="#">熱門文章</a></li>
+								</ul>
+							</li>
+							<li class="has-submenu">
+								<a href="#">最新文章</a>
+								<ul class="third-menu">
+									<li><a href="#">最新文章</a></li>
+								</ul>
+							</li>
+              <li class="has-submenu">
+								<a href="#">精選文章</a>
+								<ul class="third-menu">
+									<li><a href="#">精選文章</a></li>
+								</ul>
+							</li>
+              <li class="has-submenu">
+								<a href="#">科學專題</a>
+								<ul class="third-menu">
+									<li><a href="#">科學專題</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="has-submenu">
+						<a href="#">影音</a>
+						<ul class="sub-menu">
+							<li class="has-submenu">
+								<a href="#">影音</a>
+								<ul class="third-menu">
+									<li><a href="#">test3</a></li>
+								</ul>
+							</li>
+							<li class="has-submenu">
+								<a href="#">影音</a>
+								<ul class="third-menu">
+									<li><a href="#">申請閱覽政府資訊或卷宗作業規定</a></li>
+									<li><a href="#">test3</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="has-submenu">
+						<a href="#">活動</a>
+						<ul class="sub-menu">
+							<li class="has-submenu">
+								<a href="#">活動</a>
+								<ul class="third-menu">
+									<li><a href="#">test3</a></li>
+									<li><a href="#">test3</a></li>
+									<li><a href="#">test3</a></li>
+									<li><a href="#">test3</a></li>
+									<li><a href="#">test3</a></li>
+								</ul>
+							</li>
+							<li class="has-submenu">
+								<a href="#">活動</a>
+								<ul class="third-menu">
+									<li><a href="#">test3</a></li>
+									<li><a href="#">test3</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="has-submenu">
+						<a href="#">學生專區</a>
+						<ul class="sub-menu">
+							<li class="has-submenu">
+								<a href="#">學生專區</a>
+								<ul class="third-menu">
+									<li><a href="#">test3</a></li>
+								</ul>
+							</li>
+							<li class="has-submenu">
+								<a href="#">test2</a>
+								<ul class="third-menu">
+									<li><a href="#">test3</a></li>
+									<li><a href="#">test3</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="has-submenu">
+						<a href="#">夥伴</a>
+						<ul class="sub-menu">
+							<li class="has-submenu">
+								<a href="#">夥伴</a>
+								<ul class="third-menu">
+									<li><a href="#">test3</a></li>
+								</ul>
+							</li>
+							<li class="has-submenu">
+								<a href="#">test2</a>
+								<ul class="third-menu">
+									<li><a href="#">test3</a></li>
+									<li><a href="#">test3</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="has-submenu">
+						<a href="#">認證</a>
+						<ul class="sub-menu">
+							<li class="has-submenu">
+								<a href="#">認證</a>
+								<ul class="third-menu">
+									<li><a href="#">test3</a></li>
+								</ul>
+							</li>
+							<li class="has-submenu">
+								<a href="#">test2</a>
+								<ul class="third-menu">
+									<li><a href="#">test3</a></li>
+									<li><a href="#">test3</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+        </ul>
+        <div class="menu-topnav">
+          <div class="row">
+            <a href="#" title="登入/註冊" class="menu-topnav-item btn-secondary">
+              <i class="pr-2 fas fa-user" aria-hidden="true"></i>
+              <span>登入</span>
+            </a>
+            <a href="#" title="登入/註冊" class="menu-topnav-item btn-secondary">
+              <i class="pr-2 fas fa-sign-in-alt" aria-hidden="true"></i>
+              <span>註冊</span>
+            </a>
+            <a href="#" title="網站導覽" class="menu-topnav-item btn-secondary">
+              <i class="pr-2 fas fa-sitemap" aria-hidden="true"></i>
+              <span>網站導覽</span>
+            </a>
+          </div>
+        </div>
+			</nav>
+		</div>
+		<!-- desktop menu -->
+		<div id="main-nav-wrap">
+      <div class="container">
+        <div class="nav-content">
+          <ul id="primary-nav" data-function="nav_control">
+            <li class="nav-item nav-fulltxt">
+              <span class="nav-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menubar">
+                <a href="#" title="關於">關於</a>
+              </span>
+              <div class="dropdowns dropdown-menu">
+                <div class="container">
+                  <div class="secondary-title">
+                    <div class="h3">關於我們</div>
+                    <div class="kf-img obj-img-cover">
+                      <figure class="embed-responsive embed-responsive-4by3 ">
+                        <img src="images/default-x.jpg" alt=""/>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="secondary-nav">
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>認識台肥</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">公司簡介</a></li>
+                        <li><a href="#">經營理念</a></li>
+                        <li><a href="#">台肥大事紀</a></li>
+                        <li><a href="#">台肥影音</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>組織團隊</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">經營團隊</a></li>
+                        <li><a href="#">組織架構</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>市場與業務</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">主要產品</a></li>
+                        <li><a href="#">事業據點</a></li>
+                        <li><a href="#">主要轉投資事業</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>台肥基金會</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">獲獎名單</a></li>
+                        <li><a href="#">獎學金申請</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>重要管理政策</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">品質政策</a></li>
+                        <li><a href="#">安全衛生政策</a></li>
+                        <li><a href="#">環境政策</a></li>
+                        <li><a href="#">資訊安全政策</a></li>
+                        <li><a href="#">全國團結圈</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>台肥花蓮深層海水園區</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- nav-item end -->
+            <li class="nav-item nav-column">
+              <span class="nav-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menubar">
+                <a href="#" title="文章">文章</a>
+              </span>
+              <div class="dropdowns dropdown-menu">
+                <div class="container">
+                  <div class="secondary-title">
+                    <div class="h3">關於我們</div>
+                    <div class="kf-img obj-img-cover">
+                      <figure class="embed-responsive embed-responsive-4by3 ">
+                        <img src="images/default-x.jpg" alt=""/>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="secondary-nav">
+                    <div class="sec-item">
+                      <div class="kf-img obj-img-cover">
+                        <figure class="embed-responsive embed-responsive-4by3 ">
+                          <img src="images/default-x.jpg" alt=""/>
+                        </figure>
+                      </div>
+                      <div class="sec-tit h5"><a href="#">最新消息</a></div>
+                      <ul class="third-item">
+                        <li><a href="#">公司簡介</a></li>
+                        <li><a href="#">經營理念</a></li>
+                        <li><a href="#">台肥大事紀</a></li>
+                        <li><a href="#">台肥影音</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="kf-img obj-img-cover">
+                        <figure class="embed-responsive embed-responsive-4by3 ">
+                          <img src="images/default-x.jpg" alt=""/>
+                        </figure>
+                      </div>
+                      <div class="sec-tit h5"><a href="#">報名系統</a></div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="kf-img obj-img-cover">
+                        <figure class="embed-responsive embed-responsive-4by3 ">
+                          <img src="images/default-x.jpg" alt=""/>
+                        </figure>
+                      </div>
+                      <div class="sec-tit h5"><a href="#">招標公告</a></div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="kf-img obj-img-cover">
+                        <figure class="embed-responsive embed-responsive-4by3 ">
+                          <img src="images/default-x.jpg" alt=""/>
+                        </figure>
+                      </div>
+                      <div class="sec-tit h5"><a href="#">人才召募</a></div>
+                    </div>
+                    <!-- sec-item end -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- nav-item end -->
+            <li class="nav-item nav-fullimg">
+              <span class="nav-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menubar">
+                <a href="#" title="影音">影音</a>
+              </span>
+              <div class="dropdowns dropdown-menu">
+                <div class="container">
+                  <div class="secondary-title">
+                    <div class="h3">商品/不動產</div>
+                  </div>
+                  <div class="secondary-nav">
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>不動產開發</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">業務簡介</a></li>
+                        <li><a href="#">策略願景</a></li>
+                        <li><a href="#">招租招商</a></li>
+                        <li><a href="#">重要建案</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>肥料產品</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">農友牌簡介</a></li>
+                        <li><a href="#">商品資訊</a></li>
+                        <li><a href="#">肥料教室</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>化工產品</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>電子級化學品</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>水產繁養</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>液氨產品牌價</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- nav-item end -->
+            <li class="nav-item nav-column">
+              <span class="nav-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menubar">
+                <a href="#" title="活動">活動</a>
+              </span>
+              <div class="dropdowns dropdown-menu">
+                <div class="container">
+                  <div class="secondary-title">
+                    <div class="h3">關於我們</div>
+                    <div class="kf-img obj-img-cover">
+                      <figure class="embed-responsive embed-responsive-4by3 ">
+                        <img src="images/default-x.jpg" alt=""/>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="secondary-nav">
+                    <div class="sec-item">
+                      <div class="sec-tit h5"><a href="#">全部文章</a></div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5"><a href="#">員工投稿</a></div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5"><a href="#">70周年紀念專區</a></div>
+                    </div>
+                    <!-- sec-item end -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- nav-item end -->
+            <li class="nav-item nav-icon">
+              <span class="nav-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menubar">
+                <a href="#" title="公務員認證">公務員認證</a>
+              </span>
+              <div class="dropdowns dropdown-menu">
+                <div class="container">
+                  <div class="secondary-title">
+                    <div class="h3">投資人專區</div>
+                  </div>
+                  <div class="secondary-nav">
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>公司治理</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">治理規章</a></li>
+                        <li><a href="#">董事會</a></li>
+                        <li><a href="#">誠信經營與反貪腐</a></li>
+                        <li><a href="#">內部稽核</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>股東資訊</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">股東資訊</a></li>
+                        <li><a href="#">股務資訊</a></li>
+                        <li><a href="#">台肥年報</a></li>
+                        <li><a href="#">財務資訊</a></li>
+                        <li><a href="#">法說資料</a></li>
+                        <li><a href="#">重大訊息</a></li>
+                        <li><a href="#">諮詢服務</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>化工產品</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>電子級化學品</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>水產繁養</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>液氨產品牌價</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- nav-item end -->
+            <li class="nav-item nav-icon">
+              <span class="nav-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menubar">
+                <a href="#" title="教師認證">教師認證</a>
+              </span>
+              <div class="dropdowns dropdown-menu">
+                <div class="container">
+                  <div class="secondary-title">
+                    <div class="h3">投資人專區</div>
+                  </div>
+                  <div class="secondary-nav">
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>公司治理</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">治理規章</a></li>
+                        <li><a href="#">董事會</a></li>
+                        <li><a href="#">誠信經營與反貪腐</a></li>
+                        <li><a href="#">內部稽核</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>股東資訊</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">股東資訊</a></li>
+                        <li><a href="#">股務資訊</a></li>
+                        <li><a href="#">台肥年報</a></li>
+                        <li><a href="#">財務資訊</a></li>
+                        <li><a href="#">法說資料</a></li>
+                        <li><a href="#">重大訊息</a></li>
+                        <li><a href="#">諮詢服務</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>化工產品</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>電子級化學品</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>水產繁養</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>液氨產品牌價</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- nav-item end -->
+            <li class="nav-item nav-icon">
+              <span class="nav-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menubar">
+                <a href="#" title="學生專區">學生專區</a>
+              </span>
+              <div class="dropdowns dropdown-menu">
+                <div class="container">
+                  <div class="secondary-title">
+                    <div class="h3">投資人專區</div>
+                  </div>
+                  <div class="secondary-nav">
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>公司治理</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">治理規章</a></li>
+                        <li><a href="#">董事會</a></li>
+                        <li><a href="#">誠信經營與反貪腐</a></li>
+                        <li><a href="#">內部稽核</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>股東資訊</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">股東資訊</a></li>
+                        <li><a href="#">股務資訊</a></li>
+                        <li><a href="#">台肥年報</a></li>
+                        <li><a href="#">財務資訊</a></li>
+                        <li><a href="#">法說資料</a></li>
+                        <li><a href="#">重大訊息</a></li>
+                        <li><a href="#">諮詢服務</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>化工產品</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>電子級化學品</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>水產繁養</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>液氨產品牌價</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- nav-item end -->
+            <li class="nav-item nav-icon">
+              <span class="nav-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menubar">
+                <a href="#" title="夥伴">夥伴</a>
+              </span>
+              <div class="dropdowns dropdown-menu">
+                <div class="container">
+                  <div class="secondary-title">
+                    <div class="h3">投資人專區</div>
+                  </div>
+                  <div class="secondary-nav">
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>公司治理</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">治理規章</a></li>
+                        <li><a href="#">董事會</a></li>
+                        <li><a href="#">誠信經營與反貪腐</a></li>
+                        <li><a href="#">內部稽核</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>股東資訊</span>
+                        </a>
+                      </div>
+                      <ul class="third-item">
+                        <li><a href="#">股東資訊</a></li>
+                        <li><a href="#">股務資訊</a></li>
+                        <li><a href="#">台肥年報</a></li>
+                        <li><a href="#">財務資訊</a></li>
+                        <li><a href="#">法說資料</a></li>
+                        <li><a href="#">重大訊息</a></li>
+                        <li><a href="#">諮詢服務</a></li>
+                      </ul>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>化工產品</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>電子級化學品</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>水產繁養</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                    <div class="sec-item">
+                      <div class="sec-tit h5">
+                        <a href="#">
+                          <div class="kf-img obj-img-cover">
+                            <figure class="embed-responsive embed-responsive-4by3 ">
+                              <img src="images/default-x.jpg" alt=""/>
+                            </figure>
+                          </div>
+                          <span>液氨產品牌價</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- sec-item end -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- nav-item end -->
+          </ul>
+        </div>
+      </div>
+		</div>
+  </div>
+	<!-- ContentsWrap -->
+	<div class="contents_wrap">
+    <!-- banner -->
+  <section class="main-banner-wrap">
+    <div class="container">
+      <h2 class="title h1">學生專區</h2>
+    </div>
+  </section>
+    <!-- 麵包屑 標題 分享 字型大小 -->
+		<div class="container-mx pt-3">
+      <!--Breadcrumbs-->
+      <div class="breadcrumbs">
+        <div id="tabC">
+          <a id="maincontent" href="#" title="中央主要內容區" accesskey="C">:::</a>
+        </div>
+        <ul class="breadcrumbs_u">
+          <li><a href="#">首頁</a></li>
+          <li><a href="#">觀光情報</a></li>
+          <li><a href="#">熱門訊息</a></li>
+          <li><a href="#">最新消息</a></li>
+        </ul>
+      </div>
+      <!-- 分享 字型大小 -->
+      <div class="contents_function">
+        <div class="contents_function_inner">
+          <div class="social_skip">
+            <a href="#mainbody" id="aSkip" title="略過字型切換，社群分享工具列">略過字型切換，社群分享工具列</a>
+          </div>
+          <div class="switchertool">
+            <a class="social_links1" href="#" target="_blank" title="facebook_另開新視窗">facebook</a>
+            <a class="social_links2" href="#" target="_blank" title="twitter_另開新視窗">twitter</a>
+            <a class="social_links3" href="#" target="_blank" title="plurk_另開新視窗">plurk</a>
+            <a class="social_links4" href="#" target="_blank" title="line_另開新視窗">line</a>
+            <a class="switcher sc_font" href="#" title="中">中</a>
+            <a class="switcher sc_print" href="#print" title="列印功能">列印</a>
+          </div>              
+        </div>
+        <noscript>
+          您的瀏覽器似乎不支援JavaScript語法，但沒關係，這裡的JavaScript語法並不會影響到內容的陳述。<br/> 
+          如需要選擇字級大小<br/> IE請利用鍵盤按住Alt鍵 + V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小<br/>
+          Chrome、Firefox 瀏覽器則可利用鍵盤 Ctrl + (+)放大(-)縮小來改變字型大小， 列印可使用瀏覽器提供的(Ctrl+P)功能。<br /> 若要分享網頁，您可使用下列連結，再輸入您想要分享的資訊：
+          <a href="http://www.facebook.com/" target="_blank" title="facebook_另開新視窗">facebook</a>
+          <a href="http://www.twitter.com/" target="_blank" title="twitter_另開新視窗">twitter</a>
+          <a href="http://www.plurk.com/" target="_blank" title="plurk_另開新視窗">plurk</a>
+          <a href="http://line.me/zh-hant/" target="_blank" title="line_另開新視窗">line</a>
+        </noscript>
+      </div>
+      <h2 class="main_tit">列表功能標題</h2>
+    </div>
+    <!-- 功能區塊 -->
+    <div id="mainbody">
+      <!--介接主版時，請把下方class="center_body"改為class="main_body"-->
+      <div class="center_body" style="min-height: 20rem;">
+        網站內容放置區
+      </div>
+      <!-- <div class="container-mx mfoot">
+        <div class="mfoot_inner">
+          <a class="btn btn-gray" href="#"><i class="far fa-grin-beam-sweat"></i>網站資料錯誤，歡迎提供您的意見</a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!-- Fat footer -->
+  <div class="fat-wrap">
+    <div class="fatbtn-bar">
+      <a href="javascript:void(0);" class="fatbtn" title="開啟">開啟</a>
+    </div>
+    <div class="fat-content container">
+      <div class="row">
+        <div class="col">
+          <div class="fat-itle h5"><a href="#">頁尾大標題名稱</a></div>
+          <ul class="fat-item">
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱連結名稱">FatFooter連結名稱連結名稱</a></li>
+            <li><a href="#" title="連結名稱">連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="fat-itle h5"><a href="#">頁尾大標題名稱</a></div>
+          <ul class="fat-item">
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱連結名稱">FatFooter連結名稱連結名稱</a></li>
+            <li><a href="#" title="連結名稱">連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="fat-itle h5"><a href="#">頁尾大標題名稱</a></div>
+          <ul class="fat-item">
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱連結名稱">FatFooter連結名稱連結名稱</a></li>
+            <li><a href="#" title="連結名稱">連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="fat-itle h5"><a href="#">頁尾大標題名稱</a></div>
+          <ul class="fat-item">
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱連結名稱">FatFooter連結名稱連結名稱</a></li>
+            <li><a href="#" title="連結名稱">連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="fat-itle h5"><a href="#">頁尾大標題名稱</a></div>
+          <ul class="fat-item">
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱連結名稱">FatFooter連結名稱連結名稱</a></li>
+            <li><a href="#" title="連結名稱">連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+            <li><a href="#" title="連結名稱">連結名稱</a></li>
+            <li><a href="#" title="FatFooter連結名稱">FatFooter連結名稱</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-wrap">
+    <div class="container pt-4 pt-md-6">
+      <div class="d-lg-flex justify-content-lg-between px-3 py-4 px-md-0">
+        <div class="d-md-flex">
+          <div class="footer-logo mb-3">
+            <a id="tabB" href="#tabB" title="下方導覽連結區" accesskey="B">:::</a>
+            <img src="images/footer-logo.svg" alt="科技部-科技大觀園">
+          </div>
+          <div class="foot-info mb-3">
+            <p>通訊地址：10622 臺北市大安區和平東路二段106號三樓</p>
+            <p>電話：(02)6630-0634</p>
+            <p>信箱：moststv@gmail.com</p>
+            <p>公務人員及教師認證服務專用信箱 : 1403040@narlabs.org.tw</p>
+          </div>
+        </div>
+        <div class="d-md-flex ml-lg-auto">
+          <div class="foot-link mb-3">
+            <a href="#" title="資訊安全政策">資訊安全政策</a>
+            <a href="#" title="政府資料開放宣告">政府資料開放宣告</a>
+            <a href="#" title="隱私權政策">隱私權政策</a>
+          </div>
+          <div class="foot-government ml-md-4">
+            <a href="http://www.gov.tw/" target="_blank" title="我的E政府(另開新視窗)" class="mx-2 mb-md-3">
+              <img src="images/gov.svg" alt="我的E政府商標">
+            </a>
+            <a href="https://www.handicap-free.nat.gov.tw/Applications/Detail?category=20180303130745" target="_blank" title="無障礙網站(另開新視窗)" class="mx-2 mb-md-3">
+              <img src="images/accessibility.svg" alt="通過無障礙2.0網頁檢測AA等級">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-foot">
+      <div class="row no-gutters px-3 py-4 px-md-0">
+        <div class="col-lg-7 mb-2 mb-lg-0">建議瀏覽器：IE11.0以上、Firefox、Chrome(螢幕設定最佳顯示效果為1920*1080)</div>
+        <div class="col-lg-5 text-lg-right">更新日期：109-06-24 訪客人數：00269530</div>
+      </div>
+    </div>
+  </footer>
+	<div class="scrollToTop">
+    <a href="#" title="回頂部">
+      <i class="fas fa-arrow-alt-circle-up" aria-hidden="true"></i>
+      <span class="sr-only">回頂部</span>
+    </a>
+  </div>
+<!-- bootstrap JS -->
+<script src="Scripts/bootstrap.min.js"></script>
+<!-- megamenu -->
+<script src="Scripts/megamenu/MobileMenu.js"></script>
+<!-- Owl  Carousel JS-->
+<script src="Scripts/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+<script src="Scripts/common.js"></script>
+<script src="Scripts/customDs.js"></script>
+<script src="Scripts/main.js"></script>
+<!--下面這支script 程式介接時請移除-->
+<script src="Scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+/*-------------------------------------------*\
+	_MainContent.sass
+	
+	功能內容區塊
+  - 1.主要框架
+\*-------------------------------------------*/
+// 1.主要框架
+.Stv-MainContent{
+  width: 100%;
+  @include media-breakpoint-up(xl){
+    width: calc(100% - 400px);
+    padding-right: 50px;
+	}
+	@include media-breakpoint-up(mx){
+    padding-right: 100px;
+	}
+  @include media-breakpoint-up(mxx){
+    width: calc(100% - 480px);
+    padding-right: 130px;
+	}
+}

@@ -1,0 +1,145 @@
+/*-------------------------------------------*\
+	activity.scss
+	
+	Index
+  - 1.science-wrap
+\*-------------------------------------------*/
+// 1. wrap & title
+.activity-wrap{
+  @include media-breakpoint-up(lg){
+    .container{      
+      position: relative;
+      z-index: 1;
+    }
+    .in_title{ 
+      position: absolute;
+      z-index: 2;
+      width: calc((100% - 60%) - (2rem + 0.5rem));
+      right: .5rem;
+      margin-top: 3rem;
+    }
+  }
+  @include media-breakpoint-up(xl){
+    .in_title{
+      width: calc((100% - 60%) - (2rem + 0.5rem));
+      margin-top: 4rem;
+    }
+  }
+  @include media-breakpoint-up(mx){
+    .in_title{
+      width: calc((100% - 58%) - (3rem + 0.5rem));
+    }
+  }
+}
+// 2. layout RWD
+.activity{
+  &-item{
+    display: block;
+    padding: .5rem;
+    &:hover{
+      .activity-more{
+        color: $white;
+        background-color: $primary;
+      }
+      img{
+        transform: scale(1.05);
+      }
+    }
+    &:focus{
+      outline-offset: -2px;
+    }
+  }
+  &-fig{
+    border: 1rem solid $white;
+    box-shadow: none !important;
+    &::before{
+      padding-top: 75%;
+    }
+  }
+  &-body{
+    padding: 0 1rem 1rem;
+    color: $black;
+    background: url(../images/dot-grid.gif);
+    background-size: 60%;
+  }
+  @include media-breakpoint-up(md){
+    &-item{      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem 0;
+    }
+    &-fig{
+      flex-shrink: 0;
+      width: 60%;
+      box-shadow: .75rem .75rem .75rem -.5rem rgba($black, .2) !important;
+    }
+    &-body{
+      z-index: -1;
+      flex-shrink: 0;
+      width: 40%;
+      padding: 1.5rem 1rem;
+    }
+  }
+  @include media-breakpoint-up(lg){
+    &-item{
+      align-items: start;
+    }
+    // &-fig{
+    //   &::before{
+    //     padding-top: 65%;
+    //   }
+    // }
+    &-body{      
+      margin-top: 7rem;
+      padding: 2rem;
+    }
+  }
+  @include media-breakpoint-up(xl){
+    &-fig{
+      width: 51.1%;
+      // &::before{
+      //   padding-top: 56.2%;
+      // }
+    }
+    &-body{
+      width: 35%;
+      margin-top: 9rem;
+      padding: 2rem;
+    }
+  }
+  @include media-breakpoint-up(mx){
+    &-body{
+      margin-top: 10rem;
+      padding: 3rem;
+    }
+  }
+}
+// 3.text
+.activity{
+  &-tit{
+    font-size: $h3-font-size;
+    font-weight: bold;
+    line-height: 1.2;
+    @include text-truncate-more(1);
+    @include media-breakpoint-up(xl){
+      @include text-truncate-more(2);
+      height: calc(2em * 1.2);
+    }
+  }
+  &-data{
+    font-size: $font-size-sm;
+  }
+  &-txt{
+    line-height: 1.5;
+  }
+  &-more{
+    display: inline-block;
+    width: 140px;
+    padding: .75rem;
+    color: $primary;
+    text-align: center;
+    border: 1px solid $primary;
+    border-radius: .25rem;
+  }
+}

@@ -1,0 +1,43 @@
+/*-------------------------------------------*\
+	Main.scss
+	
+	Index
+  - 1.
+\*-------------------------------------------*/
+.main-banner-wrap{
+  position: relative;
+  height: 100px;
+  background: url(../images/student_banner.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba($black, 1) 0%, rgba($black, .5) 60%, rgba($black, 0) 100%);
+  }
+  .title {
+    position: relative;
+    font-size: $h1-font-size;
+    font-weight: bold;
+    color: $white;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
+  }
+  @include media-breakpoint-up(sm){
+    height: 200px;
+  }
+  @include media-breakpoint-up(sm){
+    height: 250px;
+  }
+}

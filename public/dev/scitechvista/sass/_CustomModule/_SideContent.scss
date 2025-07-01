@@ -1,0 +1,135 @@
+/*-------------------------------------------*\
+	_SideContent.sass
+	
+	側邊內容區塊
+  - 1.主要框架
+  - 2.訂閱電子報
+  - 3.追蹤 搜尋 推薦 外框架
+  - 4.追蹤我們
+  - 5.搜尋關鍵字
+  - 6.最新文章
+\*-------------------------------------------*/
+// 1.主要框架
+.Stv-SideContent{
+  width: 100%;
+  margin: 3rem 0;
+  @include media-breakpoint-up(xl){
+    width: 400px;
+    margin-top: 0;
+  }
+  @include media-breakpoint-up(mxx){
+    width: 480px;
+  }
+}
+// 2.訂閱電子報
+.Stv-SideContent{
+  .SubscribeEpaper{
+    background: $gray-900;
+    padding: .75rem;
+    box-shadow: $box-shadow;
+    color: $white;
+    @include media-breakpoint-up(sm){ padding: 3rem 2rem;}
+    .tit{ font-weight: bold;}
+    p{ line-height: $line-height-base;}
+  }
+}
+// 3.追蹤 搜尋 推薦 外框架
+.Stv-SideContent{
+  .Rgt-wrap{
+    background: $white;
+    padding: .75rem;
+    box-shadow: $box-shadow;
+    @include media-breakpoint-up(sm){ padding: 1rem 2rem; padding-top: 3rem;}
+  }
+  .Rgt-row{
+    margin-bottom: 2rem;
+    .tit{
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      span{
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        padding-right: .5rem;
+      }
+      &:after{
+        content: "";
+        width: 100%;
+        border-bottom: solid 1px $gray-300;
+      }
+    }
+  }
+}
+// 4.追蹤我們
+$boxsize:  52px;
+$social-types: (
+	FB : #1877f2, 
+	Line : #00b900,
+	Youtube : #ff0000,
+	Plurk: #ff574d,
+  Instagram: #f00075,
+);
+@each $name, $color in $social-types {
+	.Community-#{$name} {
+    background:url(../images/module/Community_#{$name}.svg)no-repeat center center $color;
+    &:hover,&:focus{
+      background:url(../images/module/Community_#{$name}.svg)no-repeat center center darken($color, 8%);
+    }
+	}
+}
+.Stv-SideContent{
+  .FollowRow{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem;
+    .item{
+      display: block;
+      width: $boxsize;
+      height: $boxsize;
+      line-height: $boxsize;
+      border-radius: 50%;
+      margin: .5rem
+    }
+  }
+}
+// 5.搜尋關鍵字
+.side-SearchKeyword{
+  margin-left: -.125rem;
+  margin-right: -.125rem;
+  .badge{ margin: .25rem .125rem;}
+}
+// 6.最新文章
+.Stv-SideContent{
+  .ListRow{
+    margin-bottom: 2.5rem;
+    .ListCol{
+      .kf-bookmark{
+        position: relative;
+        z-index: 1;
+        margin-bottom: -2.125rem;
+      }
+    }
+    .item{
+      display: block;
+      margin-bottom: 1rem;
+      .kf-img{ 
+        padding: 0;
+        figure{border-radius: 50%;}
+      }
+      .kf-text-content{ padding-right: 0;}
+      .kf-title{
+        margin-bottom: 0;
+        height: 3rem;
+      }
+      .kf-difficulty-star{
+        padding-right: 2rem;
+      }
+      @include media-breakpoint-up(xl){
+        .kf-img{ padding: .25rem;}
+        .kf-text-content{ padding-right: .25rem;}
+      }
+    }
+  }
+}

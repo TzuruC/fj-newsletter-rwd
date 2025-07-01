@@ -1,0 +1,21 @@
+/*-------------------------------------------*\
+	_DetailContent.scss.
+
+  - 1.外框架
+
+\*-------------------------------------------*/
+
+// 1.外框架
+.DetailContent{
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  @include media-breakpoint-up(md){
+    max-width: 680px;
+  }
+}
+// 2.內容文章 相關檔案 相關連結 延伸閱讀列表文字大小
+.det-group li{
+  font-size: $font-size-md-em;
+}

@@ -1,0 +1,76 @@
+/*-------------------------------------------------------------------------------*/
+/* 圖文樣式                                                                       */
+/*-------------------------------------------------------------------------------*/
+.wcm-DiagramText{
+  img{
+    vertical-align: bottom;
+  }
+}
+.wcm-Drawing{
+  text-align: center !important;
+  line-height: 1.5;
+  font-size: $font-size-sm-em;
+  color: $gray-700;
+  p{
+    padding-top: .25rem;
+  }
+}
+.wcm-LimgRtxt{
+  .txt{
+    padding-right: calc((100% - 680px)/2) !important;
+  }
+}
+.wcm-RimgLtxt{
+  .txt{
+    padding-left: calc((100% - 680px)/2) !important;
+  }
+}
+.Stv-ReadAround-row{
+  .item{
+    display: flex;
+    align-items: center;
+    border: solid 1px $gray-300;
+    background: $white;
+    margin-bottom: .5rem;
+    min-height: 77px;
+    @include media-breakpoint-up(sm){
+      min-height: 97.5px;
+    }
+  }
+  .kf-img{ 
+    width: 100px;
+    @include media-breakpoint-up(sm){
+      width: 130px;
+    }
+  }
+  .tit{ 
+    color: $base-color-txt;
+    font-size: $font-size-md-em;
+    line-height: $line-height-base;
+    font-weight: bold;
+    width: 100%;
+    padding: 0 .5rem;
+    &:hover,&:focus{
+      color: $link-color;
+    }
+    @include media-breakpoint-up(sm){
+      position: relative;
+      padding: 0 1.5rem;
+      padding-right: 5rem;
+      &:after{
+        content: "\f35d";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 1.5rem;
+        top: calc(100%/2 - 20px/2);
+      }
+    }
+  }
+  .kf-img + .tit{
+    width: calc(100% - 100px);
+    @include media-breakpoint-up(sm){
+      width: calc(100% - 130px);
+    }
+  }
+}

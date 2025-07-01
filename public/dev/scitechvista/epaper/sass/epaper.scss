@@ -1,0 +1,16 @@
+@import "../../sass/_Bootstrap/functions";
+@import "../../sass/_Bootstrap/mixins/grid";
+@import "../../sass/_Bootstrap/variables";
+@import "../../sass/_Bootstrap/mixins";
+@import "../../sass/_CommonModule/mixins";
+@import "../../sass/_CommonModule/_System/kf-DetContent";
+
+// .kf-det-center 編輯器 className
+
+@import "epaper/EpaperBase";     //基本樣式
+@import "epaper/Header";         //Header
+@import "epaper/Banner";         //Banner
+// @import "epaper/Title";          //共用標題
+@import "epaper/Diagramtex";     //圖文列表與卡片   
+@import "epaper/List";           //文字列表
+@import "epaper/Footer";         //Footer

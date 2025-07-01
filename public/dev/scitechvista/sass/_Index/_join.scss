@@ -1,0 +1,56 @@
+/*-------------------------------------------*\
+	_join.scss
+	
+	Index
+  - 1.wrap
+  - 2.form
+  - 3.input & btn
+\*-------------------------------------------*/
+// 1.wrap
+.join-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background: url(../images/join_bg.jpg) no-repeat bottom center;
+}
+// 2.form
+.join-form{
+  max-width: 900px;
+  margin: 0 auto;
+  &-group{
+    display: flex;
+    margin-top: 1rem;
+    input:focus{
+      outline-offset: 1px;
+      outline: 2px dotted $outline-lighten;
+      &:not(:focus-visible){
+        outline: 0;
+      }
+      &-visible{
+        outline: 2px dotted $outline-lighten;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg){
+    display: flex;
+    align-items: center;
+    &-group{
+      flex-grow: 1;
+      margin: 0;
+      margin-left: 1rem;
+    }
+  }
+}
+// 3.input & btn
+.join{
+  &-txt{
+    flex-grow: 1;
+    padding-left: 0.5rem;
+    border: 0;
+    border-radius: .25rem;
+  }
+  &-btn{
+    width: 80px;
+  }
+}

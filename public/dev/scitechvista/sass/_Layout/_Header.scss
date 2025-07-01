@@ -1,0 +1,96 @@
+/*-------------------------------------------*\
+  Header .scss
+  
+  index
+  - 1.Wrapper
+  - 2.Logo
+  - 3.TopNav
+  - 4.no-js
+\*-------------------------------------------*/
+// 1.Wrapper
+.header-row{
+  position: fixed;
+  z-index: index($zid, header-row);
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 1px solid $gray-200;
+  transition: all .5s ease-in-out;
+  .container{
+    height: 60px;
+    justify-content: center;
+    padding: 0;
+    transition: all .5s ease-in-out;
+  }
+  @include media-breakpoint-up(lg){
+    .container{
+      // @include rb;
+      justify-content: space-between;
+      align-items: center;
+      // height: 70px;
+      // transition: height .5s ease-in-out;
+    }
+  }
+}
+// 2.Logo
+.header-logo{
+  // width: auto;
+  height: 100%;
+  margin-bottom: 0 !important;
+  transition: all .25s ease-in-out;
+  a,img {
+    width: inherit;
+    height: inherit;
+  }
+  a{
+    display: flex;
+    &:focus{
+      outline-offset: -2px;
+    }
+  }
+  @include media-breakpoint-up(lg){
+    // width: 180px;
+    height: 60px;
+  }
+}
+// 3.TopNav
+.topNav{
+  &-row{display: none;}
+  @include media-breakpoint-up(lg){
+    &-row{
+      position: relative;
+      display: block;
+      // align-self: flex-end;
+      // margin-bottom: 1.5rem;
+      margin-right: 60px;
+      #tabU{
+        left: -1rem; 
+      }
+    }
+    &-item{
+      display: flex;
+      a{
+        display: block;
+        padding: 0 .25rem;
+        color: $black;
+        &:hover{
+          color: $primary;
+        }
+      }
+      &:not(:nth-last-child(-n+2)){
+        &::after{
+          content: "/";
+          display: inline-block;
+          margin: 0 .25rem;
+        }
+      }
+    }
+    &-item-fas{
+      margin-left: .75rem;
+      a{
+        font-size: $font-size-md;
+      }
+    }
+  }
+}
+// 4.no-js

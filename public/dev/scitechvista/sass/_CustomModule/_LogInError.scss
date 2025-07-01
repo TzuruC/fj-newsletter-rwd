@@ -1,0 +1,24 @@
+/*-------------------------------------------*\
+	_Frameset.sass
+	
+	功能內容區塊
+  - 1. 錯誤訊息
+  - 2. FB+GOOGLE登入外框線
+\*-------------------------------------------*/
+
+// 1. 錯誤訊息
+// .alert-danger {
+//   color: $dark_red;
+//   background-color: $light_pink;
+//   border-color: $light_pink1;
+//   padding: 1rem;
+//   border: 1px solid $dark_red;
+//   border-radius: 6px;
+// }
+// 2. FB+GOOGLE登入外框線
+.btn-Facebook,.btn-GooglePlus{
+  border: 1px solid $gray-400;
+  &:hover,&:focus{
+    border: 1px solid $gray-500;
+  }
+}

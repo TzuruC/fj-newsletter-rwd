@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>初始頁面</title>
+	<link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Common CSS 首頁主版共用 -->
+  <link rel="stylesheet" href="css/common.min.css">
+  <!-- Main CSS 主版 -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Components CSS 標準功能-->
+  <link rel="stylesheet" href="css/kf-components.min.css">
+  <!-- Custom CSS 客制功能 -->
+  <link rel="stylesheet" href="css/custom.min.css">
+  <!-- Optional JavaScript -->
+	<script src="Scripts/lib/modernizr-custom.min.js"></script>
+  <script src="Scripts/lib/jquery_kf.js"></script>
+  <script src="Scripts/common.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script src="Scripts/module/search_unit.js"></script>
+</head>
+<body>
+
+  <div id="mainbody">
+    <h2 class="main_tit">初始頁面</h2><!-- 測試FreeGo 才放的h2 -->
+    <div class="main_body">
+      <!-- container 請依照介面選擇mx、xl、lg等 -->
+      <div class="MemberTabRow">
+        <div class="container-mx">
+          <a href="#" class="col-12 col-sm">個人首頁</a>
+          <a href="#" class="col-12 col-sm">個人圖書館</a>
+          <a href="#" class="col-12 col-sm">訂閱關鍵字</a>
+          <a href="#" class="col-12 col-sm">瀏覽紀錄</a>
+          <a href="#" class="col-12 col-sm active">帳戶設定</a>
+        </div>
+      </div>
+      <div class="container-mx">
+        <div class="my-5">
+          <div class="kf-title kf-det-title h4 d-block">帳戶設定</div>
+          <!-- 一般帳號 -->
+          <div class="kf-forms mt-4">
+            <!-- 帳號 -->
+            <div class="form-group row">
+              <label for="Settings-01" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                帳號
+              </label>
+              <div class="col-md-8 col-lg-9">
+                <div class="form-row">
+                  <div class="col-sm-8">
+                    <input id="Settings-01 " class="form-control" type="text" value="daffy@kingfor.com.tw" placeholder="請輸入姓名(必填)" disabled>
+                  </div>
+                </div>
+                <!-- 錯誤回饋請設定 display: block; -->
+                <div class="invalid-feedback">請輸入帳號</div>
+              </div>
+            </div>
+            <!-- 密碼 -->
+            <div class="form-group row">
+              <label for="Settings-01" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                密碼<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr>
+              </label>
+              <div class="col-md-8 col-lg-9">
+                <div class="form-row">
+                  <div class="col-sm-8">
+                    <input id="Settings-01 " class="form-control" type="password" value="12345678" placeholder="請輸入密碼(必填)" disabled>
+                  </div>
+                  <div class="col-auto">
+                    <input class="btn btn-secondary" type="submit" value="變更密碼">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 姓名 -->
+            <div class="form-group row">
+              <label for="Settings-01" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                姓名
+              </label>
+              <div class="col-md-8 col-lg-9">
+                <div class="form-row">
+                  <div class="col-sm-8">
+                    <input id="Settings-01 " class="form-control" type="text" value="王安石" placeholder="請輸入姓名(必填)">
+                  </div>
+                </div>
+                <!-- 錯誤回饋請設定 display: block; -->
+                <div class="invalid-feedback">請輸入姓名(必填)</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center my-5">
+            <input class="btn btn-outline-secondary text-dark flex-fill col-sm-2 m-1" type="reset" value="取消">
+            <input class="btn btn-secondary flex-fill col-sm-2 m-1" type="submit" value="確認">
+          </div>
+          <!-- 社群帳號 -->
+          <div class="kf-forms mt-4">
+            <!-- 帳號 -->
+            <div class="form-group row">
+              <label for="Settings-01" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                帳號
+              </label>
+              <div class="col-md-8 col-lg-9">
+                <div class="form-row">
+                  <div class="col-sm-8">
+                    <div class="form-control h-auto bg-LightGray">
+                      <p>
+                        <img src="images/google.svg" class="pr-1" alt="">使用 Google 帳號
+                      </p>
+                      <p class="mt-1">daffy@kingfor.com.tw</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 錯誤回饋請設定 display: block; -->
+                <div class="invalid-feedback">請輸入帳號</div>
+              </div>
+            </div>
+            <!-- 姓名 -->
+            <div class="form-group row">
+              <label for="Settings-01" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                姓名
+              </label>
+              <div class="col-md-8 col-lg-9">
+                <div class="form-row">
+                  <div class="col-sm-8">
+                    <input id="Settings-01 " class="form-control" type="text" value="王安石" placeholder="請輸入姓名(必填)">
+                  </div>
+                </div>
+                <!-- 錯誤回饋請設定 display: block; -->
+                <div class="invalid-feedback">請輸入姓名(必填)</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center my-5">
+            <input class="btn btn-outline-secondary text-dark flex-fill col-sm-2 m-1" type="reset" value="取消">
+            <input class="btn btn-secondary flex-fill col-sm-2 m-1" type="submit" value="確認">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/*-------------------------------------------*\
+	SearchResult.scss
+
+  - 1.搜尋結果文字
+\*-------------------------------------------*/
+.SearchResultTxt{
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  span{
+    color: $primary;
+    font-weight: bold;
+    padding: 0 .125rem;
+  }
+}

@@ -1,0 +1,92 @@
+/*-------------------------------------------*\
+	_Diagramtex.scss
+	
+  - 1.base
+  - 2.card & list
+\*-------------------------------------------*/
+// 1.base
+.kf-ep-Diagramtext-item{
+  width: 100%;
+  a{
+    display: block;
+    width: 100%;
+    &:hover,&:focus{
+      .title,.btn{
+        text-decoration: underline;
+      }
+    }
+  }
+  .img{
+    text-align: center;
+    img{width: 100%;}
+  }
+  .content{
+    padding: .75rem 0;
+  }
+  .title{
+    color: $base-color-txt;
+    font-size: $font-size-xl-em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: .75rem 0;
+  }
+  .subtitle{
+    color: $base-color-txt;
+    font-size: $font-size-base-em;
+    line-height: 1.2;
+    margin: .75rem 0;
+  }
+  .date{
+    color: $base-color-txt;
+    font-size: $font-size-sm-em;
+    font-family: $font-family-base;
+  }
+  .txt{
+    color: $base-color-txt;
+    font-size: $font-size-sm-em;
+    line-height: 1.5;
+    margin: .75rem 0 1.5rem;
+  }
+}
+.kf-ep-Diagramtext-card,.kf-ep-Diagramtext-list{
+  .title{
+    height: 3.75rem;
+  }
+  .txt{
+    height: 2.625rem;
+  }
+}
+.kf-ep-Diagramtext-card{
+  .kf-ep-Diagramtext-item{
+    margin-bottom: 2.5rem;
+  }
+}
+.kf-ep-Diagramtext-list{
+  .kf-ep-Diagramtext-item{
+    margin-bottom: 2.5rem;
+    a{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .content{ padding-left: 1.5rem;}
+    }
+  }
+}
+
+.kf-ep-Diagramtext-list.full{
+  .kf-ep-Diagramtext-item{
+    width: 100%;
+    margin-bottom: 0;
+    a{
+      background: $black;
+      align-items: center;
+      .content{ 
+        padding: .5rem 32px 1rem;
+        .title,.txt{
+          color: $white;
+        }
+      }
+      .kf-img{ padding: 0;}
+    }
+  }
+}

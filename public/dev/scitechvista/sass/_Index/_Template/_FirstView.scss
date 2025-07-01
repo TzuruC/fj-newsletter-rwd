@@ -1,0 +1,47 @@
+/*-------------------------------------------*\
+	_firstView.scss
+	
+	Index
+  - 1.firstView
+  - 2.item
+\*-------------------------------------------*/
+// 1.firstView
+.owl_fv,
+.owl_fv-item{
+  position: relative;
+}
+// 2.item
+.owl_fv-item{
+  display: block;
+  .embed-responsive-fv::before {
+    padding-bottom: 31.245%;
+  }
+  &:hover,&:focus{
+    img{
+      transform: scale(1) !important;
+    }
+  }
+}
+// 3.owl
+.owl_fv{
+  .owl-dots{
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+    width: 100%;
+    padding: .5rem;
+  }
+}
+.owl-dot{
+  pointer-events: auto;
+  &:focus {
+    outline-offset: -2px;
+    outline: 2px auto $outline;
+    &:not(:focus-visible) {
+      outline: 0;
+    }
+    &-visible {
+      outline: 2px auto $outline;
+    }
+  }
+}

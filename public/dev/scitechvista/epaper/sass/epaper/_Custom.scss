@@ -1,0 +1,19 @@
+/*-------------------------------------------*\
+	_custom.scss
+	
+\*-------------------------------------------*/
+.Knowledge{
+  .content{
+    padding: 1.75rem;
+    line-height: $line-height-base;
+    margin-bottom: 2.5rem;
+  }
+  .title{
+    font-size: $font-size-base*2;
+    font-weight: bold;
+  }
+  .txt{
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+}

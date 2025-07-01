@@ -1,0 +1,215 @@
+/*-------------------------------------------*\
+	_Article.scss.
+
+  - 1.標籤群組
+  - 2.作者
+  - 3.加入圖書館(書籤)
+  - 4.內頁延伸閱讀
+  - 5.標籤
+  - 6.創用授權
+\*-------------------------------------------*/
+// 1.標籤群組
+.BadgeGroup{
+  @include media-breakpoint-up(sm){
+    padding-right: 30px
+  }
+}
+// 2.作者
+// 2-1 基本樣式
+.Article-AuthorRow{
+  display: flex;
+  font-size: $font-size-sm-em;
+  color: $gray-700;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 1rem;
+  span{ line-height: $line-height-sm;}
+  .Author{
+    min-width: 4rem;
+  }
+}
+// 2-1 卡片式版本內縮
+.kf-diagramtext-card{
+  .Article-AuthorRow{
+    padding-right: 2.5rem;
+  }
+}
+// 3.加入圖書館(書籤)
+// 3-1 Modal視窗
+.ModalBookmark{
+  .custom-control{
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: .25rem;
+    label{
+      cursor: pointer;
+      padding: 1rem 0;
+      width: 100%;
+      &:before{
+        top: 1.125rem;
+      }
+      &:after{
+        top: 1.2rem;
+      }
+    }
+    &:hover{
+      background: $gray-100;
+    }
+  }
+}
+.modal-footer{
+  .ModalClassInput{
+    border-bottom: solid 1px $gray-300;
+    padding: 0 0 1rem;
+    i{
+      color: $secondary;
+    }
+  }
+  .BtnWarp{
+    padding: .5rem 0 0;
+    justify-content: flex-end;
+  }
+}
+// 3-2 書籤按鈕基本樣式
+.kf-bookmark{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 34px;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  &:before{
+    display: block;
+    content: "\f02e";
+    font-family: 'Font Awesome 5 Free';
+    transition: all .25s ease-in-out;
+    // @include animate(.3s);
+  }
+  &.active{
+    &:before{
+      font-weight: 900;
+    }
+  }
+  &:hover,&:focus{
+    &:before{
+      font-size: $font-size-base-em * 1.1875;
+      transition: all .25s ease-in-out;
+    }
+  }
+}
+// 3-3 左圖右文列表式加入書籤按鈕
+.kf-diagramtext-list,.ListRow{
+  .kf-bookmark{
+    margin-left: auto;
+    margin-right: 14px;
+    margin-bottom: -36px;
+    position: relative;
+    z-index: 1;
+    @include media-breakpoint-up(sm){
+      margin-bottom: -34px;
+    }
+  }
+}
+// 3-2 上圖下文卡片式版加入書籤按鈕
+.kf-diagramtext-card {
+  .kf-bookmark{
+    position: absolute;
+    z-index: 1;
+    right: 0.75rem;
+    bottom: 1.5rem;
+  }
+}
+// 4.內頁延伸閱讀
+.Stv-ReadAround{
+  .Stv-ReadAround-row{
+    .item{
+      display: flex;
+      align-items: center;
+      border: solid 1px $gray-300;
+      background: $white;
+      margin-bottom: .5rem;
+      min-height: 77px;
+      @include media-breakpoint-up(sm){
+        min-height: 97.5px;
+      }
+    }
+    .kf-img{ 
+      width: 100px;
+      @include media-breakpoint-up(sm){
+        width: 130px;
+      }
+    }
+    .tit{ 
+      font-size: $font-size-md-em;
+      line-height: $line-height-base;
+      font-weight: bold;
+      width: 100%;
+      padding: 0 .5rem;
+      @include media-breakpoint-up(sm){
+        position: relative;
+        padding: 0 1.5rem;
+        padding-right: 5rem;
+        &:after{
+          content: "\f35d";
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          position: absolute;
+          right: 1.5rem;
+          top: calc(100%/2 - 20px/2);
+        }
+      }
+    }
+    .kf-img + .tit{
+      width: calc(100% - 100px);
+      @include media-breakpoint-up(sm){
+        width: calc(100% - 130px);
+      }
+    }
+  }
+
+}
+// 5.標籤
+.Stv-Sticker{
+  .TagsTit{
+    font-size: $font-size-md-em;
+    line-height: 2.5;
+  }
+  a{
+    padding: .5rem 1rem;
+    margin: .125rem;
+  }
+}
+// 6.創用授權
+.Stv-CCPL{
+  background: $white;
+  padding: 1rem .75rem;
+  @include media-breakpoint-up(md){
+    padding: 1rem;
+  }
+  .license{
+    margin-right: .5rem;
+    img{
+      margin-right: .5rem;
+      width: 150px;
+    }
+  }
+  .kf-title.h4{
+    margin: .5rem 0;
+  }
+  .txt{
+    font-size: $font-size-base-em;
+    line-height: $line-height-lg;
+    word-wrap: break-word;
+    a{
+      color: $bese-link;
+      transition: all .3s ease-in-out;
+      &:hover,&:focus{
+        color: $bese-link-active;
+        background: $best-link-active-bg;
+      }
+    }
+  }
+}

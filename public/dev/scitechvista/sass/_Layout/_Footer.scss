@@ -1,0 +1,64 @@
+/*-------------------------------------------*\
+	footer.scss
+	
+	Index
+  - 1.Layout
+  - 2.logo
+  - 3.link
+  - 4.government
+\*-------------------------------------------*/
+// 1.Layout
+.footer{
+  &-wrap{
+    color: $white;
+    line-height: 1.8;
+    background: $gray-900;
+    a:focus-visible,
+    a:focus{
+      outline-color: $outline-lighten;
+    }
+    @include media-breakpoint-down(lg){
+      padding-bottom: 50px;
+    }
+  }
+  &-foot{
+    font-size: $font-size-sm;
+    border-top: 1px solid $gray-600;
+  }
+}
+// 2.logo
+.footer-logo{
+  position: relative;
+  width: 160px;
+  #tabB{
+    top: -1.5rem;
+    color: $white;
+  }
+  @include media-breakpoint-up(md){
+    flex-shrink: 0;
+    width: 240px;
+    margin-right: 2rem;
+  }
+  @include media-breakpoint-up(mx){
+    margin-right: 6rem;
+  }
+}
+// 3.link
+.foot-link{  
+  a{
+    display: block;
+    padding: .25rem 0;
+    color: $secondary;
+    text-decoration: underline;
+    white-space: nowrap;
+    &:hover,&:focus{
+      color: $white;
+    }
+  }
+}
+// 4.government
+.foot-government{
+  a{
+    display: inline-block;
+  }
+}

@@ -1,0 +1,33 @@
+/*-------------------------------------------------------------------------------*/
+/* 組織圖樣式                                                                       */
+/*-------------------------------------------------------------------------------*/
+.wcm-OrganizationChart{
+  text-align: center;
+  line-height: $line-height-base/1.25;
+  .wcm-text{
+    color: $base-color-txt;
+    display: block;
+    padding: .5rem;
+    height: 100%;
+    overflow: hidden;
+    a{
+      color: $base-color-txt;
+      display: block;
+    }
+  }
+  .wcm-LevelOne,.wcm-LevelFour{
+    .wcm-text{
+      height: auto;
+    }
+  }
+  .wcm-LevelFour,.wcm-LevelFives{
+    .wcm-text{
+      color: $white;
+      a{
+        color: $white;
+      }
+    }
+  }
+
+  > .col-12 > .col-12{ margin: .5rem 0;}
+}

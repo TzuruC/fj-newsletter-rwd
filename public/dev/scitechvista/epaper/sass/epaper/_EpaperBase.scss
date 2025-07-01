@@ -1,0 +1,79 @@
+body,html{
+  font-family: $font-primary;
+  background: $gray-300;
+}
+img{
+  vertical-align: bottom;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;  
+  background-color: $gray-100;
+}
+.common_wrap{
+  padding: 0 16px;
+  @include media-breakpoint-up(sm){
+    padding: 0 32px;
+  }
+}
+
+// 與table 相關聯
+.sm-px-16px{
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+.sm-pl-16px{
+  padding-left: 16px !important;
+}
+//主要大標題
+.EpaperTitle{
+  text-align: center;
+  font-weight: bold;
+  margin: 32px 0;
+}
+//圖片
+.kf-img{
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+// more
+.btn.EpCommonBtn{
+  width: 150px;
+  background-color: $secondary;
+  color: $base-color-txt;
+  &:hover,&:focus{
+    text-decoration: underline;
+  }
+}
+//標籤樣式
+.BadgeGroup{
+  padding-bottom: .5rem;
+  .badge{
+    font-size: inherit;
+    font-weight: inherit;
+    margin-bottom: 0.25rem;
+    text-align: left;
+    white-space: initial;
+    max-width: 200px;
+    line-height: 1.2;
+  }
+}
+.truncate-2{
+  @include text-truncate-more(2);
+}
+
+.EpaperBorder{
+  border-bottom: dashed 1px $gray-500;
+  margin: 0 16px;
+  @include media-breakpoint-up(sm){
+    margin: 0 32px;
+  }
+}

@@ -1,0 +1,17 @@
+/*-------------------------------------------*\
+	_EmptyState).scss
+
+  - 1.
+\*-------------------------------------------*/
+
+.EmptyState{
+  text-align: center;
+  padding: 2rem;
+  .kf-img{
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+}

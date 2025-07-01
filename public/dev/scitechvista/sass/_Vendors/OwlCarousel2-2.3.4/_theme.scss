@@ -1,0 +1,131 @@
+
+.owl-theme {
+  .owl-nav{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    [class*='owl-']{
+      position: absolute;
+      top: calc(50% - 4px);
+      width: $nav-size;
+      height: $nav-size;
+      border-radius: $nav-rounded;
+      background: $color-gray ;
+      margin: $nav-margin;
+      transform: translateY(-50%);
+      cursor: pointer;
+      &:hover{
+        background-color: $nav-background-hover;
+      }
+      &:focus{
+        outline: 2px dotted $outline;
+      }
+    }
+    span{
+      display: inline-block;
+      width: $nav-size/2;
+      height: $nav-size/2;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      border: 4px solid $nav-color;
+      transform: rotate(45deg);
+    }
+    .owl-prev{
+      left: $nav-brink-margin;
+      span{
+        border-top: none;
+        border-right: none;
+        margin-left: $nav-size/5;
+      }
+    }
+    .owl-next{
+      right: $nav-brink-margin;
+      span{
+        border-left: none;
+        border-bottom: none;
+        margin-right: $nav-size/5;
+      }
+    }
+    .disabled {
+      opacity: $nav-disabled-opacity;
+      cursor: default;
+    }
+  }
+
+  
+  // Styling Next and Prev buttons
+  	// Styling Next and Prev buttons
+
+	// .owl-nav {
+	// 	margin-top: 10px;
+	// 	text-align: center;
+	// 	-webkit-tap-highlight-color: transparent;
+
+	// 	[class*='owl-'] {
+	// 		color: $nav-color;
+	// 		font-size: $nav-font-size;
+	// 		margin: $nav-margin;
+	// 		padding: $nav-padding;
+	// 		background: $nav-background;
+	// 		display: inline-block;
+	// 		cursor: pointer;
+	// 		border-radius: 3px;
+
+	// 		&:hover {
+	// 			background: $nav-background-hover;
+	// 			color:$nav-color-hover;
+	// 			text-decoration: none;
+	// 		}
+	// 	}
+	// 	.disabled {
+	// 		opacity: $nav-disabled-opacity;
+	// 		cursor: default;
+	// 	}
+	// }
+
+	// Styling dots
+	// .owl-nav.disabled + .owl-dots {
+	// 	margin-top: 10px;
+	// }
+
+	.owl-dots {    
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+			span {
+				width: $dot-width;
+				height: $dot-height;
+				margin: $dot-margin;
+				background: $dot-background;
+				display: block;
+				-webkit-backface-visibility: visible;
+				transition: opacity 200ms ease;
+				border-radius: $dot-rounded;
+        transition: all .2s ease-in-out;
+			}
+			&.active,
+			&:hover {
+				span {
+          width: 2em;
+					background: $dot-background-active;
+				}
+			}
+      &:focus{
+        outline-offset: 1px;
+        outline: 2px dotted $outline;
+        &:not(:focus-visible){
+          outline: 0;
+        }
+        &-visible{
+          outline: 2px dotted $outline;
+        }
+      }
+		}
+	}
+}

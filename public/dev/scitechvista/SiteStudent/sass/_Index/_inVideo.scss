@@ -1,0 +1,18 @@
+/*-------------------------------------------*\
+	_inVideo.scss
+	
+	Index
+  - 1.text color
+  - 2.play icon
+\*-------------------------------------------*/
+.video-wrap{
+  background: $black url(../images/join_bg.jpg) no-repeat bottom center;
+  .btn-more{
+    &:focus{
+      outline-color: $outline-lighten;
+      &-visible{
+        outline-color: $outline-lighten;
+      }
+    }
+  }
+}

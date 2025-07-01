@@ -1,0 +1,55 @@
+/*-------------------------------------------------------------------------------*/
+/* 標語樣式                                                                       */
+/*-------------------------------------------------------------------------------*/
+.wcm-SloganV01,.wcm-SloganV02{
+  p{
+    padding-bottom: 0 !important;
+  }
+}
+.wcm-SloganV01{
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  &:before{
+    content: "";
+    position: absolute;
+    background: rgba($primary_l, .075);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 50%;
+    border: dashed 1px white;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    box-shadow: 0px 0px 0px 5px rgba($primary_l, .075);
+  }
+}
+.wcm-SloganV02{
+  position: relative;
+  text-align: center;
+  color: $primary;
+  z-index: 1;
+  .templateLongText{
+    display: inline-block;
+    background: $white;
+    padding: 0 1rem;  
+    margin: 0 5%;
+    @include  media-breakpoint-up(md){
+      margin: 0 4rem;
+    }
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    border-top: solid 1px $primary;
+    border-bottom: solid 1px $primary;
+    z-index: -1;
+  }
+}

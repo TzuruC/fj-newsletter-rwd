@@ -1,0 +1,47 @@
+/*-------------------------------------------*\
+	_follow.scss
+	
+	Index
+  - 1.wrap
+\*-------------------------------------------*/
+.follow-nav{
+  display: flex;
+  justify-content: center;
+}
+.follow-item{
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0.125rem;
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+  &:hover{
+    transform: translateY(-.25rem);
+  }
+  @include media-breakpoint-up(md){
+    width: 78px;
+    height: 78px;
+    margin: 0.75rem;
+  }
+}
+
+$icon-color: (
+  'fb':        #2967D2,
+  'line':      #13C43B,
+  'youtube':   #D52424,
+  'plurk':     #FF574D,
+  'instagram': #C13584,
+);
+
+@each $icon, $color in $icon-color {
+  .follow-#{$icon}{
+    background: $color url(../images/social-media-#{$icon}.svg) no-repeat center;
+    background-size: 50px;
+    &:hover{
+      background-color: darken($color, 10%);
+    }
+    @include media-breakpoint-up(md){
+      background-size: 78px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+/*-------------------------------------------------------------------------------*/
+/*    $Base                                                                                    */
+/*-------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+body{
+	font-family: $font-primary;
+	a{transition: all .5s ease-in-out;}
+}
+
+html,
+body,
+.header_search{
+	height: 100%;
+	box-sizing: border-box;
+}
+
+img{vertical-align: middle;}
+input{box-sizing: border-box;}
+
+#tabU,
+#tabL,
+#tabC,
+#tabB{
+	position: absolute;
+	top: 0;left: 0;
+	font-size: $font-size-sm;
+	opacity: 0;
+	&:focus{opacity: 1;}
+}
+a{
+	&:focus{
+		outline-offset: 1px;
+		outline: 2px dotted $outline;
+		&:not(:focus-visible){
+			outline: 0;
+		}
+		&-visible{
+			outline: 2px dotted $outline;
+		}
+	}
+}

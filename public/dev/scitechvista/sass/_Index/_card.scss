@@ -1,0 +1,261 @@
+/*-------------------------------------------*\
+	card.scss
+	
+	Index
+  - 1.z-index
+  - 2.base
+  - 3.responsive Size
+  - 4.card position
+  - 5.foot
+  - 6.mobile list
+  - 7.list
+\*-------------------------------------------*/
+// 1.z-index
+$card-zid:
+  card-position-after,
+  card-body,
+  kf-bookmark,
+;
+// 2.base
+.card{
+  position: relative;
+  z-index: 0;
+  a{
+    display: block;
+    &:hover{
+      box-shadow: 
+        0 .25rem .5rem rgba($black, .075),
+        0 .5rem .75rem rgba($black, .075);
+      img{
+        transform: scale(1.05);
+      }
+    }
+    &.card-position:hover{
+      img{
+        filter: brightness(.5) sepia(.2) contrast(.9) saturate(.9);
+      }
+      &::after{
+        opacity: .5;
+      }
+    }
+    .card-body{
+      color: $black;
+    }
+  }
+  .kf-bookmark{
+    position: absolute;
+    z-index: index($card-zid, kf-bookmark);
+    right: .25rem;
+    bottom: .75rem;
+  }
+  &>.BadgeGroup{
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+  .badge{
+    margin-bottom: .25rem;
+  }
+}
+// 3.responsive Size
+.embed-responsive{
+  &-card::before{
+    padding-top: 75%;
+  }
+  &-card_lg::before{
+    padding-top: 80.728%;
+  }
+}
+// 4.card position
+.card-position{
+  position: relative !important;
+  &::after,.card-body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  &::after{
+    content: "";
+    display: block;
+    z-index: index($card-zid, card-position-after);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+  }
+  .card-body{
+    z-index: index($card-zid, card-body);
+    display: flex;
+    flex-direction: column-reverse;
+    color: $white !important;
+    background-image: linear-gradient(0deg, rgba($black, 1) 0%, rgba($black, .5) 30%, rgba($black, 0) 50%);
+    &>div:nth-child(1){order: 3;}
+    &>div:nth-child(2){order: 2;}
+    &>div:nth-child(3){order: 1;}
+    transition: all .5s ease-in-out;
+  }
+  &+.kf-bookmark{
+    right: 1.25rem !important;
+    @include media-breakpoint-up(md){
+      color: $white;
+    }
+  }
+}
+// 5.foot
+.card{
+  &-date,
+  &-body-foot{
+    font-size: $font-size-sm;
+  }
+  &-body-tit{
+    font-weight: bold;
+  }
+}
+// 6.mobile list
+.card-mobile-list{
+  @include media-breakpoint-down(sm){
+    .card-position::after{
+      display: none;
+    }
+    .card-item{
+      display: flex;
+      align-items: flex-start;
+    }
+    .embed-responsive{
+      width: 120px;
+    }
+    .card-body{
+      position: static;
+      width: calc(100% - 120px);
+      padding: 1rem !important;
+      color: $black !important;
+      background-color: $white;
+      background-image: none;
+    }
+    .card-date{
+      font-size: $font-size-sm *.85;
+    }
+    .kf-bookmark{
+      top: .25rem;
+      right: .5rem !important;
+      bottom: auto;
+    }
+  }
+  @include media-breakpoint-only(lg){
+    .card-body{
+      padding: 1rem !important;
+    }
+    .card-body-tit{
+      font-size: $h5-font-size;
+    }
+    .card-body-foot{
+      margin-right: 1.5rem;
+    }
+    .kf-bookmark{
+      right: 0.25rem !important;
+      bottom: 0.25rem !important;
+    }
+  }
+}
+// 7.list  影音專區使用
+.card-list{
+  padding: .75rem 0;
+  &+.card-list{
+    border-top: 1px solid rgba($white, .3);
+  }
+  .card-position::after{
+    display: none;
+  }
+  .card-item{
+    display: flex;
+    align-items: flex-start;
+  }
+  .embed-responsive{
+    width: 100px;
+  }
+  .card-body{
+    position: static;
+    width: calc(100% - 100px);
+    padding: 0rem 0rem 0rem 1rem !important;
+    color: $white !important;
+    background-image: none;
+  }
+  .kf-bookmark{
+    top: .25rem;
+    right: .5rem !important;
+    bottom: auto;
+  }
+  @include media-breakpoint-down(sm){
+    .card-body-tit{
+      font-size: $h5-font-size;
+    }
+    .badge,
+    .card-date{
+      font-size: $font-size-sm *.85;
+    }
+  }
+  @include media-breakpoint-up(md){
+    .embed-responsive{
+      width: 150px;
+    }
+    .card-body{
+      width: calc(100% - 150px);
+    }
+  }
+  @include media-breakpoint-up(lg){
+    padding: 1rem 0;
+    &:first-child{
+      padding-top: 0;
+    }
+  }
+  @include media-breakpoint-up(xl){
+    .embed-responsive{
+      width: 200px;
+    }
+    .card-body{
+      width: calc(100% - 200px);
+    }
+  }
+}
+
+// focus
+.card-list .card-item,
+.card-position{
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border: 3px dotted transparent;
+    border-image: linear-gradient(180deg, $outline 0%, $outline-lighten 100%);
+    border-image-slice: 1;
+    opacity: 0;
+  }
+  &:focus{
+    outline: none;
+    &::before{
+      opacity: 1;
+    }		
+		&:not(:focus-visible){
+      &::before{
+        opacity: 0;
+      }
+		}
+		&-visible{
+			outline: none;
+      &::before{
+        opacity: 1;
+      }
+		}
+	}
+  &+.kf-bookmark:focus{
+    outline-color: $outline-lighten;
+    &-visible{
+      outline-color: $outline-lighten;
+    }
+  }
+}

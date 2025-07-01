@@ -1,0 +1,116 @@
+/*-------------------------------------------*\
+	kf-Search.scss
+
+  - 1.基本搜尋bar
+  - 2.進階搜尋bar
+    --進階搜尋開啟後樣式
+    --無障礙fieldext群組
+  - 3.btn
+
+\*-------------------------------------------*/
+// 1-基本樣式
+.kf-search-row,.kf-search-unit{
+  background: $gray-100;
+  padding: .5rem;
+  align-items: center;
+}
+.kf-search-row .form-group{ margin-bottom: 0; }
+
+//2-進階搜尋
+.kf-search-unit-bar{
+  .form-group{ margin-bottom: .5rem; }
+  @include media-breakpoint-up(sm){ 
+    .form-group{ margin-bottom: 0; }
+    margin-right: .25rem;
+    width: calc(100% - 196px - .25rem);
+  }
+  width: 100%;
+  label.invisible{
+    display: none;
+  }
+}
+.kf-search-unit-btn{
+  width: 100%;
+  @include media-breakpoint-up(sm){ width: auto;}
+  .btn{
+    white-space: nowrap;
+  }
+}
+.kf-search-unit-clear{ display: none;}
+.kf-search-unit-fold{ display: none; height: 0;}
+  
+// 進階搜尋開啟後樣式
+.unit-open{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap !important;
+  padding: 2.5rem .5rem 1rem;
+  @include media-breakpoint-up(sm){
+    padding: 2.5rem 1rem 1rem;
+  }
+  label{
+  display: block;
+  margin-bottom: .5rem;
+  }
+  .kf-search-unit-bar{
+    .form-group{ margin-bottom: 1rem;}
+    @include media-breakpoint-up(sm){
+      width: 100%;
+    }
+    label{ 
+      visibility: visible !important;
+      display: block;
+    }
+  }
+  .kf-search-unit-fold{
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+  .kf-search-unit-btn{ 
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .kf-search-unit-clear{ display: inline-block;}
+  .kf-search-unit-more{
+    position: absolute;
+    top: .25rem;
+    right: 0;
+    color: $primary_d !important;
+    background: transparent !important;
+    border: 0;
+    padding-left: 2rem;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+    &:hover,&:focus{
+      color: $primary_d !important;
+      background: transparent !important;
+      border: 0;
+    }
+    &:before,&:after{
+      position: absolute;
+      top: 1.275rem;
+      left: .5rem;
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: $primary_d;
+    }
+    &:before{ transform: rotate(45deg);}
+    &:after{ transform: rotate(-45deg);}
+  }
+  //無障礙fieldext群組
+  fieldset.form-group{
+    margin-left: 0;
+    margin-right: 0;
+    legend{
+      position: initial;
+      margin-bottom: .5rem;
+    }
+  }
+}
+// 3.btn
+.kf-search-btn{
+  min-width: 90px;
+}

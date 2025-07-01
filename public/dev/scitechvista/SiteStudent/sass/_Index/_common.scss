@@ -1,0 +1,117 @@
+/*-------------------------------------------*\
+	_common.scss
+	
+	Index
+  - 1.wrap
+\*-------------------------------------------*/
+
+// 3-1 加入書籤按鈕模組 sass/_CustomModule/_Article.scss
+.ModalBookmark{
+  .custom-control{
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: .25rem;
+    label{
+      cursor: pointer;
+      padding: 1rem 0;
+      width: 100%;
+      &:before{
+        top: 1.125rem;
+      }
+      &:after{
+        top: 1.2rem;
+      }
+    }
+    &:hover{
+      background: $gray-100;
+    }
+  }
+}
+.kf-bookmark{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 34px;
+  user-select: none;
+  background-color: transparent;
+  &:before{
+    display: block;
+    content: "\f02e";
+    font-family: 'Font Awesome 5 Free';
+    // @include animate(.3s);
+  }
+  &.active{
+    &:before{
+      font-weight: 900;
+    }
+  }
+  &:hover,&:focus{
+    &:before{
+      font-size: $font-size-base-em * 1.1875;
+      transition: all .25s ease-in-out;
+    }
+  }
+  &:focus{
+    box-shadow: none  ;
+    outline-offset: 1px;
+		outline: 2px dotted $outline;
+		&:not(:focus-visible){
+			outline: 0;
+		}
+		&-visible{
+			outline: 2px dotted $outline;
+		}
+  }
+}
+// 1.title
+.in_title{
+  .in-tit-h3{
+    display: block;
+    position: relative;
+    padding: .75rem .75rem .25rem;
+    font-family: $font-sans-serif-en;
+    color: $primary;
+    font-weight: bold;
+    text-transform: uppercase;
+    &::before,&::after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+    }
+    &::before{
+      left: 0;
+      width: 25px;
+      height: 22px;
+      border-top: 5px solid $secondary;
+      border-left: 5px solid $secondary;
+    }
+    &::after{
+      left: 25px;
+      width: 5px;
+      height: 10px;
+      border-left: 5px solid $secondary;
+    }
+  }
+}
+.txt-truncate2{
+  @include text-truncate-more(2);
+  height: calc(2em * 1.2);
+}
+// 3.more
+.btn-more{
+  width: 200px;
+  padding: 0.75rem;
+	&:focus{
+		outline-offset: 1px;
+		outline: 2px dotted $outline;
+		&:not(:focus-visible){
+			outline: 0;
+		}
+		&-visible{
+			outline: 2px dotted $outline;
+		}
+	}
+}

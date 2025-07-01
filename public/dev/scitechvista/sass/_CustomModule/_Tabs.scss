@@ -1,0 +1,144 @@
+/*-------------------------------------------*\
+  Tabs.scss
+  01-頁籤標題
+  02-頁籤按鈕
+  03-頁籤內容
+  04-no-js
+	
+\*-------------------------------------------*/
+
+.in-Tabs{
+  font-weight: bold;
+  padding: 1rem;
+  @include media-breakpoint-up(sm){
+    position: relative;
+    padding-top: 6.25rem;
+  }
+}
+.in-TabBtn{
+  text-align: center;
+  a{
+    border-bottom: 1px solid rgb(128, 128, 128);
+    display: block;
+    font-size: $font-size-base-em;
+    padding: 0 .25rem;
+    color: $gray-600;
+    background: $gray-900;
+    font-weight: 500;
+    margin-bottom: .125rem;
+    transition: all .2s ease-in-out;
+    &:after{
+      content: "";
+      display: block;
+      width: 0;
+      margin: 0.8rem auto 0;
+      border-bottom: 2px solid $secondary;
+      transition: width .3s ease-in-out;
+      position: relative;
+      z-index: 2;
+    }
+    &:hover,&:focus,&.active{
+      color: $gray-900;
+      font-weight: bold;
+      transition: all .2s ease-in-out;
+      border-bottom: 2px solid $secondary;
+      padding: 0;
+      &:after{
+        width: 100%;
+      }
+    }
+    @include media-breakpoint-down(sm){
+      &:hover,&:focus,&.active{
+        color: $gray-300;
+      }
+      &,&.active{
+        background: $black;
+        color:$white;
+        padding: 0.8em !important;
+        margin: 1em 0;
+      }
+      &:after{
+        border-bottom:none;
+      }
+    }
+  }
+  @include media-breakpoint-up(sm){
+    position: absolute;
+    top: 1rem;
+    width: calc((100% - 2rem)/5);
+    &:nth-child(1){ 
+      left: 1rem;
+    }
+    &:nth-child(3){ left: calc((100% - 2rem)/5 + 1rem)}
+    &:nth-child(5){ left: calc((100% - 2rem)/5*2 + 1rem)}
+    &:nth-child(7){ left: calc((100% - 2rem)/5*3 + 1rem)}
+    &:nth-child(9){ right: 1rem;}
+    a{
+      background: transparent;
+    }
+  }
+  @include media-breakpoint-up(xl){
+    a{ font-size: $font-size-md-em;}
+  }
+  @include media-breakpoint-up(mx){
+    a{ font-size: $font-size-lg-em;}
+  }
+}
+.in-TabContent{
+  display: none;
+  .in-List{
+    a{
+      position: relative;
+      display: block;
+      margin-bottom: .125rem;
+      // color: $base-color-txt;
+      transition: all .2s ease-in-out;
+      &:hover,&:focus{
+        transform:scale(1.02);
+        z-index: 1;
+        transition: all .2s ease-in-out;
+        &:after{
+          right: 1.25rem;
+        }
+      }
+    }
+  }
+  .kf-date{
+    display: block;
+    margin-bottom: .25rem;
+    color: $primary;
+  }
+  .in-more{
+    @include media-breakpoint-up(sm){
+      position: absolute;
+      width: 100%;
+      bottom: -5.5rem
+    }
+
+  }
+  &.active{
+    display: block;
+  }
+}
+/*========no-js ========*/
+.no-js {
+  .submenu {
+    display: block;
+}
+  .in-Tabs{
+    padding-top: 1rem;
+  }
+  .in-TabBtn{ 
+    position: static;
+    a{
+      background: $primary;
+      // color: $white;
+      &:after{
+        width: 50px;
+      }
+    }
+  }
+  .in-TabContent{
+    display: block;
+  }
+}

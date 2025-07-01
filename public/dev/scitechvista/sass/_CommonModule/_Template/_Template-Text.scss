@@ -1,0 +1,15 @@
+/*-------------------------------------------------------------------------------*/
+/* 文字欄樣式                                                                       */
+/*-------------------------------------------------------------------------------*/
+.wcm-Column2{
+  @include  media-breakpoint-up(md){
+    column-count:2;
+  }
+}
+.layoutContent .kf-det-center{
+  i{ font-style: italic;}
+}
+// .templateLongText{
+//   > ul{ padding-bottom: 1.5rem;}
+//   > ol{ padding-bottom: 1.5rem;}
+// }

@@ -21,7 +21,7 @@ header.fixed-top {
 .right-header {
     width: calc(100vw - $logoWidth);
     height: $logoHight;
-    margin-left: $logoWidth;
+    // margin-left: $logoWidth;
     left: $logoWidth;
     z-index: 9;
 }

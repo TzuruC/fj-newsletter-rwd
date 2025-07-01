@@ -1,0 +1,241 @@
+/*-------------------------------------------*\
+	_MobileMenu.scss
+	
+	Index
+  - 1.MegaMenu
+	- 2.Mobile Wrap
+	- 3.Menu Button
+	- 4.content
+	- 5.height & arrow setting
+	- 6.first
+	- 7.sub
+	- 8.third
+	- 9.fourth
+	- 10.mobile topNav
+\*-------------------------------------------*/
+$mobile_btn-size:  60px;
+$mobile_border:    $gray-200;
+$mobile_bg1:       $white;
+$mobile_bg1-hover: $gray-900;
+$mobile_bg2:       $gray-100;
+$mobile_bg2-hover: $secondary;
+$mobile_bg3:       $gray-200;
+$mobile_bg3-hover: $secondary_d1;
+$mobile_bg4:       $gray-300;
+$mobile_bg4-hover: $secondary_d2;
+$mobile_txt:       $gray-900;
+$mobile_txt-hover: $white;
+
+// 1.MegaMenu
+.megamenu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+  z-index: index($zid, megamenu);
+	height: 100%;
+	transition: all .5s ease-in-out;
+	&.active{
+		z-index: index($zid, megamenu-active);
+	}
+	@include media-breakpoint-up(lg){
+		top: 60px;
+		height: auto;
+	}
+}
+// 2.Mobile Wrap
+#mobile-nav-wrap{
+	position: relative;
+	z-index: 1;
+	width: 100vw;
+	height: inherit;
+	overflow: hidden;
+	&::before,
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;			
+		height: 100vh;
+		opacity: 0;
+		transform: translateX(-100%);
+		transition-property: all;
+		transition-timing-function: ease-in-out;
+	}
+	&::before{
+		z-index: -2;
+		pointer-events: auto;
+		width: 100vw;
+		background-color: rgba($black, .2);
+		transition-duration: .5s;
+	}
+	&::after{
+		z-index: -1;
+		width: 90vw;
+		background-color: $white;
+		transition-duration: .2s;
+	}
+	&.active{
+		position: fixed;
+		&::before,
+		&::after{
+			opacity: 1;
+			transform: translateX(0%);
+		}
+		&::before{
+			transition-duration: .2s;
+		}
+		&::after{
+			transition-duration: .5s;
+		}
+	}
+	@include media-breakpoint-up(lg){display: none;}
+}
+// 3.Menu Button
+.mobile-nav-link{
+	display: block;
+	width: $mobile_btn-size;
+	height: $mobile_btn-size;	
+	overflow: hidden;
+	text-indent: 110%;
+	background: url(../images/mobile-menu-btn1.svg) no-repeat center center;
+	background-size: 90%;
+	pointer-events: auto;
+	cursor: pointer;
+	transform: translateX(0);
+	transition: all .2s ease-in-out;
+	&.active{
+		background: url(../images/mobile-menu-btn2.svg) no-repeat center center;
+		background-size: 90%;
+		transform: translateX(calc(90vw - 60px));
+		transition-duration: .5s;
+	}
+	&:focus{
+		outline-offset: -2px;
+	}
+}
+// 4.content 
+.mobile-nav{
+	width: 90vw;
+	height: calc(100vh - 60px);
+	background-color: $white;
+	overflow-y: scroll;
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: all .2s ease-in-out;
+	&.active{
+		pointer-events: auto;
+    opacity: 1;
+		transform: translateX(0%);
+		transition-duration: .5s;
+  }
+	&>ul{
+		border-top: 1px solid $mobile_border;
+	}
+	li{
+		a{
+			display: block;
+			padding: 1rem 2rem;
+			border-bottom: 1px solid $mobile_border;
+			color: $mobile_txt;
+			@include word_break;
+			&.active,&:hover{
+				color: $mobile_txt-hover;
+			}
+		}
+	}
+}
+// 5.height & arrow setting
+.sub-menu,
+.third-menu,
+.fourth-menu{
+	overflow: hidden;
+	max-height: 0;	
+	pointer-events: auto;
+	&.active{
+    max-height: 100%;
+  }
+	&:after{
+    content: "\f105";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    color: $gray-900;
+		z-index: 99;
+		top: 1rem;
+		right: 1rem;
+		display: block;
+		transition: all 0.3s ease;
+		pointer-events: none;
+	}
+	&.active:after{
+		color: $white;
+		transform: rotate(90deg);
+	}
+}
+// 6.first
+.has-submenu{
+	position: relative;
+	&>a{
+    font-weight: bold;
+		&.active,&:hover{
+			background-color: $mobile_bg1-hover;
+			&+.sub-menu::after{
+				color: $white;
+			}
+		}
+	}
+}
+// 7.sub
+.sub-menu{
+	a{
+		padding-left: 3rem !important;
+		color: $mobile_txt !important;
+		background: $mobile_bg2;
+		&.active,&:hover{			
+			background: $mobile_bg2-hover;
+			&+.third-menu::after{
+				color: $gray-900 !important;
+			}
+		}		
+	}
+	&.active::after{
+		color: $white;
+	}
+}
+// 8.third
+.third-menu{
+	a {
+		padding-left: 3rem !important;
+		background: $mobile_bg3;
+		&.active,&:hover,&:focus {
+			background: $mobile_bg3-hover;
+		}
+  }
+}
+// 9.fourth
+.fourth-menu{
+  background: $mobile_bg4;
+  a {
+		padding-left: 3rem !important;
+		&.active,&:hover,&:focus {
+			background: $mobile_bg4-hover;
+		}
+  }
+}
+// 10.mobile topNav
+.menu-topnav{
+	padding: 1.5rem;
+	&-item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+		margin: .5rem;
+		padding: 1rem;
+	}
+}

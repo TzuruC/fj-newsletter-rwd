@@ -1,0 +1,13 @@
+@import "../../sass/_Bootstrap/functions";
+@import "../../sass/_Bootstrap/variables";
+@import "../../sass/_Bootstrap/mixins";
+@import "../../sass/_CommonModule/mixins";
+// Template
+@import "_Index/common";           //首頁共用元件
+@import "_Index/inBanner";
+@import "_Index/card";             //Card 圖文
+@import "_Index/FirstView";        //owl firstView 輪播
+@import "_Index/network";          //學科學習網
+@import "_Index/science";          //科學專題
+@import "_Index/inVideo";          //影音專區
+@import "_Index/_Tabs";

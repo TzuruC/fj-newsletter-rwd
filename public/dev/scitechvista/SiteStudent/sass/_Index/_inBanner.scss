@@ -1,0 +1,55 @@
+/*-------------------------------------------*\
+	_inBanner.scss
+	
+	Index
+
+\*-------------------------------------------*/
+.Banner-wrap{
+  position: relative;
+  margin-top: calc(60px + 48px);
+  height: 100px;
+  background: url(../images/student_banner.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: margin-top 0.5s ease-in-out;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba($black, 1) 0%, rgba($black, .5) 60%, rgba($black, 0) 100%);
+  }
+  .in-tit{
+    position: relative;
+    font-size: $h1-font-size;
+    color: $white;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
+  }
+  @include media-breakpoint-up(sm){
+    height: 200px;
+    &::after{
+      background-image: linear-gradient(90deg, rgba($black, 1) 0%, rgba($black, .5) 30%, rgba($black, 0) 100%);
+    }
+    .in-tit{
+      text-align: left;
+    }
+  }
+  @include media-breakpoint-up(lg){
+    margin-top: calc(61px + 60px);
+    height: 300px;
+  }
+}
+.Banner-wrap.sticky{
+  margin-top: 0;
+  transition: margin-top 0.5s ease-in-out;
+}

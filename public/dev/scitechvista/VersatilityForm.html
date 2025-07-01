@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="email=no" name="format-detection" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>線上報名-資料填寫</title>
+	<link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Common CSS 首頁主版共用 -->
+  <link rel="stylesheet" href="css/common.min.css">
+  <!-- Main CSS 主版 -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Components CSS 標準功能-->
+  <link rel="stylesheet" href="css/kf-components.min.css">
+  <!-- Optional JavaScript -->
+	<script src="Scripts/lib/modernizr-custom.min.js"></script>
+  <script src="Scripts/lib/jquery_kf.js"></script>
+  <script src="Scripts/select2-develop/src/js/select2.min.js"></script>
+  <script src="Scripts/select2-develop/src/js/i18n/zh-TW.js"></script>
+  <script src="Scripts/common.js"></script>
+  <script src="Scripts/main.js"></script>
+</head>
+<body>
+  <div class="contents_wrap tc_contents_wrap">
+    <div class="container">
+    <!-- main_wrap -->
+      <div class="main_wrap">
+        <div class="main_content">
+          <h2 class="main_tit">線上報名-資料填寫</h2><!-- 測試FreeGo 才放的h2 -->
+          <div class="main_body">
+            <div class="d-flex justify-content-sm-end mx-1 mb-2">
+              <a href="#" class="btn btn-primary col col-sm-auto m-1"><i class="far fa-question-circle mr-1"
+                  aria-hidden="true"></i>常見問答</a>
+              <a href="#" class="btn btn-primary col col-sm-auto m-1"><i class="fas fa-search mr-1" aria-hidden="true"></i>案件查詢</a>
+            </div>
+            <div class="kf-forms my-3">
+              <!-- 1.姓名 -->
+              <div class="form-group row">
+                <label for="onlineform01" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                  姓名<abbr title="為必填(選)欄位, 不能為空白。" class="text-nowrap">(必填)</abbr>
+                </label>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row">
+                    <div class="col-md-8">
+                      <input id="onlineform01" class="form-control" type="text" placeholder="請輸入你的姓名(必填)">
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                  <!-- 錯誤回饋請設定 display: block; -->
+                  <div class="invalid-feedback">請輸入您的姓名</div>
+                </div>
+              </div>
+              <!-- 2.E-mail -->
+              <div class="form-group row">
+                <label for="onlineform02" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                  E-mail<abbr title="為必填(選)欄位, 不能為空白。" class="text-nowrap">(必填)</abbr>
+                </label>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row">
+                    <div class="col-md-8">
+                      <input id="onlineform02" class="form-control" type="text" placeholder="請輸入你的E-mail(必填)">
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                  <div class="invalid-feedback">請輸入您的E-mail</div>
+                </div>
+              </div>
+              <!-- 3.聯絡電話 -->
+              <div class="form-group row">
+                <label for="onlineform03" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">聯絡電話</label>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row">
+                    <div class="col-md-8">
+                      <input id="onlineform03" class="form-control" type="text" placeholder="請輸入電話號碼(eg.,0912345678)(必填)">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 4.通訊地址 -->
+              <div class="form-group row">
+                <div id="onlineform04" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">通訊地址</div>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row">
+                    <div class="col-sm-3 mb-2 mb-sm-0">
+                      <label class="invisible" for="onlineform04-01">選擇縣市</label>
+                      <select class="form-control" id="onlineform04-01" aria-labelledby="onlineform04">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-3 mb-2 mb-sm-0">
+                      <label class="invisible" for="onlineform04-02">選擇區域</label>
+                      <select class="form-control" id="onlineform04-02" aria-labelledby="onlineform04">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6 mb-2 mb-sm-0">
+                      <label class="invisible" for="onlineform04-03">請輸入詳細地址</label>
+                      <input id="onlineform04-03" class="form-control" type="text" placeholder="請輸入詳細地址 (必填)" aria-labelledby="onlineform04">
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                </div>
+              </div>
+              <!-- 5.日期 -->
+              <div class="form-group row">
+                <div id="onlineform04" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">選擇日期</div>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row align-items-center">
+                    <div class="col-sm-5 mb-2 mb-sm-0">
+                      <label class="invisible" for="onlineform05-03">請選擇日期</label>
+                      <input id="onlineform05-03" class="form-control" type="date" name="bday" placeholder="請選擇日期">
+                    </div>
+                    <span class="col-12 col-sm-auto mb-2 mb-sm-0 text-center">~</span>
+                    <div class="col-sm-5 mb-2 mb-sm-0">
+                      <label class="invisible" for="onlineform05-04">請選擇日期</label>
+                      <input id="onlineform05-04" class="form-control" type="date" name="bday" placeholder="請選擇日期">
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                </div>
+              </div>
+              <!-- 5.日期 -->
+              <div class="form-group row">
+                <div id="onlineform04" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">選擇日期</div>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row align-items-center">
+                    <span class="col-auto my-2 my-sm-0">起</span>
+                    <div class="col-sm-5 mb-2 mb-sm-0">
+                      <label class="invisible" for="onlineform05-03">請選擇日期</label>
+                      <input id="onlineform05-03" class="form-control" type="date" name="bday" placeholder="請選擇日期">
+                    </div>
+                    <span class="col-auto my-2 my-sm-0">至</span>
+                    <div class="col-sm-5 mb-2 mb-sm-0">
+                      <label class="invisible" for="onlineform05-04">請選擇日期</label>
+                      <input id="onlineform05-04" class="form-control" type="date" name="bday" placeholder="請選擇日期">
+                    </div>
+                    <span class="col-auto my-2 my-sm-0">止</span>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                </div>
+              </div>
+              <!-- 6.意見分類 -->
+              <div class="form-group row">
+                <label for="onlineform05" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">意見分類</label>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row">
+                    <div class="col-md-8">
+                      <select class="form-control" id="onlineform05">
+                        <option>請選擇分類</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="SelectTest-2" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">複選下拉</label>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row">
+                    <div class="col-md-8">
+                      <select id="SelectTest-2" class="SelectCheck" name="select"multiple="multiple">
+                        <option>請選擇次分類</option>
+                        <option>次分類</option>
+                        <option>次分類次分類次分類</option>
+                        <option>次分類</option>
+                        <option>次分類次分類</option>
+                      </select>
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                </div>
+              </div>
+              <!-- 7.單選選項 並排 -->
+              <fieldset class="form-group form-fieldset-justify row">
+                <legend id="onlineForm08" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                  單選選項<abbr title="為必填(選)欄位, 不能為空白。" class="text-nowrap">(必填)</abbr>
+                </legend>
+                <div class="col-md-8 col-lg-9 offset-md-4 offset-lg-3">
+                  <div class="col-md-12 pl-0 mt-2">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                  <div class="invalid-feedback">請選擇</div>
+                </div>
+              </fieldset>
+              <!-- 7.單選選項 條列 -->
+              <fieldset class="form-group form-fieldset-justify row">
+                <legend id="onlineForm08" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                  單選選項<abbr title="為必填(選)欄位, 不能為空白。" class="text-nowrap">(必填)</abbr>
+                </legend>
+                <div class="col-md-8 col-lg-9 offset-md-4 offset-lg-3">
+                  <div class="col-md-12 pl-0 mt-2">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio3">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio4">Or toggle this other custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio5">Or toggle this other custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio6">Or toggle this other custom radio</label>
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                  <div class="invalid-feedback">請選擇</div>
+                </div>
+              </fieldset>
+              <!-- 8.複選選項 並排-->
+              <fieldset class="form-group form-fieldset-justify row">
+                <legend id="onlineForm08" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                  複選選項<abbr title="為必填(選)欄位, 不能為空白。" class="text-nowrap">(必填)</abbr>
+                </legend>
+                <div class="col-md-8 col-lg-9 offset-md-4 offset-lg-3">
+                  <div class="col-md-12 pl-0 mt-2">
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                      <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="customCheck2">
+                      <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="customCheck3">
+                      <label class="custom-control-label" for="customCheck3">Check this custom checkbox</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="customCheck4">
+                      <label class="custom-control-label" for="customCheck4">Check this custom checkbox</label>
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                  <div class="invalid-feedback">請選擇</div>
+                </div>
+              </fieldset>
+              <!-- 8.複選選項 條列-->
+              <fieldset class="form-group form-fieldset-justify row">
+                <legend id="onlineForm08" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                  複選選項<abbr title="為必填(選)欄位, 不能為空白。" class="text-nowrap">(必填)</abbr>
+                </legend>
+                <div class="col-md-8 col-lg-9 offset-md-4 offset-lg-3">
+                  <div class="col-md-12 pl-0 mt-2">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck5">
+                      <label class="custom-control-label" for="customCheck5">Check this custom checkbox</label>
+                    </div>
+                    <div class="form-row align-items-center custom-control custom-checkbox custom-control-inline">
+                      <div class="col-auto">
+                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                        <label class="custom-control-label" for="customCheck6">Other</label>
+                      </div>
+                      <div class="col-auto">
+                        <label for="onlineform09" class="invisible"></label>
+                        <input id="onlineform09" class="form-control" type="text" placeholder="請輸入項目">
+                      </div>
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                  <div class="invalid-feedback">請選擇</div>
+                </div>
+              </fieldset>
+              <!-- 9.訊息主旨 -->
+              <div class="form-group row">
+                <label for="onlineform06" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                  訊息主旨<abbr title="為必填(選)欄位, 不能為空白。" class="text-nowrap">(必填)</abbr>
+                </label>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row">
+                    <div class="col-md-8">
+                      <input id="onlineform06" class="form-control" type="text" placeholder="請輸入主旨(必填)">
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                  <div class="invalid-feedback">請輸入主旨</div>
+                </div>
+              </div>
+              <!-- 10.訊息內容 -->
+              <div class="form-group row">
+                <label for="onlineform07" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                  訊息內容<abbr title="為必填(選)欄位, 不能為空白。" class="text-nowrap">(必填)</abbr>
+                </label>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row">
+                    <div class="col">
+                      <textarea class="form-control" id="onlineform07" rows="3"></textarea>
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block">
+                    我是備註你想說些甚麼
+                  </small>
+                  <div class="invalid-feedback">請輸入內容</div>
+                </div>
+              </div>
+              <!-- 11.參考位置 -->
+              <div class="form-group row">
+                <div class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">參考位置</div>
+                <div class="col-md-8 col-lg-9">
+                  <a href="#" class="btn btn-primary">位置標示</a>
+                </div>
+              </div>
+              <!-- 12.上傳檔案 -->
+              <div class="form-group row">
+                <div  id="onlineform11" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">上傳檔案</div>
+                <div class="col-md-8 col-lg-9">
+                  <div class="form-row">
+                    <div class="col-md-8">
+                      <label for="onlineform10-01" class="invisible">上傳檔案</label>
+                      <input id="onlineform10-01" class="form-control-file mb-2" type="file" multiple aria-labelledby="onlineform11">
+                      <label for="onlineform10-02" class="invisible">上傳檔案</label>
+                      <input id="onlineform10-02" class="form-control-file mb-2" type="file" multiple aria-labelledby="onlineform11">
+                      <label for="onlineform10-03" class="invisible">上傳檔案</label>
+                      <input id="onlineform10-03" class="form-control-file mb-2" type="file" multiple aria-labelledby="onlineform11">
+                      <label for="onlineform10-04" class="invisible">上傳檔案</label>
+                      <input id="onlineform10-04" class="form-control-file mb-2" type="file" multiple aria-labelledby="onlineform11">
+                      <label for="onlineform10-05" class="invisible">上傳檔案</label>
+                      <input id="onlineform10-05" class="form-control-file mb-2" type="file" multiple aria-labelledby="onlineform11">
+                    </div>
+                  </div>
+                  <small class="text-info mt-2 d-block kf-break-all">
+                    檔案大小限制2以內，支援.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.zip,.jpg,.jpeg,.bmp,.gif,.png,.odt,.ott,.odg,.otg,.odp,.otp,.ods,.ots,.odc,.otc,.odi,.oti,.odf,.otf,.odm,.oth,.pdf
+                  </small>
+                </div>
+              </div>
+              <!-- 14.驗證碼 -->
+              <div class="form-group row">
+                <span id="onlineform11" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+                  驗證碼<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr>
+                </span>
+                <div class="col-md-8 col-lg-9">
+                  <div class="row align-items-lg-center">
+                    <div class="col-12 col-lg-auto  d-flex flex-column mb-2 mb-sm-3">
+                      <input class="align-self-start" type="image" name="testname15" src="images/module/ValidateCode.jpg" alt="點選圖片可重新產生驗證碼" aria-labelledby="onlineform11">
+                      <small class="text-info mt-2">(點選圖片可重新產生驗證碼)</small>
+                    </div>
+                    <div class="col-12 col-lg-auto mb-2 mb-sm-3 pl-lg-0">
+                      <a class="btn btn-primary" href="#" target="_blank" title="聽取驗證碼 (另開新視窗)" aria-labelledby="onlineform11">
+                        <i class="fa fa-microphone mr-2" aria-hidden="true"></i>聽取驗證碼
+                      </a>
+                    </div>
+                    <div class="col-sm-8">
+                      <input id="onlineform05 " class="form-control" type="text" placeholder="請輸入驗證碼(必填)" aria-labelledby="onlineform11">
+                    </div>
+                  </div>
+                  <div class="invalid-feedback">
+                    <span>請輸入驗證碼</span>
+                    <span>驗證碼格式錯誤</span>
+                </div>
+                </div>
+              </div>
+            </div>
+            <!-- 按鈕區域 -->
+            <div class="d-flex justify-content-center my-5">
+              <input class="btn btn-secondary flex-fill col-sm-2 m-1" type="reset" value="清除">
+              <input class="btn btn-primary flex-fill col-sm-2 m-1" type="submit" value="送出">
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  $(document).ready( function(){
+    $(".SelectCheck").select2({
+      maximumSelectionLength: 2,//限制數量設定
+      placeholder: '請選擇分類項目',//可自行修改
+      language: 'zh-TW',
+      width: '100%',// 最多字元限制
+      maximumInputLength: 100,// 最少字元才觸發尋找, 0 不指定
+      minimumInputLength: 0,// 當找不到可以使用輸入的文字
+      tags: false,
+      allowClear: true,//清除全部tag的關閉btn
+    });
+  });
+</script>
+</body>
+</html>

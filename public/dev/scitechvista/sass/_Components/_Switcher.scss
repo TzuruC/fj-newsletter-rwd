@@ -1,0 +1,226 @@
+/*-------------------------------------------------------------------------------*\
+  Switcher.scss
+  -1. 主要框架
+  -2. 略過字型切換，社群分享工具列
+  -3. 按鈕外框架
+  -4. 分享展開
+/*-------------------------------------------------------------------------------*/
+$boxsize:  40px;
+$switcher-color-txt: $gray-700;
+//1. 主要框架
+.contents_function{
+	position: relative;
+	// z-index: index($zid, social_links);
+  margin: .5rem 0;
+	&_inner{
+    position: relative;
+  }
+}
+ //2. 略過字型切換，社群分享工具列
+.social_skip{
+  text-align: center;
+	a {		
+		display: block;
+		width: 1px;
+    height: 1px;
+		color: $gray-900;
+		white-space: nowrap;
+		opacity: 0;
+		&:focus {
+			width: auto;
+			height: auto;
+      padding: .25rem;
+      margin-bottom: 10px;
+			opacity: 1;
+			@include animate(.3s);
+		}
+	}
+}
+//3. 按鈕外框架
+.switchertool{	
+	display: flex;
+  @include media-breakpoint-up(md){
+    justify-content: flex-end;
+  }
+	a{
+		display: block;
+		width: $boxsize;
+		height: $boxsize;
+		line-height: $boxsize;
+    color: transparent !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    border: solid 1px $gray-300;
+    margin: .125rem;
+		&:hover,&:focus,&.active,&.sc_social-open{
+      color: $white;
+      background-color: $gray-800;
+      &:before,&:after{ color: $white;}
+    }
+	}
+}
+// .SwitcherStraight{
+//   .theiaStickySidebar{
+//     display: flex;
+//     flex-wrap: wrap;
+//     padding-right: .5rem;
+//     padding-left: .5rem;
+//   }
+//   @include media-breakpoint-up(lg){
+//     .theiaStickySidebar{
+//       display: block;
+//     }
+//     float: left;
+//     left: calc(50% - 680px/2 - 80px);
+//     padding-top: 13rem;
+//     z-index: 2;
+//     @include animate(.3s);
+//   }
+// }
+.SwitcherStraight{
+  padding-right: .5rem;
+  padding-left: .5rem;
+  @include media-breakpoint-up(lg){
+    position: absolute;
+    flex-wrap: wrap;
+    top: 0;
+    left: calc(50% - 680px/2 - 80px);
+    width: $boxsize + 5px;
+    padding-top: calc((40px*8)/2 + 200px);
+    padding-right: 0;
+    padding-left: 0;
+    // @include animate(.3s);
+    transition: padding-top 1s ease-in-out;
+    &.fixed{
+      position: fixed;
+      padding-top: calc(110px + 48px);
+    }
+  }
+}
+// switcher
+.switcher{	
+	margin: 0;
+	margin-left: 1px;
+	color: $switcher-color-txt;
+	font-size: $font-size-base;
+	text-align: center;
+	background-color: $gray-100;
+	@include animate(.3s);
+}
+// print & social
+.sc{
+  &_font{
+    position: relative;
+    display: flex;
+    &:before,&:after{
+      position: absolute;
+      top: 0;
+      content: "A";
+      display: block;
+      color: $switcher-color-txt;
+      font-family: $font-primary-en;
+      font-weight: bold;
+    }
+    &:before{ left: 9px; font-size: $font-size-base;}
+    &:after{ right: 9px; font-size: $font-size-base*.875;}
+    &.font_bigger{
+      &:before{ font-size: $font-size-base;}
+      &:after{ font-size: $font-size-base;}
+    }
+  }
+  &_print,&_social,&_bookmark{
+	position: relative;
+	font-size: 0em ;
+    &:after{
+      position: absolute;
+      top: 0;
+      display: block;
+      font-size: $font-size-base;
+      width: 100%;
+      text-align: center;
+      font-family: 'Font Awesome 5 Free';
+      color: $switcher-color-txt;
+    }
+  }
+	&_print{
+    &:after{
+      content: "\f02f";
+      font-weight: 900;
+    }
+	}
+	&_social{
+    &:after{
+      content: "\f1e0";
+    }
+	}
+  &_bookmark{
+    &:after{
+      content: "\f02e";
+    }
+	}
+}
+
+// 4. 分享展開
+// social_links
+// .social_links{
+// 	position: absolute;
+// 	right: 0;
+// 	visibility: hidden;
+// 	width: $boxsize;
+// 	height: 0;
+// 	opacity: 0;
+// 	@include animate(.3s);
+// 	@include media-breakpoint-up(sm){
+// 		left: auto;
+// 		right: 0;
+// 	}
+// 	a{
+// 		display: block;
+// 		width: $boxsize;
+// 		height: $boxsize;
+// 		margin-top: 1px;
+// 		line-height: $boxsize;
+// 		font-size: 0em;
+// 		&:first-of-type{color: $white;}
+// 		&:not(:first-of-type){color: $black;}
+// 	}
+// }
+
+// social_links icon
+$social-types: (
+	links1 : #1877f2, 
+	links2 : #1d9bf0,
+	links3 : #ff574d,
+	links4 : #00b900,
+);
+@each $name, $color in $social-types {
+	.social_#{$name} {
+		background:url(../images/switcher/social_#{$name}.svg)no-repeat center center;
+    &:hover,&:focus{
+      background:url(../images/switcher/social_#{$name}_hover.svg)no-repeat center center $color !important;
+    }
+	}
+}
+/*========no-js ========*/
+.no-js{
+	.contents_function{
+    position: relative !important;
+		width: 100%;
+	}
+	.contents_function noscript{
+		display: block;
+		background: $white;
+		margin-bottom: 1rem;
+	}
+  .switchertool{ display: none;}
+  .SwitcherStraight{
+    position: relative;
+    top: auto;
+    left: auto;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom:0;
+    .sc_bookmark{ margin-top: .125rem !important;}
+  }
+}

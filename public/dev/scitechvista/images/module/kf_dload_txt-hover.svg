@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #003b70;
+      }
+
+      .cls-2 {
+        font-size: 14px;
+        fill: #fff;
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+    </style>
+  </defs>
+  <g id="圖層_1_拷貝" data-name="圖層 1 拷貝">
+    <path class="cls-1" d="M2.71.55H2A2.14,2.14,0,0,0,0,2.81V37.19a2.14,2.14,0,0,0,2,2.26H30.36a4.39,4.39,0,0,0,2.89-1.07l5.33-4.63A4,4,0,0,0,40,30.7v-26A4.22,4.22,0,0,0,35.69.55Z"/>
+  </g>
+  <g id="圖層_2_拷貝" data-name="圖層 2 拷貝">
+    <text class="cls-2" transform="translate(6.29 24.53)">TXT</text>
+  </g>
+</svg>

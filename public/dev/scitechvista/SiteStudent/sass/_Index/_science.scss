@@ -1,0 +1,36 @@
+/*-------------------------------------------*\
+	science.scss
+	
+	Index
+  - 1.science-wrap
+\*-------------------------------------------*/
+// 1.science-wrap
+.science-wrap{
+  position: relative;
+  z-index: 0;
+  background-color: $gray-100;
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 78%;
+    background-color: $white;
+    box-shadow: 
+      0 .25rem .5rem rgba($black, .025),
+      0 .5rem .75rem rgba($black, .025);
+    @include media-breakpoint-up(lg){
+      height: 55%;
+    }
+  }
+  .card-item{
+    box-shadow: 
+      0 .25rem .5rem -.125rem rgba($black, .075),
+      0 .5rem .75rem -.25rem rgba($black, .075),
+      0 1rem 1.25rem -.5rem rgba($black, .075),
+      0 1.5rem 1.75rem -.75rem rgba($black, .075);
+  }
+}

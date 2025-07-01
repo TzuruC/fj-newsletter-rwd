@@ -1,0 +1,68 @@
+/*-------------------------------------------*\
+	_Main-V01.sass
+	
+	主版
+  - 1.主版背景
+  - 4.內容框架
+  - 5.主版標題
+  - 6.內容區塊
+\*-------------------------------------------*/
+// 1.主版背景
+.contents_wrap{
+  background: $gray-100;
+  transition: padding-top .5s ease-in-out;
+  // padding: 0 0 3rem;
+  padding-top: calc(60px + 48px);
+  padding-bottom: 1px;
+  @include  media-breakpoint-up(lg){
+    // padding-top: $desktopNav-height + 38px;
+    padding-top: calc(60px + 60px);
+  }
+}
+// 4.內容框架
+// .main_wrap{
+//   position: relative;
+//   z-index: index($zid, main_wrap);
+//   flex: 0 0 100%;
+//   max-width: 100%;
+//   padding: 2rem 0;
+// }
+// 5.主版標題
+.main_tit{
+  // position: relative;
+  // z-index: 1;
+	display: block;
+  font-size: $h1-font-size !important;
+  // text-shadow: 0 .125rem .125rem rgba($color: $black, $alpha: .105);
+  @include media-breakpoint-down(xs){
+    font-size: $h2-font-size !important;
+    margin-bottom: 1rem;
+  }
+}
+// 6.內容區塊
+.main_body{
+  background: $gray-100;
+  .DetailContent,.container,.container-mx,.container-fluid{
+    position: relative;
+  }
+}
+// 7.主版footer，錯誤回饋
+
+// 8.介面最後更新日期
+.kf-updated{
+  font-size: $font-size-sm-em;
+  text-align: center;
+  color: $gray-600;
+  @include  media-breakpoint-up(md){ text-align: right;}
+  @include  media-breakpoint-up(xl){
+    position: absolute;
+    bottom: 4.5rem;
+    right: 1rem;	
+  }
+}
+/*========no-js ========*/
+.no-js{
+  .contents_wrap{
+    @include  media-breakpoint-up(lg){padding-top: 0;}
+  }
+}

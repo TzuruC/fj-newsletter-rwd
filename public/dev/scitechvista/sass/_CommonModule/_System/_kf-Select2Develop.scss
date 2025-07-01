@@ -1,0 +1,82 @@
+/*-------------------------------------------*\
+	kf-Select2Develop.scss
+
+  - 1.Select2 複選下拉套件樣式
+  與 bootstrap _forms.scss 相同（有調整文字size）
+
+\*-------------------------------------------*/
+.select2-container--default{
+  //基本外框
+  .select2-selection--multiple{
+    display: block;
+    width: 100%;
+    min-height: $input-height !important;
+    padding: $input-padding-y*.25 $input-padding-x/2 !important;
+    font-family: $input-font-family;
+    @include font-size($input-font-size);
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color;
+    background-color: $input-bg !important;
+    background-clip: padding-box;
+    border: $input-border-width solid $input-border-color !important;
+    @include border-radius($input-border-radius, 0);
+    @include box-shadow($input-box-shadow);
+    @include transition($input-transition);
+    &::-ms-expand {
+      background-color: transparent;
+      border: 0;
+    }
+  }
+  //
+  .select2-search--dropdown {
+    .select2-search__field {
+      border: 1px solid $input-border-color;
+    }
+  }
+  .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: $primary !important;
+    color: white;
+  }
+  //多選標籤樣式
+  .select2-selection--multiple{
+    .select2-selection__choice {
+      background-color: #e4e4e4 !important;
+      border: 1px solid $input-border-color;
+      @include border-radius($input-border-radius, 0);
+    }
+  }
+  //foucs
+  &.select2-container--focus {
+    .select2-selection--multiple {
+      border-color: $input-focus-border-color !important;
+      @if $enable-shadows {
+        @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+      } @else {
+        box-shadow: $input-focus-box-shadow;
+      }
+    }
+  }
+  //
+  .select2-selection__choice__remove {
+    border-right: 1px solid $input-border-color !important;
+    border-top-left-radius: $input-border-radius !important;
+    border-bottom-left-radius: $input-border-radius !important;
+    color: $input-color !important;
+  }
+}
+//
+.select2-dropdown {
+  border: 1px solid $input-border-color !important;
+  border-radius: $input-border-radius !important;
+}
+//placeholder顯示對齊
+.select2-container{
+  .select2-search--inline {
+    .select2-search__field {
+      margin-top: 7px !important;
+    }
+  }
+}
+//
+

@@ -1,0 +1,206 @@
+/*-------------------------------------------*\
+ kf-ModuleTitle 模組標題  
+ 01-基本樣式
+   -內容標題
+   -相關連結、相關圖片、相關檔案標題
+ 02-常見問答標題
+	
+\*-------------------------------------------*/
+.kf-title{
+  //基本樣式設計，可依照專案調整
+  &.h1, &.h2, &.h3, &.h4, &.h5, &.h6{
+    line-height: $headings-line-height;
+    color: $base-color_txt;
+  }
+  &.h2{
+    margin-bottom: 1.5rem;
+    @include media-breakpoint-down(xs){
+      font-size: $h3-font-size !important;
+    }
+  }
+  &.h3{
+    margin-bottom: 1.5rem;
+    @include media-breakpoint-down(xs){
+      font-size: $h4-font-size !important;
+    }
+  }
+  &.h4{
+    font-weight: bold;
+    margin-bottom: 1rem;
+    @include media-breakpoint-down(xs){
+      font-size: $h5-font-size !important;
+    }
+  }
+  &.h5,&.h6,&.h7{
+    margin-bottom: 1rem;
+  }
+  p{ padding: 0 !important;}
+}
+
+//內頁標準標題
+.kf-det-title.h3{
+  font-size: $h1-font-size;
+  display: block;
+  margin-bottom: 1.5rem;
+  @include media-breakpoint-down(xs){
+    font-size: $h3-font-size !important;
+  }
+}
+//相關連結、相關圖片、相關檔案標題
+.kf-det-title.h4{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+//樣板管理標題
+.kf-model-title.h4{
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.kf-model-title.h5{
+  position: relative;
+  display: block;
+  font-weight: bold;
+  padding-left: 1.75rem;
+  margin-bottom: 1.5rem;
+  &:before,&:after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+  }
+  &:before{
+    width: .75rem;
+    height: .75rem;
+    border: 2px solid $secondary;
+    left: 4px;
+    top: 4px;
+  }
+  &:after{
+    width: 1rem;
+    height: 1rem;
+    background: rgba($secondary_l, .3);
+    left: 8px;
+    top: 8px;
+  }
+}
+.kf-model-title.h6{
+  position: relative;
+  background: rgba($primary, .15);
+  padding: 0.5rem ;
+  margin: 2em 0 1em;
+  border-radius: 0 5px 5px 5px;
+  &:after {
+    position: absolute;
+    font-family: "Font Awesome 5 Free",'Quicksand','Avenir','Arial',sans-serif;
+    font-weight: 900;
+    content: '\f00c Check';
+    background: $primary_d;
+    color: #fff;
+    left: 0px;
+    bottom: 100%;
+    border-radius: 5px 5px 0 0;
+    padding: 3px 7px 2px;
+    font-size: $font-size-base-em * .75;
+    line-height: 1;
+    letter-spacing: 0.05em
+  }
+  // position: relative;
+  // background-color: $secondary; 
+  // // color: $white;
+  // overflow: hidden;
+  // padding: .75rem 4.5rem .75rem .75rem;
+  // display: inline-block;
+  // font-weight: bold;
+  // margin-bottom: 1.5rem;
+  // &:before,&:after{
+  //   position: absolute;
+  //   content: '';
+  //   display: block;
+  //   background-color: $white;
+  //   opacity: 0.3;
+  //   width: 500px;
+  //   height: 500px;
+  // }
+  // &:before{
+  //   transform: rotate(-50deg);
+  //   bottom: -10px;
+  //   right: -330px;
+  // }
+  // &:after{
+  //   transform: rotate(-70deg);
+  //   bottom: -100px;
+  //   right: -500px;
+  // }
+}
+.kf-model-title.h7{
+  font-size: $font-size-md-em;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding: 0.75em 0.75em 0.75em 1.75em;
+  border-top: dotted 2px $gray-500;
+  border-bottom: dotted 2px $gray-500;
+  &:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f138";
+    font-weight: 900;
+    position: absolute;
+    font-size: 1em;
+    left: 0.25em;
+    top: 0.75em;
+    color: $gray-900; 
+  }
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: bold;
+  line-height: $headings-line-height;
+  color: $base-color_txt;
+}
+h2{
+  margin-bottom: 1.5rem;
+}
+a{
+  .kf-title{transition: all .3s ease-in-out;}
+  &:hover,&:focus{
+    .kf-title{
+      color:$primary_d;
+    }
+  }
+}
+
+
+//常見問答標題
+.kf-fqa{
+  &-q,&-a{
+    display: flex !important;
+    padding-left: 0 !important;
+    &::before{
+      content: "";
+      position: unset !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0 ;
+      width: 32px !important;
+      height: 32px !important;
+      margin-right: 0.5rem;
+      border-radius: 2px;
+    }
+  }
+  &-q::before {
+    margin-top: .25rem;
+    background-color: $primary;
+    background-image: url(../images/module/fqa-q.svg) !important;
+  }
+  &-a::before{
+    background-color: $secondary;
+    background-image: url(../images/module/fqa-a.svg) !important;
+  }
+}
+@include media-breakpoint-down(sm){
+  .kf-fqa-a{
+    flex-direction: column;
+    &::before{margin-bottom: 1rem;}
+  }
+}

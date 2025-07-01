@@ -1,0 +1,180 @@
+/*-------------------------------------------*\
+  Calendar.scss
+
+  - 1.上下切換月份選擇
+  - 2.行事曆表格
+  - 3.行事曆手機版
+  - 4.日期內容區
+  - 5.按紐
+\*-------------------------------------------*/
+$week-bg: $primary;                      //星期背景色
+$week-txt-color: $white;                 //星期文字顏色
+$day-bg: $white;                         //日期背景色
+$day-border: 1px solid $gray-200;        //日期表格線
+$other-month-bg: $gray-100;              //非當月日期，灰階設定
+$holiday-bg: $primary_l;                 //手機版假日背景色
+$holiday-border: 1px solid $white;       //手機版假日線段
+$fullybooked-bg: $secondary;             //額滿按鈕背景色
+$fullybooked-txt-color: $base-color-txt; //額滿按鈕文字顏色
+
+
+ // 1.上下切換月份選擇
+.kf-calendar{
+  &-monthselect{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+    span {
+      padding: 0 .5rem;
+      margin-bottom: 0;
+      font-weight: bold;
+      letter-spacing: .125em;
+    }
+    .prev,.next{
+      font-size: 1.5rem;
+    }
+    // input[type="submit"] {
+    //   width: 40px;
+    //   height: 40px;		
+    //   border: none;
+    //   background: transparent url(../images/module/calender_arrow.svg) no-repeat;
+    //   @include text-hide;
+    //   color: $black;
+    //   &:hover {background-position: center bottom;}
+    //   &:focus{
+    //     outline-offset: 2px;
+    //     outline: 2px dotted $outline;
+    //   }
+    //   &.prev {transform: rotateY(180deg);}
+    // }
+  }
+}
+// 2.行事曆表格
+.kf-calendar-table{
+	width: 100%;
+	border-collapse: collapse;
+  table-layout: fixed;
+  //星期
+  th.week{
+    padding: .75rem;
+    color: $week-txt-color;
+    background: $week-bg;
+  }
+  //非當月日期
+  .other-month{
+    background: $other-month-bg;
+    p{ opacity: .5;}
+  }
+  //日期共用
+	td{
+		// vertical-align: top;
+		// text-align: center;
+    background: $day-bg;
+    border: $day-border;
+		p{
+			font-family: $font-primary-en;
+			font-weight: 600;
+			padding: .5rem .5rem 0 .5rem;
+			text-align: left;
+			color: $base-color-txt;
+		}
+  }
+  //周日周六
+	tr td{
+		&:first-child p{color: $danger;}
+		&:last-child p{color:  $success;}
+	}
+}
+// 3.行事曆手機版
+@include media-breakpoint-down(sm){
+  .kf-calendar-table{
+		display: block;
+		border-top: .25rem solid $primary;
+    thead,tbody,th,td,tr{display: block; }
+    //隱藏星期列表與非當月日期
+    th.week,
+    td.other-month{display: none;}
+    //日期共用
+		td{
+      display: flex;
+      align-items: center;
+			background: $white;
+			border: none;
+			border-bottom: $day-border;			
+			p{
+        position: relative;
+        width: 5rem;
+        padding-top: 0;
+				padding-left: 2.5rem;				
+				&:before{
+          font-family: $font-primary;
+					font-weight: bold;
+					position: absolute;
+          top: 0;
+          left: .5rem;
+					content: attr(data-column);
+					color: $primary;
+				}
+			}
+		}
+		tr td{
+			&:first-child,
+			&:last-child{
+				background: rgba($holiday-bg, .115);
+				border-bottom: $holiday-border;
+			}
+		}
+  }
+}
+// 4.日期內容區
+.day-content{
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  min-height: 4.5rem;
+  padding: .5em 0;
+  @include media-breakpoint-down(sm){
+    width: calc(100% - 6rem);
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 3rem;
+    margin-left: 1rem;
+    padding: .65rem .25rem;
+  }
+  //內容區文字
+  &-txt{
+    display: inline-block;
+    padding: .5rem;		
+    font-size: $font-size-sm-em;
+    line-height: 1.2;
+    &.review{
+      color: $danger;
+    }
+    &.approval{
+      color: $base-color-txt;
+    }
+  }
+}
+
+// 5.按紐
+.day-content{
+	.fullybooked{
+		color: $fullybooked-txt-color !important;
+    background-color: $fullybooked-bg!important;
+    border-width: 0;
+    opacity: 1;
+  }
+}
+.none{
+  font-size: $h3-font-size;
+  color: $danger;
+}
+//非當月透明度降低
+.other-month .day-content{
+  .fullybooked,.none{
+    opacity: .6;
+  }
+}

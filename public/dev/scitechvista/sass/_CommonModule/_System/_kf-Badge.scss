@@ -1,0 +1,42 @@
+/*-------------------------------------------*\
+	Badge.scss
+
+  - 1.submit
+  - 2.checkbox
+\*-------------------------------------------*/
+.badge{
+  font-size: inherit;
+  font-weight: inherit;
+}
+.kf-badge-submit{
+  display: inline-block !important;
+  border: 0;
+}
+.kf-badge-checkbox{
+  input{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  label{
+    display: inline-block;
+    @include font-size($badge-font-size);
+    font-weight: 700;
+    padding: $badge-padding-y $badge-padding-x;
+    @include border-radius($badge-border-radius);
+    cursor: pointer;
+  }
+}
+@mixin check-badge-variant($bg) {
+  input:checked + label {
+    background-color: darken($bg, 10%);
+    box-shadow: 0 0 0 $badge-focus-width rgba($bg, .5);
+  }
+  input:not(:checked) + label{
+    background-color: $bg;}
+}
+@each $color, $value in $theme-colors {
+  .kf-badge-checkbox-#{$color} {
+    @include check-badge-variant($value);
+  }
+}

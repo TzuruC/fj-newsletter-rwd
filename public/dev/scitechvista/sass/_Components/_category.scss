@@ -1,0 +1,147 @@
+/*-------------------------------------------*\
+  category.scss
+  
+  index
+  - 1.wrapper
+  - 2.mask
+\*-------------------------------------------*/
+// 1. bar & open、close
+.category{
+  &-bar{
+    position: fixed;
+    top: 61px;
+    left: 0;
+    right: 0;
+    z-index: index($zid, category-bar);
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background-color: $white;
+    border-bottom: 1px solid $gray-200;
+    box-shadow:
+      0 .5rem .25rem -.25rem rgba($black, .025),
+      0 1rem .5rem -.5rem rgba($black, .025),
+      0 2rem 1rem -1rem rgba($black, .025);
+    transition: all .5s ease-in-out;
+    @include media-breakpoint-down(md){
+      .container{min-width: 100%;}
+    }
+    @include media-breakpoint-up(lg){
+      // top: 111px;
+      height: 60px;
+    }
+  }
+  &-close,
+  &-open{
+    color: $black;
+    font-size:$font-size-md;
+    background-color: $white;
+    border: none;
+    &:hover{
+      color: $primary;
+    }
+    &:focus{
+      outline-offset: -2px;
+      outline: 2px dotted $outline;
+      &:not(:focus-visible){
+        outline: 0;
+      }
+      &-visible{
+        outline: 2px dotted $outline;
+      }
+    }
+    @include media-breakpoint-up(mx){
+      font-size:$font-size-lg;
+      padding: 0 .75rem;
+    }
+  }
+  &-close{
+    width: 60px;
+    height: 60px;
+  }
+}
+// 2.side
+.category{
+  &-side{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: index($zid, category);
+    height: 100vh;
+    visibility: hidden;
+    overflow: hidden;
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -2;
+      pointer-events: auto;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba($black, .2);
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: all .5s ease-in-out;
+    }
+    &.active{
+      visibility: inherit;
+      &::after,
+      .category-body{
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      &::after{
+        transition-duration: .2s;
+      }
+      .category-body{
+        transition-duration: .5s;
+      }
+    }
+  }
+  &-body{
+    width: 90vw;
+    height: 100vh;
+    pointer-events: auto;
+    background-color: $white;
+    overflow-y: scroll;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .2s ease-in-out;
+    @include media-breakpoint-up(lg){
+      max-width: 360px;
+    }
+  }
+}
+// content
+.category{
+  &-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 2rem;
+    border-bottom: 1px solid $gray-200;
+  }
+  &-list{
+    padding-bottom: 50px;
+    a{
+      display: block;
+      padding: 1rem;
+      padding-left: 2rem;
+      color: $black;
+      background-color: $white;
+      &:hover,
+      &:focus{
+        background-color: $secondary_l;
+      }
+      &:focus{
+        outline-offset: -2px;
+      }
+    }
+  }
+}

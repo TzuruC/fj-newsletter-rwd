@@ -1,0 +1,45 @@
+/*-------------------------------------------------------------------------------*/
+/*    $Megamen-Icon                                                                          */
+/*-------------------------------------------------------------------------------*/
+//Icon選單
+.nav-icon{
+  .sec-item{
+    width: calc(99.9% / 3);
+    .sec-tit{
+      padding-bottom: .75rem;
+      a{
+        display: flex;
+        align-items: center;
+        padding-right: 2.5rem;
+        border-bottom: $border-width solid $border-color;
+        &:after{
+          position: absolute;
+          right: .5rem;
+          content: "\f105";
+          font-family: 'Font Awesome 5 Free';
+          font-weight: bold;
+          color: $gray-500;
+          transition: all .25s ease-in-out;
+        }
+        .kf-img{ 
+          margin-right: .5rem;
+          margin-bottom: 0;
+          width: 80px;
+          text-align: center;
+        }
+        &:hover,&:focus{
+          &:after{
+            transform:translateX(.25rem);
+          }
+        }
+      }
+    }
+    .third-item{
+      //預設定顯示是第三層，不顯是請display:none;
+      //display: none;
+      display: flex;
+      flex-wrap: wrap;
+      li{ width: calc(99.9%/2);}
+    }
+  }
+}

@@ -1,0 +1,238 @@
+/*-------------------------------------------*\
+	Form.scss
+
+  - 1.forms
+  - 2.file
+  - 3.label abbr
+  - 4.select
+  - 5.View data
+  - 6.無障礙fieldext群組
+  - 7.Radio Checkbox
+  - 8.Questionnaire
+  - 9.Google驗證碼
+  - 10.查詢結果
+  - 11.同意須知說明文
+\*-------------------------------------------*/
+// 1.forms
+.kf-forms{
+  padding: 1rem;
+  box-shadow: $box-shadow-sm;
+  background: $white;
+  // background-color: $gray-100;
+  @include media-breakpoint-up(sm){
+    padding: 2rem 2.5rem
+  }
+  @include media-breakpoint-up(xl){
+    padding: 3rem 4rem;
+  }
+  @include media-breakpoint-up(mx){
+    padding: 3rem 10%;
+  }
+  .form-text{
+    color: $primary_d;
+  }
+}
+.invisible{display: none;}
+textarea{box-sizing: border-box;}
+
+// 2.file
+@mixin filebtn($bg) {
+  width: 80px !important;
+  padding: 6.5px .75rem;
+  font-family: $font-sans-serif;
+  font-size: $font-size-sm-em;
+  border: 0;
+  border-radius: .25rem;
+  background-color: $bg;
+}
+.form-control-file{
+  padding: 0.25rem;
+  background-color: $white;
+  border: 1px solid $gray-300;
+  border-radius: .25rem;
+  cursor: pointer;  
+  @include form-control-focus($ignore-warning: true);
+  &::-webkit-file-upload-button{
+    @include filebtn($primary);
+    color: $white;
+  }
+  &::-ms-browse{      
+    @include filebtn($primary);
+    color: $white;
+  }
+  &::-ms-value{
+    background: $white;
+    border: 0;
+  }
+  &:disabled{
+    color: $gray-500;
+    background-color: $gray-200;
+    &::-webkit-file-upload-button{
+      color: $gray-800;
+      background-color: desaturate($primary, 20);
+    }
+    &::-ms-browse{
+      color: $gray-800;
+      background-color: desaturate($primary, 20);
+    }
+    &::-ms-value{
+      background-color: $gray-200;
+    }
+  }
+}
+
+// 3.label abbr
+.kf-form_label{
+  color: $gray-900;
+  abbr{
+    margin: 0 .25rem;
+    color: $danger;
+    border-bottom: none;
+    text-decoration: none;
+  }
+}
+
+// 4.select
+select.form-control {
+  /*IE隱藏箭頭樣式*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  padding-right: $input-padding-x*1.75;
+  background: url(../images/module/kf-select-arrow.svg)no-repeat center right .5rem, $white;
+  &::-ms-expand { 
+    display: none; 
+  }
+
+}
+
+// 5.View data
+.form-control.form-ViewDate{
+  border: none;
+  background: transparent;
+}
+
+// 6.無障礙fieldext群組
+fieldset{
+  &.form-group,&.form-fieldset-justify{
+    border: none;
+    padding: 0;
+  }
+  @include media-breakpoint-up(md){
+    &.form-fieldset-justify{
+      position: relative;
+      legend{
+        position: absolute;
+      }
+    }
+    .form-row{
+      margin-top: $font-size-sm;
+    }
+  }
+}
+
+// 7.Radio Checkbox
+.custom-control-label {
+  line-height: $line-height-base;
+  &::before {
+    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2.7;
+  }
+  &::after {
+    left: -($custom-control-gutter + $custom-control-indicator-size) / 1.05;
+    background: no-repeat 50%;
+  }
+}
+
+// 8.Questionnaire
+//問卷表單的必填樣式
+abbr.kf-RequiredForm{
+  color: $danger;
+  font-size: $font-size-sm-em;
+  border-bottom: none;
+  margin: 0 .25rem;
+  text-decoration: none;
+}
+//問卷結果-進度條
+ol li,ul li{
+  .kf-ProgressBar{
+    width: 100%;
+    margin-left: -1.5rem !important;
+  }
+}
+//問卷結果-文字說明
+.progress + .kf-txt{
+  font-size: $font-size-sm-em;
+}
+.kf-login{
+  @include media-breakpoint-up(md){
+    max-width: 450px;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+  }
+}
+.kf-login-tabs{
+  a{
+    color: $base-color-txt;
+    text-decoration: underline;
+    &:hover,&:focus{
+      color: $bese-link-active;
+    }
+  }
+}
+
+// 9.Google驗證碼
+// RWD
+.reCAPTCHA{
+  @media (max-width: 360px){
+    transform-origin:0;
+    transform:scale(0.85);
+  }
+}
+// 驗證資訊
+#ucValidateCode_ucGoogleV2_divMessage{
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: $success;
+}
+
+// 10.查詢結果
+.kf-InqResult{
+  display: flex;
+  .kf-det-content{ 
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .form-group{
+    margin-bottom: 1.5rem;
+    align-items: center;
+  }
+}
+.kf-InqResult-heading{
+  font-weight: bold;
+  position: relative;
+  &:before{
+    display: block;
+    content: "";
+    background: $primary;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: $font-size-base-em*.55;
+    left: -1.25rem;
+  }
+}
+// 11.同意須知說明文
+.kf-Explain{
+  padding: 1rem 1rem 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 300px);
+  border: 1px solid $gray-500;
+  border-radius: $border-radius;
+  @include media-breakpoint-up(lg){
+    padding: 1rem 5rem 0;
+  }
+  @include media-breakpoint-up(mx){
+    padding: 2rem 7rem 0;
+  }
+}

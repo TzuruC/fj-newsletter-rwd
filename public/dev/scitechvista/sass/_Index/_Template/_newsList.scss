@@ -1,0 +1,77 @@
+/*-------------------------------------------*\
+	newsList.scss
+	
+	Index
+  - 1.background
+\*-------------------------------------------*/
+// item
+.list{
+	&-item {
+		display: flex;
+		padding: 1.5rem .75rem;
+		color: $gray-800;
+		border-bottom: 2px dotted $gray-600;
+	}
+	&-data {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		margin-right: 1rem;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			margin-right: .5rem;
+			border-style: solid;
+			border-width: 6px 0 6px 10px;
+			border-color: transparent transparent transparent $primary;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		&-item {
+			padding: 1.75rem .75rem;
+			font-size: $font-size-lg;
+		}
+
+		&-data {
+			margin-right: 2rem;
+		}
+	}
+}
+// news-list
+.list{
+	&-picture{
+		flex-shrink: 0;
+		width: 80px;
+	}
+	&-body{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex: auto;
+		min-width: 0;
+		width: calc(100% - 80px);
+		padding-left: 1rem;
+		span:nth-child(2){
+			margin-top: 0.5rem;
+		}
+	}
+	@include media-breakpoint-up(sm){
+		&-picture {
+			width: 130px;
+		}
+		&-body{
+			width: calc(100% - 130px);
+		}
+	}
+	@include media-breakpoint-up(mx){
+		&-picture {
+			width: 162px;
+		}
+		&-body {
+			width: calc(100% - 162px);
+		}
+	}
+}

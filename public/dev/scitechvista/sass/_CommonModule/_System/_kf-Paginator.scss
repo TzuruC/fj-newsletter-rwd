@@ -1,0 +1,31 @@
+
+// // kf-paginator 分頁
+.kf-paginator{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7rem !important;
+  &-date {
+    margin-top: 1rem;
+    color: $gray-700;
+  }
+  @include media-breakpoint-down(sm){
+    .page-item{
+      display: none;
+    }
+    .active,
+    li[class*="kf-page"]{
+      display: block;
+    }
+  }
+  @include media-breakpoint-up(md){
+    i{display: none;}
+    .sr-only{
+      position: static;
+      width: auto;
+      height: auto;
+      clip: auto;
+      overflow: auto;
+    }
+  }
+}

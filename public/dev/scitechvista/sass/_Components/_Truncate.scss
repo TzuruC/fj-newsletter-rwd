@@ -1,0 +1,15 @@
+/*-------------------------------------------------------------------------------*/
+/*    $truncate                                                                  */
+/*-------------------------------------------------------------------------------*/
+.truncate-2{
+  height: 3em;
+  @include text-truncate-more(2);
+}
+.truncate-3{
+  height: 4.5em;
+  @include text-truncate-more(3);
+}
+.truncate-4{
+  height: 6em;
+  @include text-truncate-more(4);
+}

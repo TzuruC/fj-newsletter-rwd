@@ -1,0 +1,157 @@
+/*-------------------------------------------*\
+  Step.scss
+  
+  - 1.step_wrap
+  - 2.step_item
+\*-------------------------------------------*/
+//背景色
+$step_bg: $gray-300; //一般狀態
+$step_active_bg: $primary;//進行中
+$step_completed_bg: $primary_l; //完成狀態
+//文字色
+$step_txt: $gray-800; //一般狀態
+$step_active_txt: $white; //進行中
+$step_completed_txt: $primary_d; //完成狀態
+
+// 1.wrapper
+.kf-step_wrap{
+  display: flex;
+  margin-bottom: 2rem;
+  @include media-breakpoint-up(lg){
+    counter-reset:num;
+  }
+}
+// 2.item
+.kf-step_item{
+  position: relative;
+  display: none;
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.2;
+  color: $step_txt;
+  border-bottom: 2px solid $step_bg;
+  &::before{
+    content: attr(data-title);
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    line-height: 60px;
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    font-size: $font-size-lg;
+    color: $step_txt;
+    background-color: $step_bg;
+    border-radius: 50%;
+  }
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: calc(1rem + (60px - 17px));
+    left: calc(50% - (1.5rem / 2));
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $step_bg;
+    transform: rotate(45deg);
+  }
+  &.completed{
+    border-bottom: 2px solid $step_completed_bg;
+    &::before,
+    &::after{
+      background-color: $step_completed_bg;
+    }
+    &::before{
+      color: $step_completed_txt;
+    }
+  }
+  &.active{
+    display: block;
+    border-bottom: 2px solid $step_active_bg;
+    &::before,
+    &::after{
+      background-color: $step_active_bg      
+    }
+    &::before{
+      font-size: $font-size-xl;
+      color: $step_active_txt;
+    }
+  }
+  @include media-breakpoint-up(lg){
+    display: block;
+    &:before {
+      counter-increment: num;
+      content: '0'counter(num);
+    }
+  }
+}
+
+// .step_mail{
+//   .step_item{
+//     &::after,
+//     &::before {
+//       background-color: $secondary;
+//     }
+//     &::before{
+//       color: $primary;
+//     }
+//     p{
+//       padding: .5rem;
+//     }  
+//   }
+//   @include media-breakpoint-down(md){
+//     display: flex;
+//     flex-direction: column;
+//     .step_item{
+//       display: flex;
+//       align-items: center;
+//       margin-bottom: 0.5rem;
+//       text-align: left;
+//       background-color: $secondary_l4;
+//       border-bottom: none;
+//       border-radius: .5rem;
+//       &::before{
+//         flex-shrink: 0;
+//         width: 40px;
+//         height: 40px;
+//         line-height: 40px;
+//         margin-bottom: 0;
+//         margin-right: 1rem;
+//         font-size: $font-size-sm;
+//         text-align: center;
+//       }
+//       &::after{
+//         z-index: 1;
+//         top: calc(1rem + (40px - 12px));
+//         left: calc((40px / 2) + .5rem);
+//         width: 1rem;
+//         height: 1rem;
+//       }
+//     }
+//   }
+//   @include media-breakpoint-up(lg){
+//     .step_item:not(:last-child) p{
+//       &::before,
+//       &::after{
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         right: 0;
+//         width: 1.25rem;
+//         height: .25rem;
+//         background-color: $primary_l0;
+//         border-radius: 1rem;
+//       }
+//       &::before{
+//         top: calc(50% - 5.5px);
+//         transform: rotate(40deg);
+//       }
+//       &::after {          
+//         top: calc(50% + 5.5px);
+//         transform: rotate(-40deg);
+//       }
+//     }
+//   }
+// }

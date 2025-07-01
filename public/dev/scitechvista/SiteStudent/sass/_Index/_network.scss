@@ -1,0 +1,116 @@
+/*-------------------------------------------*\
+	science.scss
+	
+	Index
+  - 1.science-wrap
+\*-------------------------------------------*/
+.network-wrap{
+  background: $gray-100;
+  .network-left-col{ width: 100%;}
+  .network-right-col{
+    width: 100%;
+    p{
+      line-height: $line-height-base;
+      padding-bottom: .5rem;
+      font-size: $font-size-sm-em;
+    }
+    .bg-white{
+      padding: 2rem 1rem;
+      box-shadow: $box-shadow-lg;
+    }
+    .tit{
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      span{
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        padding-right: .5rem;
+      }
+      &:after{
+        content: "";
+        width: 100%;
+        border-bottom: solid 1px $gray-300;
+      }
+    }
+    .ListRow{
+      margin-bottom: 2.5rem;
+      .ListCol{
+        .kf-bookmark{
+          position: relative;
+          z-index: 1;
+          margin-bottom: -2.125rem;
+        }
+      }
+      .item{
+        display: block;
+        margin-bottom: 1rem;
+        .kf-img{ 
+          padding: 0;
+          figure{border-radius: 50%;}
+        }
+        .kf-text-content{ padding-right: 0;}
+        .kf-title{
+          margin-bottom: 0;
+          height: 3rem;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md){
+    .network-left-col{
+      width: calc(65%);
+    }
+    .network-right-col{
+      margin-top: -5rem;
+      padding-left: 1rem;
+      width: 35%;
+    }
+  }
+  @include media-breakpoint-up(lg){
+    .network-left-col{
+      width: calc(100% - 350px);
+    }
+    .network-right-col{
+      p{
+        font-size: $font-size-base-em;
+        padding-bottom: 1.5rem;
+      }
+      padding-left: 1rem;
+      width: 350px;
+      .bg-white{
+        padding: 1.5rem;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl){
+    .network-left-col{
+      width: calc(100% - 430px);
+    }
+    .network-right-col{
+      padding-left: 2rem;
+      width: 430px;
+      .bg-white{
+        padding: 2rem;
+      }
+    }
+  }
+  @include media-breakpoint-up(mx){
+    .network-left-col{
+      width: calc(100% - 500px);
+    }
+    .network-right-col{
+      width: 500px;
+    }
+  }
+  @include media-breakpoint-up(mxx){
+    .network-left-col{
+      width: calc(100% - 600px);
+    }
+    .network-right-col{
+      width: 600px;
+    }
+  }
+}

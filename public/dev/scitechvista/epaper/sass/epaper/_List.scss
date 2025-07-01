@@ -1,0 +1,46 @@
+/*-------------------------------------------*\
+	_list.scss
+
+  - 1.base
+  - 2.card & list
+\*-------------------------------------------*/
+.kf-ep-List{
+  margin-bottom: 4rem;
+  .item{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem .5rem;
+    border-bottom: 1px dotted;
+    border-bottom-color: $black;
+    span{
+      padding-right: 1rem;
+    }
+    a{
+      display: block;
+      color: $black;
+      &:hover,&:focus{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.kf-ep-ImgList{
+  .kf-ep-Diagramtext-item{
+    border: 1px solid $gray-300;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  a{
+    display: flex;
+    background: $white;
+  }
+  .kf-img{
+    width: 130px;
+  }
+  .content{
+    width: calc(100% - 130px);
+    padding: 0 2rem;
+    align-self: center;
+    .title{ margin-bottom: 0;}
+  }
+}

@@ -1,0 +1,23 @@
+/*-------------------------------------------*\
+	_Recommend.scss.
+
+  - 1.請區分區段撰寫，方便索引
+\*-------------------------------------------*/
+
+// 1.
+.Stv-Recommend{
+  padding-bottom: 3rem !important;
+  .kf-item{
+    .kf-img figure{
+      box-shadow: 0 0 0 0 !important;
+    }
+    .kf-title{
+      height: 3rem;
+    }
+    @include media-breakpoint-up(sm){
+      .kf-title{
+        height: 3.5rem;
+      }
+    }
+  }
+}

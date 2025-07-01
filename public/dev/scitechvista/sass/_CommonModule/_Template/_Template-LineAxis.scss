@@ -1,0 +1,75 @@
+/*-------------------------------------------------------------------------------*/
+/* 時間軸                                                                         */
+/*-------------------------------------------------------------------------------*/
+.wcm-LineAxis-row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  padding: .5rem .25rem .5rem 1rem;
+  border-left: 3px solid $border-color;
+}
+.wcm-LineAxis-h1{
+  &:before{
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: -10px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: none repeat scroll 0% 0% $white;
+    border: 3px solid $primary;
+  }
+}
+.wcm-LineAxis-h2{
+  .kf-title{margin-bottom: 0;}
+}
+.wcm-LineAxis-col{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem .5rem;
+  width: 100%;
+  &:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 17px;
+    height: 1px;
+    background: $border-color;
+  }
+}
+.wcm-LineAxis-continued{
+  padding-top: 5rem;
+  margin-bottom: 2rem;
+  &:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 18px;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent 0, $gray-100 60%);
+  }
+}
+.wcm-LineAxis-end{
+  padding-top: 3rem;
+  margin-bottom: 2rem;
+  &:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: none repeat scroll 0% 0% $primary;
+    border: 3px solid $primary;
+  }
+}
+.wcm-LineAxis-bg{
+  color: $white;
+  background: $primary;
+  padding: 1rem .5rem;
+}

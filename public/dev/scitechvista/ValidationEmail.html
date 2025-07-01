@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="email=no" name="format-detection" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>重發驗證信</title>
+	<link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Common CSS 首頁主版共用 -->
+  <link rel="stylesheet" href="css/common.min.css">
+  <!-- Main CSS 主版 -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="Scripts/jquery-mosaic-master/jquery.mosaic.min.css">
+  <link rel="stylesheet" href="css/custom.min.css">
+  <!-- Components CSS 標準功能-->
+  <link rel="stylesheet" href="css/kf-components.min.css">  
+	<script src="Scripts/lib/modernizr-custom.min.js"></script>
+	<script src="Scripts/lib/jquery_kf.js"></script>
+</head>
+<body>
+	<div class="MemberLogin-wrap">
+    <div class="container">
+      <!-- 側邊圖片 此專案不使用 -->
+      <div class="d-none d-lg-flex MemberLogin-img kf-img obj-img-cover">
+        <figure class="embed-responsive">
+          <img src="images/MemberLogin_wrap-img.jpg" alt="">
+        </figure>
+      </div>
+      <div class="MemberLogin-content">
+        <h2 class="main_tit">重發驗證信</h2>
+        <!-- 表單 -->
+        <div class="col-12 MemberLogin-forms mt-3">
+          <p class="kf-det-content mb-3">
+            我們將重新傳送驗證連結至您的電子信箱中，若您仍沒收到，請先檢查您的垃圾郵件夾。
+          </p>
+          <!-- Email -->
+          <div class="form-group row">
+            <label for="onlineform01" class="col-form-label kf-form_label">
+              Email<abbr title="為必填(選)欄位, 不能為空白。" class="text-nowrap">(必填)</abbr>
+            </label>
+            <div class="form-row">
+              <div class="col-12">
+                <input id="onlineform01" class="form-control" type="text" placeholder="請輸入你的E-mail(必填)">
+              </div>
+            </div>
+            <div class="invalid-feedback">請輸入您的E-mail</div>
+          </div>
+          <!-- 驗證碼 -->
+          <div class="form-group row kf-reCAPTCHA">
+            <span id="onlineform11" class="col-md-4 col-lg-3 col-form-label kf-form_label text-md-right">
+              驗證碼<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr>
+            </span>
+            <div class="col-md-8 col-lg-9">
+              <div class="form-row align-items-lg-center">
+                <div class="col-12 col-lg-auto  d-flex flex-column mb-2 mb-sm-3">
+                  <input class="align-self-start" type="image" name="testname15" src="images/module/ValidateCode.jpg" alt="點選圖片可重新產生驗證碼" aria-labelledby="onlineform11">
+                  <small class="text-info mt-2">(點選圖片可重新產生驗證碼)</small>
+                </div>
+                <div class="col-12 col-lg-auto mb-2 mb-sm-3">
+                  <a class="btn btn-primary" href="#" target="_blank" title="聽取驗證碼 (另開新視窗)" aria-labelledby="onlineform11">
+                    <i class="fa fa-microphone mr-2" aria-hidden="true"></i>聽取驗證碼
+                  </a>
+                </div>
+                <div class="col-sm-8">
+                  <input id="onlineform05 " class="form-control" type="text" placeholder="請輸入驗證碼(必填)" aria-labelledby="onlineform11">
+                  <div class="invalid-feedback">
+                    <span>請輸入驗證碼</span>
+                    <span>驗證碼格式錯誤</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- btn -->
+          <div class="d-flex flex-wrap justify-content-center flex-sm-row-reverse mt-5">
+            <input class="btn btn-primary flex-fill col-sm-4 m-1" type="submit" value="確認送出">
+            <a href="#" class="btn btn-outline-primary flex-fill col-sm-4 m-1">回登入頁</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- bootstrap JS -->
+<script src="Scripts/bootstrap.min.js"></script>
+<!-- megamenu -->
+<script src="Scripts/megamenu/MobileMenu.js"></script>
+<!-- Owl  Carousel JS-->
+<script src="Scripts/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+<script src="Scripts/tagify/tagify.min.js"></script>
+<!-- tagify.polyfills.min.js for ie11 -->
+<script src="Scripts/tagify/tagify.polyfills.min.js"></script>
+<script src="Scripts/jquery-mosaic-master/jquery.mosaic.min.js"></script>
+<script src="Scripts/common.js"></script>
+<script src="Scripts/custom.js"></script>
+<script src="Scripts/main.js"></script>
+</body>
+</html>

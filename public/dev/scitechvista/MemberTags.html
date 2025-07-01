@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>初始頁面</title>
+	<link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Common CSS 首頁主版共用 -->
+  <link rel="stylesheet" href="css/common.min.css">
+  <!-- Main CSS 主版 -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Components CSS 標準功能-->
+  <link rel="stylesheet" href="css/kf-components.min.css">
+  <!-- Custom CSS 客制功能 -->
+  <link rel="stylesheet" href="css/custom.min.css">
+  <!-- Optional JavaScript -->
+	<script src="Scripts/lib/modernizr-custom.min.js"></script>
+  <script src="Scripts/lib/jquery_kf.js"></script>
+  <script src="Scripts/select2-develop/src/js/select2.min.js"></script>
+  <script src="Scripts/select2-develop/src/js/i18n/zh-TW.js"></script>
+  <script src="Scripts/common.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script src="Scripts/module/search_unit.js"></script>
+</head>
+<body>
+
+  <div id="mainbody">
+    <h2 class="main_tit">初始頁面</h2><!-- 測試FreeGo 才放的h2 -->
+    <div class="main_body">
+      <!-- container 請依照介面選擇mx、xl、lg等 -->
+      <div class="MemberTabRow">
+        <div class="container-mx">
+          <a href="#" class="col-12 col-sm">個人首頁</a>
+          <a href="#" class="col-12 col-sm">個人圖書館</a>
+          <a href="#" class="col-12 col-sm active">訂閱關鍵字</a>
+          <a href="#" class="col-12 col-sm">瀏覽紀錄</a>
+          <a href="#" class="col-12 col-sm">帳戶設定</a>
+        </div>
+      </div>
+      <div class="container-mx">
+        <div class="my-5">
+          <div class="kf-title kf-det-title h4 d-block">已訂閱關鍵字</div>
+          <div class="kf-title h5 d-block">目前訂閱<span class=" text-danger font-weight-bold mx-1">7</span>個關鍵字  </div>
+          <div class="container-mx wcm-BorderSolid my-2"></div>
+          <!-- 上有關鍵字資料時顯示此區塊 -->
+          <div class="EmptyState">
+            <p class="kf-det-content">訂閱關鍵字，讓我們推薦更符合您的文章。</p>
+          </div>
+          <!-- 有訂閱關鍵字時的顯示此區塊 -->
+          <div class="Subscribed">
+            <div class="d-flex flex-wrap pt-3 pb-2">
+              <div class="col-auto">
+                <div class="checkBtn">
+                  <input type="checkbox" id="checkbox03-1" value="option3" checked>
+                  <label class="btn btn-LightGray" for="checkbox03-1">摩爾定律</label>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="checkBtn">
+                  <input type="checkbox" id="checkbox03-2" value="option3" checked>
+                  <label class="btn btn-LightGray" for="checkbox03-2">量子電腦</label>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="checkBtn">
+                  <input type="checkbox" id="checkbox03-3" value="option3" checked>
+                  <label class="btn btn-LightGray" for="checkbox03-3">量子糾纏</label>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="checkBtn">
+                  <input type="checkbox" id="checkbox03-5" value="option3" checked>
+                  <label class="btn btn-LightGray" for="checkbox03-5">隧道</label>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="checkBtn">
+                  <input type="checkbox" id="checkbox03-6" value="option3" checked>
+                  <label class="btn btn-LightGray" for="checkbox03-6">摩爾定律</label>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="checkBtn">
+                  <input type="checkbox" id="checkbox03-7" value="option3" checked>
+                  <label class="btn btn-LightGray" for="checkbox03-7">量子糾纏</label>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="checkBtn">
+                  <input type="checkbox" id="checkbox03-8" value="option3" checked>
+                  <label class="btn btn-LightGray" for="checkbox03-8">位元</label>
+                </div>
+              </div>
+            </div>
+            <div class="wcm-BorderDotted my-2"></div>
+            <div class="d-flex justify-content-center">
+              <button class="btn btn-secondary">確認變更</button>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 my-7 pb-3">
+          <div class="kf-title kf-det-title h4 d-block">新增關鍵字</div>
+          <div class="bg-white px-3 py-4 px-lg-5 shadow-sm">
+            <div class="col-12 col-md-10 my-3">
+              <label for="SearchKeyword" class="invisible">自選關鍵字</label>
+              <input id="SearchKeyword" type="text" placeholder="請輸入關鍵字" class="form-control">
+              <!-- <label for="SelectTest-2" class="kf-title h5 mb-3 d-block">自選關鍵字</label>
+              <select id="SelectTest-2" class="SelectCheck" name="select"multiple="multiple">
+                <option>請選擇次分類</option>
+                <option>次分類</option>
+                <option>次分類次分類次分類</option>
+                <option>次分類</option>
+                <option>次分類次分類</option>
+              </select> -->
+            </div>
+            <div class="col-12 my-4">
+              <div class="kf-title h5 mb-3 d-block">常用關鍵字</div>
+              <div class="row flex-wrap">
+                <div class="col-auto">
+                  <div class="checkBtn">
+                    <input type="checkbox" id="checkbox04-1" value="option3">
+                    <label class="btn btn-LightGray" for="checkbox04-1">摩爾定律</label>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="checkBtn">
+                    <input type="checkbox" id="checkbox04-2" value="option3">
+                    <label class="btn btn-LightGray" for="checkbox04-2">量子電腦</label>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="checkBtn">
+                    <input type="checkbox" id="checkbox04-3" value="option3">
+                    <label class="btn btn-LightGray" for="checkbox04-3">量子糾纏</label>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="checkBtn">
+                    <input type="checkbox" id="checkbox04-5" value="option1">
+                    <label class="btn btn-LightGray" for="checkbox04-5">隧道</label>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="checkBtn">
+                    <input type="checkbox" id="checkbox04-6" value="option1">
+                    <label class="btn btn-LightGray" for="checkbox04-6">摩爾定律</label>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="checkBtn">
+                    <input type="checkbox" id="checkbox04-7" value="option1">
+                    <label class="btn btn-LightGray" for="checkbox04-7">量子糾纏</label>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="checkBtn">
+                    <input type="checkbox" id="checkbox04-8" value="option1">
+                    <label class="btn btn-LightGray" for="checkbox04-8">位元</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wcm-BorderDotted my-2"></div>
+            <div class="d-flex justify-content-center mt-4">
+              <button class="btn btn-secondary">確認訂閱</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<script>
+  $(document).ready( function(){
+    $(".SelectCheck").select2({
+      // maximumSelectionLength: 2,//限制數量設定
+      placeholder: '請選擇分類項目',//可自行修改
+      language: 'zh-TW',
+      width: '100%',// 最多字元限制
+      maximumInputLength: 100,// 最少字元才觸發尋找, 0 不指定
+      minimumInputLength: 0,// 當找不到可以使用輸入的文字
+      tags: false,
+      allowClear: true,//清除全部tag的關閉btn
+    });
+  });
+</script>
+</body>
+</html>

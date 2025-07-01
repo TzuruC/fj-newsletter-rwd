@@ -1,0 +1,23 @@
+/*-------------------------------------------*\
+  Skip-main.scss
+\*-------------------------------------------*/
+a.skip-main {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: calc(50% - 110px);
+	width: 220px;
+	margin: 10px auto;
+	padding: .5rem;
+	text-align: center;
+	font-size: 1em;
+	color: $white;
+	background-color: $primary_d;
+	border-radius: .25rem;
+	transform: translateY(-200px);
+	transition: all .3s ease-in-out;
+	&:focus,
+	&:active {
+		transform: translateY(0px);
+	}
+}

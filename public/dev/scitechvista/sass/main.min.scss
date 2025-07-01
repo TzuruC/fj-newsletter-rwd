@@ -1,0 +1,15 @@
+@import "_Bootstrap/functions";
+@import "_Bootstrap/variables";
+@import "_Bootstrap/mixins";
+@import "_CommonModule/mixins";
+///*-------------------------------------------------------------------------------*/
+///*    main 主版                                                                  */
+///*-------------------------------------------------------------------------------*/
+// _Layout
+@import "_Layout/Main";                  //主體
+// @import "_Layout/SideMenu";              //側邊選單
+// _Components
+@import "_Components/Switcher";          //字型大中小、列印、社群分享
+@import "_Components/Breadcrumbs";           //麵包屑
+// @import "_Components/MainFoot";              //主版footer，錯誤回饋
+

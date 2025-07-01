@@ -1,0 +1,37 @@
+/*-------------------------------------------------------------------------------*/
+/*    $Megamen-Fulltxt                                                                          */
+/*-------------------------------------------------------------------------------*/
+//滿版文字選單
+.nav-fulltxt{
+  .sec-item{
+    width: calc(99.9% / 3);
+    .sec-tit{
+      padding-bottom: .75rem;
+      a{
+        padding-left: 2rem;
+        padding-right: 2.5rem;
+        border-bottom: $border-width solid $border-color;
+        .kf-img{ display: none;}
+        &:after{
+          position: absolute;
+          right: .5rem;
+          content: "\f105";
+          font-family: 'Font Awesome 5 Free';
+          font-weight: bold;
+          color: $gray-500;
+          transition: all .25s ease-in-out;
+        }
+        &:hover,&:focus{
+          &:after{
+            transform:translateX(.25rem);
+          }
+        }
+      }
+    }
+    .third-item{
+      display: flex;
+      flex-wrap: wrap;
+      li{ width: calc(99.9%/2);}
+    }
+  }
+}

@@ -1,0 +1,92 @@
+
+// kf-list 基本列表
+//列表
+.kf-div-table{
+  background: $white;
+  font-size:$font-size-base-em;
+  box-shadow: 0 0 1rem rgba( $black, .125);
+  >.row{
+    margin: 0;
+    // &:nth-child(odd){ background: rgba($gray-200,.5) }
+    &:hover,&:focus{ background: rgba( $secondary_l, .125); }
+    border-bottom: 1px solid $gray-300;
+  }
+  //表格間距
+  div[class *= col-]{
+    padding: $table-cell-padding $table-cell-padding-sm;
+    line-height: 1.5;
+    @include media-breakpoint-down(sm){
+      padding: .25rem 0;
+    }
+  }
+  //RWD後data的顯示
+  .kf-data-type{
+    @include media-breakpoint-down(sm){
+      &:before{
+        content: attr(data-type) "：";
+        display: inline-block;
+        font-weight: bold;
+        padding-right: .25rem;
+      }
+    }
+  }
+  //連結樣式
+  a.txt-link{
+    color: $base-color_txt;
+    vertical-align: middle;
+    &:hover,&:focus{
+      color: $bese_link_active;
+    }
+  }
+  a{
+    &:hover,&:focus{
+      .txt-link{
+      color: $bese_link_active;
+      }
+    }
+  }
+  //使用i標籤 fa icon 桌機版影藏 日期＆點閱率
+  @include media-breakpoint-up(md){
+    .kf-date i,.kf-ctr i{ display: none;}
+  }
+  //列表標簽 new hot
+  .badge{ 
+    font-size: .875rem;
+    margin-right: .25rem;
+  }
+}
+
+//分類RWD標籤樣式
+.kf-div-table-badge{
+  @include media-breakpoint-down(sm){
+    // background: $primary;
+    max-width: fit-content;
+    padding: 0 .5rem !important;
+    margin-bottom: .25rem;
+    border-radius: .25rem;
+  }
+  @include media-breakpoint-up(md){
+    color: $base-color_txt;
+    background: transparent;
+  }
+}
+//相關連結 相關檔案 延伸閱讀
+.kf-list-group{
+  font-size: $font-size-base-em;
+  @include kf-list-ul-custom;
+  @include kf-list-ol-custom;
+  li{ line-height: 1.5;}
+  //使用客製list需調整top高度
+  ul li:before{ top:calc(1.5em/2) !important;}
+  a{ 
+    display: inline-flex;
+    // align-items: center;
+    color: $base-color-txt;
+    &:hover,&:focus{
+      color: $bese-link-active;
+    }
+  }
+  .kf-img a{
+    display: block;
+  }
+}

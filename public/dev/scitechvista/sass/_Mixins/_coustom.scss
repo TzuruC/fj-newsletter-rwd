@@ -1,0 +1,94 @@
+// Unclassified ////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin rb{
+  border: 1px solid red;
+}
+@mixin text-truncate-more($lines-to-show) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+}
+//文字斷行
+@mixin word_break{
+	word-wrap: break-word;
+	word-break: normal;
+}
+
+// 三角形
+@mixin triangle ($size, $color, $direction) {
+  height: 0;
+  width: 0;
+//上下左右的三角形 尺寸會被除2
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size / 2;
+
+    @if $direction == up {
+      border-bottom-color: $color;
+
+    } @else if $direction == right {
+      border-left-color:   $color;
+
+    } @else if $direction == down {
+      border-top-color:    $color;
+
+    } @else if $direction == left {
+      border-right-color:  $color;
+    }
+  }
+// 右上 左上
+  @else if ($direction == up_right) or ($direction == up_left) {
+    border-top: $size solid $color;
+
+    @if $direction == up_right {
+      border-left:  $size solid transparent;
+
+    } @else if $direction == up_left {
+      border-right: $size solid transparent;
+    }
+  }
+// 右下 左下
+  @else if ($direction == down_right) or ($direction == down_left) {
+    border-bottom: $size solid $color;
+
+    @if $direction == down_right {
+      border-left:  $size solid transparent;
+
+    } @else if $direction == down_left {
+      border-right: $size solid transparent;
+    }
+  }
+}
+
+
+///*----------scoop-corner----------*/
+@mixin scoop-corner-top($bg, $bl: 0, $br: $bl){
+	background: 
+		radial-gradient(circle at bottom left, transparent $bl, $bg 0) bottom left,
+		radial-gradient(circle at bottom right, transparent $br, $bg 0) bottom right;							
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+@mixin scoop-corner-left($bg, $tl: 0, $bl: $tl){
+	background: 
+		radial-gradient(circle at top left, transparent $tl, $bg 0) top left,
+		radial-gradient(circle at bottom left, transparent $bl, $bg 0) bottom left;							
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+@mixin scoop-corner-right($bg, $tr: 0, $br: $tr){
+	background: 
+		radial-gradient(circle at top right, transparent $tr, $bg 0) top right,
+		radial-gradient(circle at bottom right, transparent $br, $bg 0) bottom right;							
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+@mixin bg-gradient($deg, $gradient-start, $gradient-end) {
+	background-color: $gradient-start;
+	background-image: linear-gradient($deg, $gradient-start 0%, $gradient-end 100%);
+}

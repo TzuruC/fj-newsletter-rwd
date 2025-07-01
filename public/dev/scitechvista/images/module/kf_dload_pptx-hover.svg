@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d12200;
+      }
+
+      .cls-2 {
+        font-size: 13px;
+        fill: #fff;
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+    </style>
+  </defs>
+  <g id="圖層_1_拷貝" data-name="圖層 1 拷貝">
+    <path class="cls-1" d="M2.71,0H2A2.14,2.14,0,0,0,0,2.26V37.74A2.14,2.14,0,0,0,2,40H30.1a4.92,4.92,0,0,0,3.28-1.21l5.26-4.67A3.9,3.9,0,0,0,40,31.2V4.12A4.41,4.41,0,0,0,35.36,0Z"/>
+  </g>
+  <g id="圖層_2_拷貝" data-name="圖層 2 拷貝">
+    <text class="cls-2" transform="translate(2.69 24.53)">PPTX</text>
+  </g>
+</svg>

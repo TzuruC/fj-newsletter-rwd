@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="no-js">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="email=no" name="format-detection" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>全站搜尋、進階搜尋、分類檢索</title>
+	<link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Common CSS 首頁主版共用 -->
+  <link rel="stylesheet" href="css/common.min.css">
+  <!-- Main CSS 主版 -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Components CSS 標準功能-->
+  <link rel="stylesheet" href="css/kf-components.min.css">
+	<script src="Scripts/lib/modernizr-custom.min.js"></script>
+  <script src="Scripts/lib/jquery_kf.js"></script>
+  <script src="Scripts/select2-develop/src/js/select2.min.js"></script>
+  <script src="Scripts/select2-develop/src/js/i18n/zh-TW.js"></script>
+  <script src="Scripts/common.js"></script>
+  <script src="Scripts/main.js"></script>
+  <script src="Scripts/module/search_unit.js"></script>
+</head>
+<body>
+  <div id="mainbody">
+    <h2 class="main_tit">搜尋</h2><!-- 測試FreeGo 才放的h2 -->
+    <div class="main_body">
+      <div class="container-mx">
+        <!-- 搜尋bar-進階搜尋 關鍵字 下拉分類2種-->
+        <div class="kf-search-unit form-row">
+          <div class="kf-search-unit-bar form-row">
+            <div class="form-group col">
+              <label for="SearchKeyword" class="invisible">關鍵字</label>
+              <input id="SearchKeyword" type="text" placeholder="請輸入關鍵字" class="form-control kf-search-unit-keyword">
+            </div>
+          </div>
+          <!-- 複選下拉 -->
+          <div class="kf-search-unit-fold form-row">
+            <div class="form-group col-md-6">
+              <label for="SelectTest-1">主分類</label>
+              <select class="form-control" id="SelectTest-1">
+                <option>請選擇主分類</option>
+                <option>主分類</option>
+                <option>主分類</option>
+                <option>主分類</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="SelectTest-2">複選下拉</label>
+              <select id="SelectTest-2" class="SelectCheck" name="select"multiple="multiple">
+                <option>請選擇次分類</option>
+                <option>次分類</option>
+                <option>次分類次分類次分類</option>
+                <option>次分類</option>
+                <option>次分類次分類</option>
+              </select>
+            </div>
+          </div>
+          <!-- 日期區間 -->
+          <div class="kf-search-unit-fold form-row">
+            <div class="col-12 form-row pr-0">
+              <span class="col-12 mb-2">日期區間</span>
+              <div class="form-sm-group col-12 col-sm">
+                <label for="date-01" class="invisible d-none">開始日期</label>
+                <input id="date-01" class="form-control" type="date" name="bday" placeholder="請選擇日期">
+              </div>
+              <span class="mt-sm-2 col-12 col-sm-auto text-center">~</span>
+              <div class="form-group col-12 col-sm pr-0">
+                <label for="date-02" class="invisible d-none">結束日期</label>
+                <input id="date-02" class="form-control" type="date" name="bday" placeholder="請選擇日期">
+              </div>
+            </div>
+          </div>
+          <div class="kf-search-unit-fold form-row">
+            <!--單選選項 radio  -->
+            <fieldset class="form-group col-md-6">
+              <legend id="onlineForm08">
+                單選選項
+              </legend>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+                </div>
+              <div class="invalid-feedback col-md-8 col-lg-9 ml-auto">請選擇</div>
+            </fieldset>
+            <!-- 複選選項 checkbox -->
+            <fieldset class="form-group col-md-6">
+              <legend id="onlineForm08">
+                複選選項
+              </legend>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2">
+                  <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+                </div>
+              <div class="invalid-feedback col-md-8 col-lg-9 ml-auto">請選擇</div>
+            </fieldset>
+          </div>
+          <div class="kf-search-unit-btn d-flex justify-content-center">
+            <input class="btn btn-secondary kf-search-unit-clear mr-2" type="submit" value="清除重填">
+            <input class="btn btn-primary m-1 my-md-0 kf-search-btn" type="submit" value="搜尋">
+            <a class="btn btn-secondary m-1 my-md-0 kf-search-unit-more" href="#">進階搜尋</a>
+          </div>
+        </div>
+        <!-- 搜尋bar 關鍵字 -->
+        <div class="kf-search-row form-row">
+          <div class="form-group col-12 mb-2 col-md-4 mb-md-0">
+            <label for="SearchKeyword" class="invisible">關鍵字</label>
+            <input id="SearchKeyword" type="text" placeholder="請輸入關鍵字" class="form-control">
+          </div>
+          <div class="d-flex justify-content-center justify-content-md-start col-12 col-md-auto">
+            <input class="btn btn-primary m-1 my-md-0 kf-search-btn" type="submit" value="搜尋">
+            <input class="btn btn-secondary m-1 my-md-0 kf-search-btn" type="reset" value="清空搜尋">
+          </div>
+        </div>
+        <!-- 搜尋bar 關鍵字 下拉分類 -->
+        <div class="kf-search-row form-row">
+          <div class="form-group col-12 mb-2 col-md-3 mb-md-0">
+            <label for="SelectTest-1" class="invisible">年度</label>
+            <select class="form-control" id="SelectTest-1">
+              <option>2019</option>
+              <option>2018</option>
+              <option>2017</option>
+              <option>2016</option>
+            </select>
+          </div>
+          <div class="form-group col-12 mb-2 col-md-4 mb-md-0">
+            <label for="SearchKeyword" class="invisible">關鍵字</label>
+            <input id="SearchKeyword" type="text" placeholder="請輸入關鍵字" class="form-control">
+          </div>
+          <div class="d-flex justify-content-center justify-content-md-start col-12 col-md-auto">
+            <input class="btn btn-primary m-1 my-md-0 kf-search-btn" type="submit" value="搜尋">
+            <input class="btn btn-secondary m-1 my-md-0 kf-search-btn" type="reset" value="清空搜尋">
+          </div>
+        </div>
+        <!-- 搜尋bar 關鍵字 下拉分類*2 -->
+        <div class="kf-search-row form-row">
+          <div class="form-group col-12 mb-2 col-md-2 mb-md-0">
+            <label for="SelectTest-1" class="invisible">年度</label>
+            <select class="form-control" id="SelectTest-1">
+              <option>2019</option>
+              <option>2018</option>
+              <option>2017</option>
+              <option>2016</option>
+            </select>
+          </div>
+          <div class="form-group col-12 mb-2 col-md-2 mb-md-0">
+            <label for="SelectTest-1" class="invisible">年度</label>
+            <select class="form-control" id="SelectTest-1">
+              <option>2019</option>
+              <option>2018</option>
+              <option>2017</option>
+              <option>2016</option>
+            </select>
+          </div>
+          <div class="form-group col-12 mb-2 col-md-4 mb-md-0">
+            <label for="SearchKeyword" class="invisible">關鍵字</label>
+            <input id="SearchKeyword" type="text" placeholder="請輸入關鍵字" class="form-control">
+          </div>
+          <div class="d-flex justify-content-center justify-content-md-start col-12 col-md-auto">
+            <input class="btn btn-primary m-1 my-md-0 kf-search-btn" type="submit" value="搜尋">
+            <input class="btn btn-secondary m-1 my-md-0 kf-search-btn" type="reset" value="清空搜尋">
+          </div>
+        </div>
+        <!-- 搜尋bar 關鍵字 日期區間 -->
+        <div class="kf-search-row form-row align-items-start">
+    
+          <div class="form-group col-12 mb-2 col-lg-8 col-xl-5 mb-md-0">
+            <div class="d-flex flex-wrap">
+              <label for="SelectTest-1" class="invisible">年度</label>
+              <input id="date" type="date" class="form-control col-12 col-md mb-2" type="text" placeholder="年/月/日">
+              <span class="d-none d-md-block pt-2 px-1">~</span>
+              <label for="SelectTest-1" class="invisible">年度</label>
+              <input id="date" type="date" class="form-control col-12 col-md mb-2" type="text" placeholder="年/月/日">
+            </div>
+          </div>
+    
+          <div class="form-group col-12 mb-2 col-md-8 col-xl-3 mb-md-0">
+            <label for="SearchKeyword" class="invisible">關鍵字</label>
+            <input id="SearchKeyword" type="text" placeholder="請輸入關鍵字" class="form-control">
+          </div>
+          <div class="d-flex justify-content-center justify-content-md-start col-12 col-md-auto">
+            <input class="btn btn-primary m-1 my-md-0 kf-search-btn" type="submit" value="搜尋">
+            <input class="btn btn-secondary m-1 my-md-0 kf-search-btn" type="reset" value="清空搜尋">
+          </div>
+        </div>
+      </div>
+  
+      <!-- 全站搜尋 -->
+      <div class="container-mx">  
+        <div class="kf-search-row form-row justify-content-center justify-content-md-start">
+          <div class="form-group col-12 mb-2 col-md-6 mb-md-0">
+            <label for="SearchKeyword" class="invisible">關鍵字</label>
+            <input id="SearchKeyword" type="text" placeholder="請輸入關鍵字" class="form-control">
+          </div>
+          <!-- 三個按鈕必須增加 flex-wrap 不然320尺寸會跑版 -->
+          <div class="d-flex flex-wrap justify-content-center justify-content-md-start col-12 col-md-auto">
+            <input class="btn btn-primary m-1 my-md-0 kf-search-btn" type="submit" value="搜尋">
+            <a class="btn btn-secondary m-1 my-md-0 kf-search-btn" href="#">進階搜尋</a>
+            <a class="btn btn-secondary m-1 my-md-0 kf-search-btn" href="#">分類檢索</a>
+          </div>
+        </div>
+      </div>
+      <div class="container-mx">
+        <div class="kf-search-row form-row align-items-center">
+          <span class="m-1 text-body">若您找不到資料，可參考以下熱門搜尋關鍵字：</span>
+          <a class="badge badge-pill badge-primary m-1" href="#">關鍵字</a>
+          <a class="badge badge-pill badge-primary m-1" href="#">關鍵字</a>
+          <a class="badge badge-pill badge-primary m-1" href="#">關鍵字</a>
+          <a class="badge badge-pill badge-primary m-1" href="#">關鍵字</a>
+        </div>
+      </div>
+      <!-- 進階搜尋 -->
+      <div class="container-mx">
+        <div class="kf-forms mt-5">
+          <p class="text-danger mb-4">尋找符合以下條件的網頁...</p>
+          <div class="form-group no-gutters my-4">
+            <label class="kf-form_label col" for="fg01">與以下字詞或語句完全相符：<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr></label>
+            <div class="col mt-2">
+              <input type="text" class="form-control" id="fg01" placeholder="請輸入關鍵字(必填)">
+            </div>
+            <small class="form-text col">※ 在指定完全相符的字詞前後加上引號： "臺中市社會局兒童發展資源網"</small>
+            <div class="invalid-feedback col" style="display: block">請輸入您的E-mail</div>
+          </div>
+          <div class="form-group no-gutters my-4">
+            <label class="kf-form_label col" for="fg02">含以下任何字詞：<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr></label>
+            <div class="col mt-2">
+              <input type="text" class="form-control" id="fg03" placeholder="請輸入關鍵字(必填)">
+            </div>
+            <small class="form-text col">※ 在各搜尋字詞之間輸入 OR(大寫)： 兒童 OR 發展"</small>
+            <div class="invalid-feedback col" style="display: block">請輸入您的E-mail</div>
+          </div>
+          <div class="form-group no-gutters my-4">
+            <label class="kf-form_label col" for="fg04">以搜尋結果排除以下任何字詞：<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr></label>
+            <div class="col mt-2">
+              <input type="text" class="form-control" id="fg04" placeholder="請輸入關鍵字(必填)">
+            </div>
+            <small class="form-text col">※ 在想要排除的字詞前面加上減號： -兒童, "發展"</small>
+            <div class="invalid-feedback col" style="display: block">請輸入您的E-mail</div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center col-12 col-md-auto my-5">
+          <input class="btn btn-primary m-1 my-md-0 kf-search-btn" type="submit" value="搜尋">
+          <a class="btn btn-secondary m-1 my-md-0 kf-search-btn" href="#">進階搜尋</a>
+          <a class="btn btn-secondary m-1 my-md-0 kf-search-btn" href="#">分類檢索</a>
+        </div>
+      </div>
+      <!-- 分類檢索 -->
+      <div class="container-mx">
+        <div class="kf-forms my-5">
+          <div class="kf-det-content text-body my-4">
+            說明文區域，編輯區
+            <ol>
+              <li>說明文區域，編輯區</li>
+              <li>說明文區域，編輯區</li>
+            </ol>
+          </div>
+          <div class="form-group no-gutters my-4">
+            <label class="kf-form_label col" for="fg02">含以下任何字詞：<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr></label>
+            <div class="col-sm-6 mt-2">
+              <select class="form-control" id="fg02">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <small class="form-text col">※ 在各搜尋字詞之間輸入 OR(大寫)： 兒童 OR 發展"</small>
+            <div class="invalid-feedback col" style="display: block">請輸入您的E-mail</div>
+          </div>
+          <div class="form-group no-gutters my-4">
+            <label class="kf-form_label col" for="fg05">以搜尋結果排除以下任何字詞：<abbr title="為必填(選)欄位, 不能為空白。">(必填)</abbr></label>
+            <div class="col mt-2">
+              <input type="text" class="form-control" id="fg05" placeholder="請輸入關鍵字(必填)">
+            </div>
+            <small class="form-text col">※ 在想要排除的字詞前面加上減號： -兒童, "發展"</small>
+            <div class="invalid-feedback col" style="display: block">請輸入您的E-mail</div>
+          </div>
+        </div>
+        <!-- 列表 -->
+        <div class="kf-div-table align-items-center mt-5">
+          <div class="kf-div-th row d-none d-md-flex bg-primary text-center text-white">
+            <div class="col-md-1">序號</div>
+            <div class="col-md">網頁</div>
+          </div>
+          <div class="row p-3 p-md-0 align-items-center">
+            <div class="col-12 col-md-1 text-md-center d-none d-md-block">1</div>
+            <div class="col-12 col-md">
+              <a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a>
+            </div>                
+          </div>
+          <div class="row p-3 p-md-0 align-items-center">
+            <div class="col-12 col-md-1 text-md-center d-none d-md-block">2</div>
+            <div class="col-12 col-md">
+              <a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a>
+            </div>
+          </div>
+          <div class="row p-3 p-md-0 align-items-center">
+            <div class="col-12 col-md-1 text-md-center d-none d-md-block">3</div>
+            <div class="col-12 col-md">
+              <a href="#" class="txt-link">標題名稱標題名稱標題名稱標題名稱標題名稱</a>
+            </div>
+          </div>
+        </div>
+        <!-- 分頁 -->
+        <nav aria-label="Page navigation example" class="kf-paginator my-5">
+          <ul class="pagination">
+            <li class="page-item kf-page-first">
+              <a class="page-link" href="#" aria-label="第一頁">
+                <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+                <span class="sr-only">第一頁</span>
+              </a>
+            </li>
+            <li class="page-item kf-page-prev">
+              <a class="page-link" href="#" aria-label="第一頁">
+                <i class="fas fa-angle-left" aria-hidden="true"></i>
+                <span class="sr-only">上一頁</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item active"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">6</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item kf-page-next">
+              <a class="page-link" href="#" aria-label="下一頁">
+                <i class="fas fa-angle-right" aria-hidden="true"></i>
+                <span class="sr-only">下一頁</span>
+              </a>
+            </li>
+            <li class="page-item kf-page-last">
+              <a class="page-link" href="#" aria-label="最後一頁">
+                <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+                <span class="sr-only">最後一頁</span>
+              </a>
+            </li>
+          </ul>
+          <span class="kf-paginator-date">資料筆數【200】頁數【1/10】</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    initSearchunit('關閉', '進階搜尋');
+    $(document).ready( function(){
+      $(".SelectCheck").select2({
+        maximumSelectionLength: 2,//限制數量設定
+        placeholder: '請選擇分類項目',//可自行修改
+        language: 'zh-TW',
+        width: '100%',// 最多字元限制
+        maximumInputLength: 100,// 最少字元才觸發尋找, 0 不指定
+        minimumInputLength: 0,// 當找不到可以使用輸入的文字
+        tags: false,
+        allowClear: true,//清除全部tag的關閉btn
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+/*-------------------------------------------*\
+  Tabs.scss
+
+  01-頁籤標題
+  02-頁籤按鈕
+  03-頁籤內容
+  05-
+  04-no-js
+
+\*-------------------------------------------*/
+
+.in-Tabs{
+  position: relative;
+  @include media-breakpoint-up(mx){
+    margin-top: -4rem;
+  }
+}
+.in-TabBtn{
+  text-align: center;
+  a{
+    border-bottom: 1px solid rgb(128, 128, 128);
+    display: block;
+    // display: flex;
+    // align-items: flex-end;
+    // justify-content: center;
+    font-size: $font-size-base-em;
+    // height: 3.5rem;
+    padding: .5rem .25rem;
+    color: $gray-600;
+    font-weight: 500;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &:hover,&:focus,&.active{
+      color: $gray-900;
+      font-weight: bold;
+      transition: all .2s ease-in-out;
+      border-bottom: 3px solid $secondary;
+    }
+  }
+  position: absolute;
+    top: 0;
+    width: calc(100%/4);
+    &:nth-child(1){ left: 0; top: 0;}
+    &:nth-child(3){ left: calc(100%/4); top: 0;}
+    &:nth-child(5){ left: calc((100%/4)*2); top: 0;}
+    &:nth-child(7){ left: calc((100%/4)*3); top: 0;}
+    &:nth-child(9){ left: 0; top: 3.5rem;}
+    &:nth-child(11){ left: calc(100%/4); top: 3.5rem;}
+    &:nth-child(13){ left: calc((100%/4)*2); top: 3.5rem;}
+    &:nth-child(15){ left: calc((100%/4)*3); top: 3.5rem;}
+
+  // @include media-breakpoint-up(md){
+  //   position: absolute;
+  //   top: 0;
+  //   width: calc(100%/8);
+  //   &:nth-child(1){ left: 0;}
+  //   &:nth-child(3){ left: calc(100%/8)}
+  //   &:nth-child(5){ left: calc((100%/8)*2)}
+  //   &:nth-child(7){ left: calc((100%/8)*3)}
+  //   &:nth-child(9){ left: calc((100%/8)*4);top: 0;}
+  //   &:nth-child(11){ left: calc((100%/8)*5);top: 0;}
+  //   &:nth-child(13){ left: calc((100%/8)*6);top: 0;}
+  //   &:nth-child(15){ left: calc((100%/8)*7);top: 0;}
+  //   a{ font-size: $font-size-md-em;}
+  // }
+  @include media-breakpoint-up(lg){
+    width: calc(100%/8);
+    &:nth-child(1){ right: calc((100%/8)*7); left: auto;}
+    &:nth-child(3){ right: calc((100%/8)*6); left: auto;}
+    &:nth-child(5){ right: calc((100%/8)*5); left: auto;}
+    &:nth-child(7){ right: calc((100%/8)*4); left: auto; top: 0;}
+    &:nth-child(9){ right: calc((100%/8)*3); left: auto; top: 0;}
+    &:nth-child(11){ right: calc((100%/8)*2); left: auto; top: 0;}
+    &:nth-child(13){ right: calc((100%/8)*1); left: auto; top: 0;}
+    &:nth-child(15){ right: 0; left: auto; top: 0;}
+    a{ font-size: $font-size-md-em;}
+  }
+  @include media-breakpoint-up(mx){
+    width: 130px;
+    &:nth-child(1){ right: calc(10px + 130px*7); left: auto;}
+    &:nth-child(3){ right: calc(10px + 130px*6); left: auto;}
+    &:nth-child(5){ right: calc(10px + 130px*5); left: auto;}
+    &:nth-child(7){ right: calc(10px + 130px*4); left: auto;}
+    &:nth-child(9){ right: calc(10px + 130px*3); left: auto;}
+    &:nth-child(11){ right: calc(10px + 130px*2); left: auto;}
+    &:nth-child(13){ right: calc(10px + 130px); left: auto;}
+    &:nth-child(15){ right: 10px; left: auto;}
+    a{ font-size: $font-size-lg-em;}
+  }
+}
+.in-TabContent{
+  display: none;
+  padding-top: 7rem;
+  margin-left: -.5rem;
+  margin-right: -.5rem;
+  @include media-breakpoint-up(lg){
+    padding-top: 6rem;
+  }
+  @include media-breakpoint-up(mx){
+    padding-top: 8rem;
+  }
+
+  .kf-diagramtext-card{
+    .kf-bookmark {
+      position: absolute;
+      z-index: 1;
+      right: .75rem;
+      bottom: .25rem;
+    }
+    @include media-breakpoint-down(md){
+      .kf-bookmark {
+        right: 1.25rem;
+        bottom: 1rem;
+      }
+      .kf-diagramtext-col {
+        border-bottom: 1px dotted $gray-300;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  // 條列式
+  .kf-diagramtext-list{
+    margin-top: 2rem;
+    .kf-diagramtext-col{
+      margin-bottom: 2rem;
+      min-height: auto;
+      .kf-item{
+        display: flex;
+        flex-wrap: wrap;
+        min-height: auto;
+        .kf-img,.kf-text-content{ width: 100%;}
+        .Article-AuthorRow{display: none;}
+      }
+    }
+    @include media-breakpoint-up(sm){
+      margin-top: 0;
+      .kf-diagramtext-col{
+        .kf-item{
+          .kf-img{ width: 180px;}
+          .kf-text-content{
+            padding-left: 1.25rem;
+            width: calc(100% - 180px);
+          }
+        }
+      }
+    }
+    @include media-breakpoint-up(xl){
+      .kf-diagramtext-col{
+        .kf-item{
+          .kf-img{ width: 250px;}
+          .kf-text-content{
+            width: calc(100% - 250px);
+          }
+          .Article-AuthorRow{display: flex;}
+        }
+      }
+    }
+    @include media-breakpoint-up(mx){
+      .kf-diagramtext-col{
+        .kf-item{
+          .kf-img{ width: 280px;}
+          .kf-text-content{
+            width: calc(100% - 280px);
+          }
+        }
+      }
+    }
+    @include media-breakpoint-up(mxx){
+      .kf-diagramtext-col{
+        .kf-item{
+          .kf-img{ width: 320px;}
+          .kf-text-content{
+            width: calc(100% - 320px);
+          }
+        }
+      }
+    }
+  }
+  &.active{
+    display: block;
+  }
+}
+
+.ScientificStaff-wrap{
+  .in-TabBtn{
+    a{
+      color: rgba( $white, .7);
+      &:hover,&:focus,&.active{
+        color: $white;
+      }
+    }
+  }
+  .in-TabContent{
+    .kf-diagramtext-col{
+      .kf-date,.kf-title,.kf-txt,.kf-bookmark{
+        color: $white;
+      }
+      .Article-AuthorRow{
+        color: rgba( $white, .7);
+      }
+      .kf-item{
+        &:hover,&:focus{
+          .kf-title{
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md){
+    .in-TabContent .row{
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+// 科學職人 背景深色
+
+/*========no-js ========*/
+.no-js {
+  .in-Tabs{
+    margin-top: 0;
+  }
+  .in-TabBtn{ 
+    position: static;
+    a{
+      color: $gray-900;
+      font-weight: bold;
+      transition: all .2s ease-in-out;
+      border-bottom: 3px solid $secondary;
+    }
+  }
+  .in-TabContent{
+    display: block;
+    padding-top: 1rem !important;
+  }
+}

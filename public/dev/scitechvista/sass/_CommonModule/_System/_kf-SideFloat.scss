@@ -1,0 +1,66 @@
+/*-------------------------------------------*\
+  SideFloat.scss
+  
+  - 1.kf-FloatWrap
+
+\*-------------------------------------------*/
+.kf-FloatWrap{
+  flex-wrap: wrap;
+  @include media-breakpoint-up(lg){
+    flex-wrap: nowrap;
+  }
+}
+.kf-FloatContent{
+  width: 100%;
+  @include media-breakpoint-up(lg){
+    width: calc(100% - 280px);
+    padding-right: 2rem;
+  }
+  @include media-breakpoint-up(mx){
+    width: calc(100% - 350px);
+  }
+  @include media-breakpoint-up(mxx){
+    padding-right: 3rem;
+  }
+}
+.kf-FloatSide{
+  width: 100%;
+  @include media-breakpoint-up(lg){
+    width: 280px;
+  }
+  @include media-breakpoint-up(mx){
+    width: 350px;
+  }
+}
+.kf-SideContent{
+  height: calc(100vh - 3rem);
+  background: $gray-200;
+  padding: 1.5rem;
+  overflow: auto;
+  .item{
+    padding: 1rem 0;
+    border-bottom: solid $gray-400 2px;
+  }
+  .kf-title{
+    display: block;
+    margin-bottom: .25rem;
+  }
+  p{
+    line-height: $line-height-base;
+  }
+  .btn-group-toggle{
+    // max-width: 100%;
+    width: 200px;
+  }
+  @include media-breakpoint-up(lg){ width: 280px; margin-top: 1.5rem;}
+  @include media-breakpoint-up(mx){ width: 350px;}
+}
+.kf-SideContent.fixed{
+  @include media-breakpoint-up(lg){
+    position: fixed;
+  }
+}
+.kf-FloatWraEnd{
+  position: absolute;
+  bottom: 25rem;
+}

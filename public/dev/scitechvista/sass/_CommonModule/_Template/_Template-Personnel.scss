@@ -1,0 +1,15 @@
+/*-------------------------------------------------------------------------------*/
+/* 人員介紹樣式                                                                   */
+/*-------------------------------------------------------------------------------*/
+.wcm-Personnel{
+  justify-content: center;
+  @include  media-breakpoint-up(lg){
+    .kf-det-center{
+      position: relative;
+      z-index: -1;
+      background: $gray-100;
+      padding: 1rem 2rem 1rem 4rem;
+      margin-left: -3rem;
+    }
+  }
+}

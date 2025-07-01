@@ -1,0 +1,12 @@
+/*-------------------------------------------*\
+	kf-BtnGroup.scss
+
+
+\*-------------------------------------------*/
+// 1.頁籤式按鈕群組
+.kf-tab-BtnGroup{
+	.active{
+    background: lighten($primary_l,20%) !important;
+    color: $primary !important;
+	}
+}
